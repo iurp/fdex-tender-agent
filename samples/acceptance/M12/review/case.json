@@ -1,0 +1,17 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M12",
+  "case_id": "review",
+  "category": "review",
+  "title": "缺税费口径不能默认零税",
+  "input": "samples/acceptance/M12/review/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M12/review/input.json",
+      "sha256": "a882a6c31f6bf572db915c4f77815c61686ab1d868e795058f98b4ae68a543c0"
+    }
+  ],
+  "expected": "samples/acceptance/M12/review/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

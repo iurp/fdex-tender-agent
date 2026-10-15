@@ -1,0 +1,55 @@
+{
+  "schema_version": "bid-training.acceptance-input.v1",
+  "module": "M18",
+  "case_id": "approved",
+  "source_mode": "DEMO",
+  "project_id": "DEMO-BID-001",
+  "lot_id": "LOT-001",
+  "analysis_time": "2026-10-13T09:00:00+08:00",
+  "payload": {
+    "candidates": [
+      {
+        "id": "REUSE-TEMPLATE",
+        "kind": "template_adapter",
+        "path": "samples/acceptance/shared/word/personnel-v1.1.docx",
+        "public": true
+      },
+      {
+        "id": "REUSE-RULE",
+        "kind": "rule",
+        "path": "samples/acceptance/shared/reuse/rule.md",
+        "public": true
+      },
+      {
+        "id": "REUSE-CHAPTER",
+        "kind": "redacted_chapter",
+        "path": "samples/acceptance/shared/reuse/redacted-chapter.md",
+        "public": true
+      }
+    ],
+    "approval": [
+      {
+        "candidate_id": "REUSE-TEMPLATE",
+        "target_sha256": "a10700a5b7141c7e6ceac5f09d6fb7ac70b1d0a4cf7ae87b41083ecb127a6f5c",
+        "approved_by": "DEMO-复用负责人",
+        "approved_at": "2026-10-13T09:00:00+08:00",
+        "scope": "template_adapter"
+      },
+      {
+        "candidate_id": "REUSE-RULE",
+        "target_sha256": "7bb25246e4c7a0c9f20d0a18cf4f87659239810f42e4aeca53edaecb2208ce54",
+        "approved_by": "DEMO-复用负责人",
+        "approved_at": "2026-10-13T09:00:00+08:00",
+        "scope": "rule"
+      },
+      {
+        "candidate_id": "REUSE-CHAPTER",
+        "target_sha256": "a84406de5457a6958e6cabd9a2b1c7891bfdbadab43f144578adaa29336a7117",
+        "approved_by": "DEMO-复用负责人",
+        "approved_at": "2026-10-13T09:00:00+08:00",
+        "scope": "redacted_chapter"
+      }
+    ],
+    "next_run_requested": true
+  }
+}

@@ -1,0 +1,38 @@
+{
+  "schema_version": "bid-training.acceptance-input.v1",
+  "module": "M18",
+  "case_id": "change",
+  "source_mode": "DEMO",
+  "project_id": "DEMO-BID-001",
+  "lot_id": "LOT-001",
+  "analysis_time": "2026-10-13T09:00:00+08:00",
+  "payload": {
+    "candidates": [
+      {
+        "id": "REUSE-TEMPLATE",
+        "kind": "template_adapter",
+        "path": "samples/acceptance/shared/word/personnel-v1.1.docx",
+        "public": true
+      },
+      {
+        "id": "REUSE-RULE",
+        "kind": "rule",
+        "path": "samples/acceptance/shared/reuse/rule-v2.md",
+        "public": true
+      },
+      {
+        "id": "REUSE-CHAPTER",
+        "kind": "redacted_chapter",
+        "path": "samples/acceptance/shared/reuse/redacted-chapter.md",
+        "public": true
+      }
+    ],
+    "approval": {
+      "approved_by": "DEMO-复用负责人",
+      "target_sha256": "7bb25246e4c7a0c9f20d0a18cf4f87659239810f42e4aeca53edaecb2208ce54",
+      "candidate_id": "REUSE-RULE",
+      "approved_at": "2026-10-13T09:00:00+08:00"
+    },
+    "next_run_requested": false
+  }
+}

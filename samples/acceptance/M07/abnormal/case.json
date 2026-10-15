@@ -1,0 +1,17 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M07",
+  "case_id": "abnormal",
+  "category": "abnormal",
+  "title": "任务期限晚于业务截止",
+  "input": "samples/acceptance/M07/abnormal/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M07/abnormal/input.json",
+      "sha256": "0162044bbe7ed673b961326f87dd2388e5842796d842c0a08a4a654b465ed53c"
+    }
+  ],
+  "expected": "samples/acceptance/M07/abnormal/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

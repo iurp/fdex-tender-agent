@@ -1,0 +1,13 @@
+{
+  "status": "REVIEW",
+  "facts": {
+    "candidate_status": "REVIEW",
+    "selected_asset_ids": [],
+    "confirmed_by": null
+  },
+  "issue_codes": [
+    "VALIDITY_UNKNOWN",
+    "CONFIRMATION_MISSING"
+  ],
+  "real_submission_authorized": false
+}

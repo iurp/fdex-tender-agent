@@ -1,0 +1,134 @@
+{
+  "schema_version": "bid-training.workflow.v1",
+  "module": "M13",
+  "run_id": "RUN-476203b6c7d0-M13",
+  "project_id": "DEMO-BID-001",
+  "lot_id": "LOT-001",
+  "source_mode": "DEMO",
+  "processing_status": "COMPLETE",
+  "input_refs": [
+    {
+      "source_id": "SRC-TENDER",
+      "relative_path": "tender/tender.md",
+      "version": "1.0",
+      "sha256": "fd5b422377b1559f21af7c5545409ebffe5d4fd600740bf051b2a8b4ecdb0baf"
+    },
+    {
+      "source_id": "SRC-PERSON-01",
+      "relative_path": "materials/person-01.md",
+      "version": "1.0",
+      "sha256": "da662b072193d923f2e3e27fcc5bf7679f84bfbac077d65921cbc480d6053aa8"
+    },
+    {
+      "source_id": "SRC-PERSON-02",
+      "relative_path": "materials/person-02.md",
+      "version": "1.0",
+      "sha256": "97a7c0869f9778acc85af20d592ee647b45fec9dd1f0692f881324869873c03f"
+    },
+    {
+      "source_id": "SRC-PERSON-03",
+      "relative_path": "materials/person-03.md",
+      "version": "1.0",
+      "sha256": "9a7071f34ab7fa357d411bb201de95a64258ecebfec2b328a69beca80496e4f3"
+    },
+    {
+      "source_id": "SRC-PERSON-04",
+      "relative_path": "materials/person-04.md",
+      "version": "1.0",
+      "sha256": "936dc77662533beabd1900115cf735fd56e50d66f74d989d2adf9374eb24ce58"
+    }
+  ],
+  "scope": {
+    "included": [
+      "人员资质章节"
+    ],
+    "excluded": [
+      "全本标书",
+      "技术方案",
+      "商务与报价",
+      "正式递交"
+    ]
+  },
+  "issues": [],
+  "data": {
+    "artifact_status": "PARTIAL_DRAFT",
+    "files": [
+      {
+        "relative_path": "personnel-chapter.docx",
+        "sha256": "6b3f5b9fe7d756b256a7851506faa89c9122c3de6552e935b01f17231fe42780",
+        "editable": true
+      }
+    ],
+    "trace": [
+      {
+        "section_id": "SECTION-PERSONNEL",
+        "field_id": "PERSONNEL-ROW-1",
+        "person_id": "PERSON-01",
+        "asset_id": "ASSET-01",
+        "attachment_id": "ATT-ASSET-01",
+        "image_sha256": "3a37f386729388eab7945ced00371e0b92e163f470255b3412a36af13376af05",
+        "requirement_ids": [
+          "REQ-0ccccb5998e81e7b",
+          "REQ-9e7294665916a26e",
+          "REQ-882c103e82d44f32",
+          "REQ-b83a09aee7b0c476",
+          "REQ-5f46976ec917e817",
+          "REQ-d81507fbb4dc615d",
+          "REQ-e5ae215765864420",
+          "REQ-2207c263eb5fd110"
+        ],
+        "output_file": "personnel-chapter.docx",
+        "output_location": "人员表第1行及证书附件1"
+      },
+      {
+        "section_id": "SECTION-PERSONNEL",
+        "field_id": "PERSONNEL-ROW-2",
+        "person_id": "PERSON-02",
+        "asset_id": "ASSET-02",
+        "attachment_id": "ATT-ASSET-02",
+        "image_sha256": "e8061802655edc1085209cc5621e719aff023c25704128b20c436869b12920d5",
+        "requirement_ids": [
+          "REQ-0ccccb5998e81e7b",
+          "REQ-9e7294665916a26e",
+          "REQ-882c103e82d44f32",
+          "REQ-b83a09aee7b0c476",
+          "REQ-5f46976ec917e817",
+          "REQ-d81507fbb4dc615d",
+          "REQ-e5ae215765864420",
+          "REQ-2207c263eb5fd110"
+        ],
+        "output_file": "personnel-chapter.docx",
+        "output_location": "人员表第2行及证书附件2"
+      },
+      {
+        "section_id": "SECTION-PERSONNEL",
+        "field_id": "PERSONNEL-ROW-3",
+        "person_id": "PERSON-03",
+        "asset_id": "ASSET-03",
+        "attachment_id": "ATT-ASSET-03",
+        "image_sha256": "500c471579fd268975046c8efd4c31387e1c608cba32878dda9001de603c167c",
+        "requirement_ids": [
+          "REQ-0ccccb5998e81e7b",
+          "REQ-9e7294665916a26e",
+          "REQ-882c103e82d44f32",
+          "REQ-b83a09aee7b0c476",
+          "REQ-5f46976ec917e817",
+          "REQ-d81507fbb4dc615d",
+          "REQ-e5ae215765864420",
+          "REQ-2207c263eb5fd110"
+        ],
+        "output_file": "personnel-chapter.docx",
+        "output_location": "人员表第3行及证书附件3"
+      }
+    ],
+    "selected_person_ids": [
+      "PERSON-01",
+      "PERSON-02",
+      "PERSON-03"
+    ],
+    "selection_digest": "bfc8e041c44fb6666698a00a8d7557c91b8854e12a1ce286d7c97366f550ac96",
+    "template_id": "TPL-PERSONNEL",
+    "template_version": "1.0"
+  },
+  "next_actions": []
+}

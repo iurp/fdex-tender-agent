@@ -1,0 +1,10 @@
+{
+  "status": "BLOCKED",
+  "facts": {
+    "artifact_status": "NOT_GENERATED"
+  },
+  "issue_codes": [
+    "TEMPLATE_HASH_MISMATCH"
+  ],
+  "real_submission_authorized": false
+}

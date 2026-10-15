@@ -1,0 +1,33 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M03",
+  "case_id": "abnormal",
+  "category": "abnormal",
+  "title": "原文引用的附件未提供",
+  "input": "samples/acceptance/M03/abnormal/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M03/abnormal/input.json",
+      "sha256": "d592a4be112499f71b8fbd1e19a541ab659e6c4154f8027620a98af0d36372ed"
+    },
+    {
+      "path": "samples/acceptance/shared/files/copy/tender-copy.md",
+      "sha256": "f43dc9bc21da93dc19f2c6e257b993cff2422b57d98bfa759d9e5b04e99b01c5"
+    },
+    {
+      "path": "samples/acceptance/shared/files/original/tender.md",
+      "sha256": "f43dc9bc21da93dc19f2c6e257b993cff2422b57d98bfa759d9e5b04e99b01c5"
+    },
+    {
+      "path": "samples/acceptance/shared/files/revised/tender.md",
+      "sha256": "c90f2ca0517bbd22d9cb40e8f6b748a5c66b1ff1b3b7df38933adb6941b62139"
+    },
+    {
+      "path": "templates/personnel-v1.docx",
+      "sha256": "157d6af5a85c6fd73be0e0979ffdaf89300c5f50f14b20b82d686a508862e394"
+    }
+  ],
+  "expected": "samples/acceptance/M03/abnormal/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

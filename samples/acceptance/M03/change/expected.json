@@ -1,0 +1,19 @@
+{
+  "status": "BLOCKED",
+  "facts": {
+    "rejected_ids": [
+      "SRC-FOREIGN"
+    ],
+    "registered_ids": [
+      "SRC-ORIGINAL",
+      "SRC-COPY",
+      "SRC-REVISED",
+      "SRC-APPENDIX",
+      "SRC-FORMAT"
+    ]
+  },
+  "issue_codes": [
+    "CONTEXT_MISMATCH"
+  ],
+  "real_submission_authorized": false
+}

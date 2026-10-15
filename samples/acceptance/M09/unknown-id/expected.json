@@ -1,0 +1,10 @@
+{
+  "status": "BLOCKED",
+  "facts": {
+    "selected_asset_ids": []
+  },
+  "issue_codes": [
+    "UNKNOWN_ASSET"
+  ],
+  "real_submission_authorized": false
+}

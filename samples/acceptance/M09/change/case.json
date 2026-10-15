@@ -1,0 +1,25 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M09",
+  "case_id": "change",
+  "category": "change",
+  "title": "换材料后旧确认摘要失效",
+  "input": "samples/acceptance/M09/change/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M09/change/input.json",
+      "sha256": "484a9e9359b9a207ceb21a7feaa813a8ad9b5bdbed3dd23bbd7c9fe2093a0de7"
+    },
+    {
+      "path": "samples/acceptance/shared/company/qualification-v1.md",
+      "sha256": "7c37b3d111482d5cf035428916bd78624244a5070bc45748d7b52f9babcf3563"
+    },
+    {
+      "path": "samples/acceptance/shared/company/qualification-v2.md",
+      "sha256": "52e5f9effcd52302e9b9f26ae6e2c75efb46a5eeda43329d505aeabab49f2c08"
+    }
+  ],
+  "expected": "samples/acceptance/M09/change/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

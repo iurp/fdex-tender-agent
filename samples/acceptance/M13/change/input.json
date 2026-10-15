@@ -1,0 +1,461 @@
+{
+  "schema_version": "bid-training.acceptance-input.v1",
+  "module": "M13",
+  "case_id": "change",
+  "source_mode": "DEMO",
+  "project_id": "DEMO-BID-001",
+  "lot_id": "LOT-001",
+  "analysis_time": "2026-10-13T09:00:00+08:00",
+  "payload": {
+    "upstream_input_root": "samples/e2e/core-normal",
+    "project_name": "示例专业服务项目",
+    "template": {
+      "template_id": "TPL-PERSONNEL",
+      "version": "1.1",
+      "path": "samples/acceptance/shared/word/personnel-v1.1.docx",
+      "sha256": "a10700a5b7141c7e6ceac5f09d6fb7ac70b1d0a4cf7ae87b41083ecb127a6f5c",
+      "columns": [
+        "角色",
+        "人员",
+        "证书编号",
+        "有效期",
+        "原件位置",
+        "资格类型"
+      ],
+      "mapping": {
+        "role": 0,
+        "name": 1,
+        "certificate_id": 2,
+        "valid_until": 3,
+        "source_path": 4,
+        "qualification": 5
+      }
+    },
+    "selected": [
+      {
+        "person_id": "PERSON-01",
+        "name": "示例人员甲",
+        "company_id": "DEMO-COMPANY",
+        "source_id": "SRC-PERSON-01",
+        "status": "MATCHED",
+        "asset_id": "ASSET-01",
+        "certificate_id": "DEMO-CERT-001",
+        "valid_until": "2028-12-31",
+        "evidence_refs": [
+          {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 2
+            },
+            "quote": "person_id: PERSON-01"
+          },
+          {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 3
+            },
+            "quote": "name: 示例人员甲"
+          },
+          {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 4
+            },
+            "quote": "asset_id: ASSET-01"
+          },
+          {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 5
+            },
+            "quote": "certificate_id: DEMO-CERT-001"
+          },
+          {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 6
+            },
+            "quote": "qualification: 示例专业服务"
+          },
+          {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 7
+            },
+            "quote": "valid_until: 2028-12-31"
+          },
+          {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 8
+            },
+            "quote": "image: materials/cert-01.png"
+          },
+          {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 9
+            },
+            "quote": "company_id: DEMO-COMPANY"
+          }
+        ],
+        "role": "负责人",
+        "qualification": "示例专业服务",
+        "image": "samples/e2e/core-normal/materials/cert-01.png"
+      },
+      {
+        "person_id": "PERSON-02",
+        "name": "示例人员乙",
+        "company_id": "DEMO-COMPANY",
+        "source_id": "SRC-PERSON-02",
+        "status": "MATCHED",
+        "asset_id": "ASSET-02",
+        "certificate_id": "DEMO-CERT-002",
+        "valid_until": "2028-12-31",
+        "evidence_refs": [
+          {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 2
+            },
+            "quote": "person_id: PERSON-02"
+          },
+          {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 3
+            },
+            "quote": "name: 示例人员乙"
+          },
+          {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 4
+            },
+            "quote": "asset_id: ASSET-02"
+          },
+          {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 5
+            },
+            "quote": "certificate_id: DEMO-CERT-002"
+          },
+          {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 6
+            },
+            "quote": "qualification: 示例专业服务"
+          },
+          {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 7
+            },
+            "quote": "valid_until: 2028-12-31"
+          },
+          {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 8
+            },
+            "quote": "image: materials/cert-02.png"
+          },
+          {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 9
+            },
+            "quote": "company_id: DEMO-COMPANY"
+          }
+        ],
+        "role": "业务分析",
+        "qualification": "示例专业服务",
+        "image": "samples/e2e/core-normal/materials/cert-02.png"
+      },
+      {
+        "person_id": "PERSON-04",
+        "asset_id": "ASSET-04",
+        "name": "示例人员丁",
+        "role": "交付测试",
+        "certificate_id": "DEMO-CERT-004",
+        "valid_until": "2028-12-31",
+        "qualification": "示例专业服务",
+        "image": "samples/e2e/core-normal/materials/cert-04.png"
+      }
+    ],
+    "confirmation_status": "CONFIRMED",
+    "supplied_confirmation": {
+      "scope": "personnel_chapter_only",
+      "project_id": "DEMO-BID-001",
+      "lot_id": "LOT-001",
+      "source_mode": "DEMO",
+      "confirmed_by": "DEMO-资料负责人",
+      "confirmed_at": "2026-10-13T09:00:00+08:00",
+      "record_kind": "SYNTHETIC_INPUT_CONFIRMATION",
+      "target_sha256": "a9f53c409d6310d8414bfc63adcd83b12f0d4c832e696143b587ae91887b0366"
+    },
+    "upstream_files": [
+      "samples/acceptance/shared/word/tender_brief.json",
+      "samples/acceptance/shared/word/response_matrix.json",
+      "samples/acceptance/shared/word/material_index.json",
+      "samples/acceptance/shared/word/asset_match.json"
+    ],
+    "previous_selected": [
+      {
+        "person_id": "PERSON-01",
+        "name": "示例人员甲",
+        "company_id": "DEMO-COMPANY",
+        "source_id": "SRC-PERSON-01",
+        "status": "MATCHED",
+        "asset_id": "ASSET-01",
+        "certificate_id": "DEMO-CERT-001",
+        "valid_until": "2028-12-31",
+        "evidence_refs": [
+          {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 2
+            },
+            "quote": "person_id: PERSON-01"
+          },
+          {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 3
+            },
+            "quote": "name: 示例人员甲"
+          },
+          {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 4
+            },
+            "quote": "asset_id: ASSET-01"
+          },
+          {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 5
+            },
+            "quote": "certificate_id: DEMO-CERT-001"
+          },
+          {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 6
+            },
+            "quote": "qualification: 示例专业服务"
+          },
+          {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 7
+            },
+            "quote": "valid_until: 2028-12-31"
+          },
+          {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 8
+            },
+            "quote": "image: materials/cert-01.png"
+          },
+          {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 9
+            },
+            "quote": "company_id: DEMO-COMPANY"
+          }
+        ],
+        "role": "负责人",
+        "qualification": "示例专业服务",
+        "image": "samples/e2e/core-normal/materials/cert-01.png"
+      },
+      {
+        "person_id": "PERSON-02",
+        "name": "示例人员乙",
+        "company_id": "DEMO-COMPANY",
+        "source_id": "SRC-PERSON-02",
+        "status": "MATCHED",
+        "asset_id": "ASSET-02",
+        "certificate_id": "DEMO-CERT-002",
+        "valid_until": "2028-12-31",
+        "evidence_refs": [
+          {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 2
+            },
+            "quote": "person_id: PERSON-02"
+          },
+          {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 3
+            },
+            "quote": "name: 示例人员乙"
+          },
+          {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 4
+            },
+            "quote": "asset_id: ASSET-02"
+          },
+          {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 5
+            },
+            "quote": "certificate_id: DEMO-CERT-002"
+          },
+          {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 6
+            },
+            "quote": "qualification: 示例专业服务"
+          },
+          {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 7
+            },
+            "quote": "valid_until: 2028-12-31"
+          },
+          {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 8
+            },
+            "quote": "image: materials/cert-02.png"
+          },
+          {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 9
+            },
+            "quote": "company_id: DEMO-COMPANY"
+          }
+        ],
+        "role": "业务分析",
+        "qualification": "示例专业服务",
+        "image": "samples/e2e/core-normal/materials/cert-02.png"
+      },
+      {
+        "person_id": "PERSON-03",
+        "name": "示例人员丙",
+        "company_id": "DEMO-COMPANY",
+        "source_id": "SRC-PERSON-03",
+        "status": "MATCHED",
+        "asset_id": "ASSET-03",
+        "certificate_id": "DEMO-CERT-003",
+        "valid_until": "2028-12-31",
+        "evidence_refs": [
+          {
+            "source_id": "SRC-PERSON-03",
+            "locator": {
+              "kind": "line",
+              "line": 2
+            },
+            "quote": "person_id: PERSON-03"
+          },
+          {
+            "source_id": "SRC-PERSON-03",
+            "locator": {
+              "kind": "line",
+              "line": 3
+            },
+            "quote": "name: 示例人员丙"
+          },
+          {
+            "source_id": "SRC-PERSON-03",
+            "locator": {
+              "kind": "line",
+              "line": 4
+            },
+            "quote": "asset_id: ASSET-03"
+          },
+          {
+            "source_id": "SRC-PERSON-03",
+            "locator": {
+              "kind": "line",
+              "line": 5
+            },
+            "quote": "certificate_id: DEMO-CERT-003"
+          },
+          {
+            "source_id": "SRC-PERSON-03",
+            "locator": {
+              "kind": "line",
+              "line": 6
+            },
+            "quote": "qualification: 示例专业服务"
+          },
+          {
+            "source_id": "SRC-PERSON-03",
+            "locator": {
+              "kind": "line",
+              "line": 7
+            },
+            "quote": "valid_until: 2028-12-31"
+          },
+          {
+            "source_id": "SRC-PERSON-03",
+            "locator": {
+              "kind": "line",
+              "line": 8
+            },
+            "quote": "image: materials/cert-03.png"
+          },
+          {
+            "source_id": "SRC-PERSON-03",
+            "locator": {
+              "kind": "line",
+              "line": 9
+            },
+            "quote": "company_id: DEMO-COMPANY"
+          }
+        ],
+        "role": "交付测试",
+        "qualification": "示例专业服务",
+        "image": "samples/e2e/core-normal/materials/cert-03.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "status": "BLOCKED",
+  "facts": {
+    "scope_total": 8,
+    "full_total": 12,
+    "full_tender_complete": false,
+    "visual_review": "NOT_PERFORMED_BY_PROGRAM",
+    "location_mismatches": [
+      {
+        "person_id": "PERSON-01",
+        "kind": "table_cell",
+        "table_index": 0,
+        "row_index": 1,
+        "column_index": 2
+      }
+    ],
+    "release_allowed": false
+  },
+  "issue_codes": [
+    "TRACE_CELL_MISMATCH"
+  ],
+  "real_submission_authorized": false
+}

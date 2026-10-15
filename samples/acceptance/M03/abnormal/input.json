@@ -1,0 +1,49 @@
+{
+  "schema_version": "bid-training.acceptance-input.v1",
+  "module": "M03",
+  "case_id": "abnormal",
+  "source_mode": "DEMO",
+  "project_id": "DEMO-BID-001",
+  "lot_id": "LOT-001",
+  "analysis_time": "2026-10-13T09:00:00+08:00",
+  "payload": {
+    "entries": [
+      {
+        "source_id": "SRC-ORIGINAL",
+        "path": "samples/acceptance/shared/files/original/tender.md",
+        "kind": "tender",
+        "version": "1.0",
+        "project_id": "DEMO-BID-001",
+        "lot_id": "LOT-001"
+      },
+      {
+        "source_id": "SRC-COPY",
+        "path": "samples/acceptance/shared/files/copy/tender-copy.md",
+        "kind": "tender",
+        "version": "1.0",
+        "project_id": "DEMO-BID-001",
+        "lot_id": "LOT-001"
+      },
+      {
+        "source_id": "SRC-REVISED",
+        "path": "samples/acceptance/shared/files/revised/tender.md",
+        "kind": "amendment",
+        "version": "1.1",
+        "project_id": "DEMO-BID-001",
+        "lot_id": "LOT-001"
+      },
+      {
+        "source_id": "SRC-FORMAT",
+        "path": "templates/personnel-v1.docx",
+        "kind": "template",
+        "version": "1.0",
+        "project_id": "DEMO-BID-001",
+        "lot_id": "LOT-001"
+      }
+    ],
+    "required_attachments": [
+      "appendix-A.md",
+      "personnel-v1.docx"
+    ]
+  }
+}

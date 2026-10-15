@@ -1,0 +1,14 @@
+{
+  "status": "COMPLETE",
+  "facts": {
+    "scope_total": 8,
+    "full_total": 12,
+    "full_tender_complete": false,
+    "visual_review": "NOT_PERFORMED_BY_PROGRAM",
+    "location_mismatches": [],
+    "inspected_document_sha256": "6b3f5b9fe7d756b256a7851506faa89c9122c3de6552e935b01f17231fe42780",
+    "release_hash_matches": true
+  },
+  "issue_codes": [],
+  "real_submission_authorized": false
+}

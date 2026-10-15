@@ -1,0 +1,10 @@
+{
+  "status": "BLOCKED",
+  "facts": {
+    "artifact_status": "NOT_GENERATED"
+  },
+  "issue_codes": [
+    "ASSET_FILE_MISSING"
+  ],
+  "real_submission_authorized": false
+}

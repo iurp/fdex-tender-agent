@@ -1,0 +1,17 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M07",
+  "case_id": "change",
+  "category": "change",
+  "title": "新列在未提供映射时提示适配",
+  "input": "samples/acceptance/M07/change/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M07/change/input.json",
+      "sha256": "eb89ad3ecbba5b406cbcf10fbd048e41c169067e7876b83c67731bc54ee1924f"
+    }
+  ],
+  "expected": "samples/acceptance/M07/change/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

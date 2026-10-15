@@ -1,0 +1,17 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M12",
+  "case_id": "change",
+  "category": "change",
+  "title": "单价变化不能继承旧报价批准",
+  "input": "samples/acceptance/M12/change/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M12/change/input.json",
+      "sha256": "df98487fdf92a336b4f8570d6186242196184046402f326e53d806dbc9af1d43"
+    }
+  ],
+  "expected": "samples/acceptance/M12/change/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

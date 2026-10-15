@@ -1,0 +1,41 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M03",
+  "case_id": "change",
+  "category": "change",
+  "title": "其他项目与标包不得混入",
+  "input": "samples/acceptance/M03/change/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M03/change/input.json",
+      "sha256": "e3ab186a46c345f7c2191e02d72189269c42c0957f0446ee11699fd8f7f5e2a4"
+    },
+    {
+      "path": "samples/acceptance/shared/files/appendix-A.md",
+      "sha256": "2c185b43af4f7e4e2c0ab8cc561b39deff29cd27aa2a48340d5de00895220e50"
+    },
+    {
+      "path": "samples/acceptance/shared/files/copy/tender-copy.md",
+      "sha256": "f43dc9bc21da93dc19f2c6e257b993cff2422b57d98bfa759d9e5b04e99b01c5"
+    },
+    {
+      "path": "samples/acceptance/shared/files/foreign/tender.md",
+      "sha256": "8b8cc059211c4b3cafc387cee919f7a649bf510e43e8129df1fedcfdedb7e7fc"
+    },
+    {
+      "path": "samples/acceptance/shared/files/original/tender.md",
+      "sha256": "f43dc9bc21da93dc19f2c6e257b993cff2422b57d98bfa759d9e5b04e99b01c5"
+    },
+    {
+      "path": "samples/acceptance/shared/files/revised/tender.md",
+      "sha256": "c90f2ca0517bbd22d9cb40e8f6b748a5c66b1ff1b3b7df38933adb6941b62139"
+    },
+    {
+      "path": "templates/personnel-v1.docx",
+      "sha256": "157d6af5a85c6fd73be0e0979ffdaf89300c5f50f14b20b82d686a508862e394"
+    }
+  ],
+  "expected": "samples/acceptance/M03/change/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M08",
+  "case_id": "review",
+  "category": "review",
+  "title": "有效期遮挡且没有补充依据",
+  "input": "samples/acceptance/M08/review/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M08/review/input.json",
+      "sha256": "c5a5bf65535e05298e729f6579547fdd183f1d7305a92d752d2f6feedd14ebe8"
+    },
+    {
+      "path": "samples/acceptance/shared/ocr/date-unreadable.png",
+      "sha256": "ccffa066b3714fb9d7004ee8b5e409effed82da385c19b5feeed95b573ad2d24"
+    }
+  ],
+  "expected": "samples/acceptance/M08/review/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M12",
+  "case_id": "abnormal",
+  "category": "abnormal",
+  "title": "超限与总价不一致同时报告",
+  "input": "samples/acceptance/M12/abnormal/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M12/abnormal/input.json",
+      "sha256": "be9e0ad17d4bb4e82887a6a6942cb77cce1629fd66827fcb987f8a76b40af165"
+    }
+  ],
+  "expected": "samples/acceptance/M12/abnormal/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

@@ -1,0 +1,25 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M06",
+  "case_id": "abnormal",
+  "category": "abnormal",
+  "title": "其他项目补遗拒绝覆盖",
+  "input": "samples/acceptance/M06/abnormal/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M06/abnormal/input.json",
+      "sha256": "ff2f2e6cddf7fc0699c052a7d9b3a98f0a2f5f59f2bb337f2179811549e4beac"
+    },
+    {
+      "path": "samples/acceptance/shared/tender/amendment-unrelated.md",
+      "sha256": "057bf8f70fed46bcb354d225342087eecc86b42d3e604696733d69a7d5755280"
+    },
+    {
+      "path": "samples/acceptance/shared/tender/plain.md",
+      "sha256": "5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8"
+    }
+  ],
+  "expected": "samples/acceptance/M06/abnormal/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

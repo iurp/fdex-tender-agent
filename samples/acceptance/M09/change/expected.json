@@ -1,0 +1,12 @@
+{
+  "status": "REVIEW",
+  "facts": {
+    "confirmation_status": "STALE",
+    "selected_asset_ids": [],
+    "old_asset_preserved": true
+  },
+  "issue_codes": [
+    "CONFIRMATION_STALE"
+  ],
+  "real_submission_authorized": false
+}

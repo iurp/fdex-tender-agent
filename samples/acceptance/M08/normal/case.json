@@ -1,0 +1,33 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M08",
+  "case_id": "normal",
+  "category": "normal",
+  "title": "四张真实图片的可见字段",
+  "input": "samples/acceptance/M08/normal/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M08/normal/input.json",
+      "sha256": "29ae934b80d7c81ec60f16e5750e4a4effccfdbb580f03d4808b909639038116"
+    },
+    {
+      "path": "samples/acceptance/shared/ocr/clear-01.png",
+      "sha256": "06dce2117618201bf8a5b47764ab1a9e572b8ece39130881766287f0f836ede3"
+    },
+    {
+      "path": "samples/acceptance/shared/ocr/clear-02.png",
+      "sha256": "fad46e86e012814371f893639680071c71ef941e2d85f0423e9f9a4e29d5b046"
+    },
+    {
+      "path": "samples/acceptance/shared/ocr/clear-03.png",
+      "sha256": "5384510595a531bd26b3b417ab961b3555a47aa7540deece46f3c05af5cd6a40"
+    },
+    {
+      "path": "samples/acceptance/shared/ocr/clear-04.png",
+      "sha256": "e2767c1843c2d4a8c05a78a3dd8246ee42f2915252ba379d31e6a55dad0c1361"
+    }
+  ],
+  "expected": "samples/acceptance/M08/normal/expected.json",
+  "manual_review": "每字段需提供图片路径、实际像素区域和可见文字；不能从文件名或sidecar猜字段。可用离线OCR/本地模型，服务未接入不得伪造已执行。",
+  "artifacts": {}
+}

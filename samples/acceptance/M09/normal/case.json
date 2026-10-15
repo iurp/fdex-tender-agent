@@ -1,0 +1,21 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M09",
+  "case_id": "normal",
+  "category": "normal",
+  "title": "企业资格有独立对象确认",
+  "input": "samples/acceptance/M09/normal/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M09/normal/input.json",
+      "sha256": "97dc688486bc56e53f72a59c5ca83584e8406e64dffc0fed7a7e61f516432949"
+    },
+    {
+      "path": "samples/acceptance/shared/company/qualification-v1.md",
+      "sha256": "7c37b3d111482d5cf035428916bd78624244a5070bc45748d7b52f9babcf3563"
+    }
+  ],
+  "expected": "samples/acceptance/M09/normal/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

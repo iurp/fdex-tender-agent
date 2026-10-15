@@ -1,0 +1,17 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M12",
+  "case_id": "normal",
+  "category": "normal",
+  "title": "三个独立报价与半分舍入",
+  "input": "samples/acceptance/M12/normal/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M12/normal/input.json",
+      "sha256": "754ffb261e286dcd58e1fe5178dafe96a6879cb53cc38b0e096acca2f527798a"
+    }
+  ],
+  "expected": "samples/acceptance/M12/normal/expected.json",
+  "manual_review": "独立报价不能合成一个总价；金额用Decimal字符串，舍入先分项后税费。PRICE-03含税总价固定125，净价125/1.13取110.62，税额取差额14.38。计算完成不代表报价已批准。",
+  "artifacts": {}
+}

@@ -1,0 +1,12 @@
+{
+  "status": "REVIEW",
+  "facts": {
+    "approval_status": "STALE",
+    "auto_confirmed": false,
+    "old_version_preserved": true
+  },
+  "issue_codes": [
+    "REUSE_APPROVAL_STALE"
+  ],
+  "real_submission_authorized": false
+}

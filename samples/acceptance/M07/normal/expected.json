@@ -1,0 +1,25 @@
+{
+  "status": "COMPLETE",
+  "facts": {
+    "owners": {
+      "R-PERSON": "资料管理员",
+      "R-FORMAT": "文档负责人"
+    },
+    "due_times": {
+      "R-PERSON": "2026-10-30T18:00:00+08:00",
+      "R-FORMAT": "2026-10-31T18:00:00+08:00"
+    },
+    "included": [
+      "R-PERSON",
+      "R-FORMAT"
+    ],
+    "excluded": [
+      "R-PRICE"
+    ],
+    "scope_total": 2,
+    "full_total": 3,
+    "full_tender_complete": false
+  },
+  "issue_codes": [],
+  "real_submission_authorized": false
+}

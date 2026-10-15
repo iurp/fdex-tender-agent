@@ -1,0 +1,25 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M04",
+  "case_id": "change",
+  "category": "change",
+  "title": "一条改变后保留语义实体与版本映射",
+  "input": "samples/acceptance/M04/change/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M04/change/input.json",
+      "sha256": "62267fa37184c08fe0cdfd76c8cc3593b140fcce18eae3dc035cb89e183bf4ee"
+    },
+    {
+      "path": "samples/acceptance/shared/tender/plain-v1.1.md",
+      "sha256": "58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7"
+    },
+    {
+      "path": "samples/acceptance/shared/tender/plain.md",
+      "sha256": "5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8"
+    }
+  ],
+  "expected": "samples/acceptance/M04/change/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

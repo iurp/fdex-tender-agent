@@ -1,0 +1,27 @@
+{
+  "schema_version": "bid-training.acceptance-input.v1",
+  "module": "M12",
+  "case_id": "abnormal",
+  "source_mode": "DEMO",
+  "project_id": "DEMO-BID-001",
+  "lot_id": "LOT-001",
+  "analysis_time": "2026-10-13T09:00:00+08:00",
+  "payload": {
+    "lines": [
+      {
+        "id": "PRICE-01",
+        "quantity": "3",
+        "unit_price": "100.00",
+        "tax_rate": "0.06",
+        "tax_mode": "exclusive",
+        "rounding": "ROUND_HALF_UP",
+        "digits": 2,
+        "ceiling": "300.00"
+      }
+    ],
+    "rounding_stage": "LINE_THEN_TOTAL",
+    "independent_quotes": true,
+    "approval": null,
+    "declared_total": "317.00"
+  }
+}

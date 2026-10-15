@@ -1,0 +1,16 @@
+{
+  "status": "BLOCKED",
+  "facts": {
+    "unreadable_assets": [
+      "OCR-CORRUPT"
+    ],
+    "missing_assets": [
+      "OCR-ORPHAN"
+    ]
+  },
+  "issue_codes": [
+    "IMAGE_UNREADABLE",
+    "ASSET_FILE_MISSING"
+  ],
+  "real_submission_authorized": false
+}

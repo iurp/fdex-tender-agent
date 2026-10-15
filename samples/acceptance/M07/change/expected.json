@@ -1,0 +1,13 @@
+{
+  "status": "REVIEW",
+  "facts": {
+    "unmapped_columns": [
+      "资格类型"
+    ],
+    "template_version": "1.1"
+  },
+  "issue_codes": [
+    "TEMPLATE_MAPPING_REQUIRED"
+  ],
+  "real_submission_authorized": false
+}

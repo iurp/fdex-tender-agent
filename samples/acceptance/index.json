@@ -1,0 +1,397 @@
+{
+  "schema_version": "bid-training.acceptance-index.v1",
+  "kit_version": "1.0",
+  "modules": [
+    "M03",
+    "M04",
+    "M06",
+    "M07",
+    "M08",
+    "M09",
+    "M12",
+    "M13",
+    "M14",
+    "M18",
+    "X01"
+  ],
+  "cases": [
+    {
+      "module": "M03",
+      "case_id": "normal",
+      "category": "normal",
+      "manifest": "samples/acceptance/M03/normal/case.json",
+      "title": "重复内容与同名不同内容均保留"
+    },
+    {
+      "module": "M03",
+      "case_id": "review",
+      "category": "review",
+      "manifest": "samples/acceptance/M03/review/case.json",
+      "title": "有修订但无覆盖关系，不能判最终版"
+    },
+    {
+      "module": "M03",
+      "case_id": "abnormal",
+      "category": "abnormal",
+      "manifest": "samples/acceptance/M03/abnormal/case.json",
+      "title": "原文引用的附件未提供"
+    },
+    {
+      "module": "M03",
+      "case_id": "change",
+      "category": "change",
+      "manifest": "samples/acceptance/M03/change/case.json",
+      "title": "其他项目与标包不得混入"
+    },
+    {
+      "module": "M04",
+      "case_id": "normal",
+      "category": "normal",
+      "manifest": "samples/acceptance/M04/normal/case.json",
+      "title": "无R标签原文中的12条要求"
+    },
+    {
+      "module": "M04",
+      "case_id": "review",
+      "category": "review",
+      "manifest": "samples/acceptance/M04/review/case.json",
+      "title": "人数冲突保留双方原文"
+    },
+    {
+      "module": "M04",
+      "case_id": "abnormal",
+      "category": "abnormal",
+      "manifest": "samples/acceptance/M04/abnormal/case.json",
+      "title": "不可读正文不能生成12条伪要求"
+    },
+    {
+      "module": "M04",
+      "case_id": "change",
+      "category": "change",
+      "manifest": "samples/acceptance/M04/change/case.json",
+      "title": "一条改变后保留语义实体与版本映射"
+    },
+    {
+      "module": "M06",
+      "case_id": "normal",
+      "category": "normal",
+      "manifest": "samples/acceptance/M06/normal/case.json",
+      "title": "补遗调整人数、资格基准与截止"
+    },
+    {
+      "module": "M06",
+      "case_id": "review",
+      "category": "review",
+      "manifest": "samples/acceptance/M06/review/case.json",
+      "title": "无覆盖关系不裁定补遗"
+    },
+    {
+      "module": "M06",
+      "case_id": "abnormal",
+      "category": "abnormal",
+      "manifest": "samples/acceptance/M06/abnormal/case.json",
+      "title": "其他项目补遗拒绝覆盖"
+    },
+    {
+      "module": "M06",
+      "case_id": "change",
+      "category": "change",
+      "manifest": "samples/acceptance/M06/change/case.json",
+      "title": "标题勘误不把无关模块全部重做"
+    },
+    {
+      "module": "M07",
+      "case_id": "normal",
+      "category": "normal",
+      "manifest": "samples/acceptance/M07/normal/case.json",
+      "title": "配置责任与期限并分别统计范围"
+    },
+    {
+      "module": "M07",
+      "case_id": "review",
+      "category": "review",
+      "manifest": "samples/acceptance/M07/review/case.json",
+      "title": "缺责任或期限不能填当天"
+    },
+    {
+      "module": "M07",
+      "case_id": "abnormal",
+      "category": "abnormal",
+      "manifest": "samples/acceptance/M07/abnormal/case.json",
+      "title": "任务期限晚于业务截止"
+    },
+    {
+      "module": "M07",
+      "case_id": "change",
+      "category": "change",
+      "manifest": "samples/acceptance/M07/change/case.json",
+      "title": "新列在未提供映射时提示适配"
+    },
+    {
+      "module": "M08",
+      "case_id": "normal",
+      "category": "normal",
+      "manifest": "samples/acceptance/M08/normal/case.json",
+      "title": "四张真实图片的可见字段"
+    },
+    {
+      "module": "M08",
+      "case_id": "review",
+      "category": "review",
+      "manifest": "samples/acceptance/M08/review/case.json",
+      "title": "有效期遮挡且没有补充依据"
+    },
+    {
+      "module": "M08",
+      "case_id": "abnormal",
+      "category": "abnormal",
+      "manifest": "samples/acceptance/M08/abnormal/case.json",
+      "title": "损坏图片与有索引无原件"
+    },
+    {
+      "module": "M08",
+      "case_id": "change",
+      "category": "change",
+      "manifest": "samples/acceptance/M08/change/case.json",
+      "title": "同一人的两个版本都保留"
+    },
+    {
+      "module": "M08",
+      "case_id": "expired",
+      "category": "abnormal",
+      "manifest": "samples/acceptance/M08/expired/case.json",
+      "title": "读得到的过期日期不能判有效"
+    },
+    {
+      "module": "M08",
+      "case_id": "human-correction",
+      "category": "normal",
+      "manifest": "samples/acceptance/M08/human-correction/case.json",
+      "title": "修正字段保存第二来源和具名核对记录"
+    },
+    {
+      "module": "M09",
+      "case_id": "normal",
+      "category": "normal",
+      "manifest": "samples/acceptance/M09/normal/case.json",
+      "title": "企业资格有独立对象确认"
+    },
+    {
+      "module": "M09",
+      "case_id": "review",
+      "category": "review",
+      "manifest": "samples/acceptance/M09/review/case.json",
+      "title": "有效期未知且没有确认"
+    },
+    {
+      "module": "M09",
+      "case_id": "abnormal",
+      "category": "abnormal",
+      "manifest": "samples/acceptance/M09/abnormal/case.json",
+      "title": "过期企业资料不能满足资格"
+    },
+    {
+      "module": "M09",
+      "case_id": "change",
+      "category": "change",
+      "manifest": "samples/acceptance/M09/change/case.json",
+      "title": "换材料后旧确认摘要失效"
+    },
+    {
+      "module": "M09",
+      "case_id": "unknown-id",
+      "category": "abnormal",
+      "manifest": "samples/acceptance/M09/unknown-id/case.json",
+      "title": "不存在的资产确认不能选用"
+    },
+    {
+      "module": "M12",
+      "case_id": "normal",
+      "category": "normal",
+      "manifest": "samples/acceptance/M12/normal/case.json",
+      "title": "三个独立报价与半分舍入"
+    },
+    {
+      "module": "M12",
+      "case_id": "review",
+      "category": "review",
+      "manifest": "samples/acceptance/M12/review/case.json",
+      "title": "缺税费口径不能默认零税"
+    },
+    {
+      "module": "M12",
+      "case_id": "abnormal",
+      "category": "abnormal",
+      "manifest": "samples/acceptance/M12/abnormal/case.json",
+      "title": "超限与总价不一致同时报告"
+    },
+    {
+      "module": "M12",
+      "case_id": "change",
+      "category": "change",
+      "manifest": "samples/acceptance/M12/change/case.json",
+      "title": "单价变化不能继承旧报价批准"
+    },
+    {
+      "module": "M13",
+      "case_id": "normal",
+      "category": "normal",
+      "manifest": "samples/acceptance/M13/normal/case.json",
+      "title": "实际Word模板1.1填入资格列"
+    },
+    {
+      "module": "M13",
+      "case_id": "review",
+      "category": "review",
+      "manifest": "samples/acceptance/M13/review/case.json",
+      "title": "无确认不装配已选人员"
+    },
+    {
+      "module": "M13",
+      "case_id": "abnormal",
+      "category": "abnormal",
+      "manifest": "samples/acceptance/M13/abnormal/case.json",
+      "title": "模板字节与manifest不符"
+    },
+    {
+      "module": "M13",
+      "case_id": "change",
+      "category": "change",
+      "manifest": "samples/acceptance/M13/change/case.json",
+      "title": "换人后六列与图片同步更新"
+    },
+    {
+      "module": "M13",
+      "case_id": "cross-lot",
+      "category": "abnormal",
+      "manifest": "samples/acceptance/M13/cross-lot/case.json",
+      "title": "跨标包上游输入不能装配"
+    },
+    {
+      "module": "M13",
+      "case_id": "missing-image",
+      "category": "abnormal",
+      "manifest": "samples/acceptance/M13/missing-image/case.json",
+      "title": "缺确认人员图片不生成成功Word"
+    },
+    {
+      "module": "M14",
+      "case_id": "normal",
+      "category": "normal",
+      "manifest": "samples/acceptance/M14/normal/case.json",
+      "title": "表格单元格与实际图片关系都正确"
+    },
+    {
+      "module": "M14",
+      "case_id": "review",
+      "category": "review",
+      "manifest": "samples/acceptance/M14/review/case.json",
+      "title": "没有trace不能声称位置都已检查"
+    },
+    {
+      "module": "M14",
+      "case_id": "abnormal",
+      "category": "abnormal",
+      "manifest": "samples/acceptance/M14/abnormal/case.json",
+      "title": "trace指错单元格但Word本身正常"
+    },
+    {
+      "module": "M14",
+      "case_id": "change",
+      "category": "change",
+      "manifest": "samples/acceptance/M14/change/case.json",
+      "title": "实际DOCX注入 swap-images"
+    },
+    {
+      "module": "M14",
+      "case_id": "missing-image",
+      "category": "abnormal",
+      "manifest": "samples/acceptance/M14/missing-image/case.json",
+      "title": "实际DOCX注入 missing-image"
+    },
+    {
+      "module": "M14",
+      "case_id": "wrong-project",
+      "category": "abnormal",
+      "manifest": "samples/acceptance/M14/wrong-project/case.json",
+      "title": "实际DOCX注入 wrong-project"
+    },
+    {
+      "module": "M14",
+      "case_id": "old-person",
+      "category": "abnormal",
+      "manifest": "samples/acceptance/M14/old-person/case.json",
+      "title": "实际DOCX注入 old-person"
+    },
+    {
+      "module": "M14",
+      "case_id": "placeholder",
+      "category": "abnormal",
+      "manifest": "samples/acceptance/M14/placeholder/case.json",
+      "title": "实际DOCX注入 placeholder"
+    },
+    {
+      "module": "M18",
+      "case_id": "normal",
+      "category": "normal",
+      "manifest": "samples/acceptance/M18/normal/case.json",
+      "title": "三类可复用候选仍待批准"
+    },
+    {
+      "module": "M18",
+      "case_id": "review",
+      "category": "review",
+      "manifest": "samples/acceptance/M18/review/case.json",
+      "title": "未批准候选不能成为下次确认响应"
+    },
+    {
+      "module": "M18",
+      "case_id": "abnormal",
+      "category": "abnormal",
+      "manifest": "samples/acceptance/M18/abnormal/case.json",
+      "title": "缺公开许可即不创建公开包"
+    },
+    {
+      "module": "M18",
+      "case_id": "change",
+      "category": "change",
+      "manifest": "samples/acceptance/M18/change/case.json",
+      "title": "复用内容改变后旧批准失效"
+    },
+    {
+      "module": "M18",
+      "case_id": "approved",
+      "category": "normal",
+      "manifest": "samples/acceptance/M18/approved/case.json",
+      "title": "具名批准允许复用但不继承业务确认"
+    },
+    {
+      "module": "X01",
+      "case_id": "normal",
+      "category": "normal",
+      "manifest": "samples/acceptance/X01/normal/case.json",
+      "title": "人员替换只重做受影响模块"
+    },
+    {
+      "module": "X01",
+      "case_id": "review",
+      "category": "review",
+      "manifest": "samples/acceptance/X01/review/case.json",
+      "title": "选择变更但未重新确认"
+    },
+    {
+      "module": "X01",
+      "case_id": "abnormal",
+      "category": "abnormal",
+      "manifest": "samples/acceptance/X01/abnormal/case.json",
+      "title": "依赖环不能冒充全部完成"
+    },
+    {
+      "module": "X01",
+      "case_id": "change",
+      "category": "change",
+      "manifest": "samples/acceptance/X01/change/case.json",
+      "title": "模板变化与报价变化分别最小重跑"
+    }
+  ]
+}

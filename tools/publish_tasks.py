@@ -4,6 +4,7 @@ import json
 import subprocess
 import tempfile
 from pathlib import Path
+from task_descriptions import render, task_specs
 
 ROOT = Path(__file__).resolve().parents[1]
 REPO = "iurp/fdex-tender-agent"
@@ -19,7 +20,7 @@ def main():
     for name, color in labels.items():
         gh("label", "create", name, "--repo", REPO, "--color", color, "--force")
     existing = json.loads(gh("issue", "list", "--repo", REPO, "--state", "all", "--limit", "200", "--json", "number,title,body,url"))
-    tasks = json.loads((ROOT / "configs/tasks.json").read_text(encoding="utf-8"))
+    tasks, briefs = task_specs()
     mapping = {}
     for task in tasks:
         token = f'"id":"{task["id"]}"'
@@ -29,8 +30,7 @@ def main():
             print("EXISTS", task["id"], prior["url"])
             continue
         meta = json.dumps({"id": task["id"], "module": task["module"], "difficulty": task["difficulty"]}, separators=(",", ":"))
-        body = f"<!-- tender-task-meta:{meta} -->\n\n" + (ROOT / f'docs/tasks/{task["module"]}.md').read_text(encoding="utf-8")
-        body += "\n\n维护规则：[学员README](https://github.com/iurp/fdex-tender-agent/blob/main/README.md)。主要负责人由机器人确认；请勿提交真实资料。\n"
+        body = f"<!-- tender-task-meta:{meta} -->\n\n" + render(task, briefs[task["module"]], "main")
         with tempfile.NamedTemporaryFile("w", encoding="utf-8", suffix=".md") as temp:
             temp.write(body); temp.flush()
             url = gh("issue", "create", "--repo", REPO, "--title", task["title"], "--body-file", temp.name,

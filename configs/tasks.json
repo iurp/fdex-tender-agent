@@ -2,7 +2,7 @@
   {
     "id": "M01-01",
     "module": "M01",
-    "title": "[M01] 公告获取与去重",
+    "title": "[M01] 整理招标公告：识别重复和更新",
     "difficulty": "standard",
     "status": "backlog",
     "objective": "新增本地网页快照适配器，处理重复、补遗与不同标包。",
@@ -13,7 +13,7 @@
   {
     "id": "M02-01",
     "module": "M02",
-    "title": "[M02] 机会规则筛选",
+    "title": "[M02] 按企业条件筛选值得跟进的项目",
     "difficulty": "standard",
     "status": "backlog",
     "objective": "用显式配置实现区域、预算和准备时间筛选。",
@@ -24,7 +24,7 @@
   {
     "id": "M03-01",
     "module": "M03",
-    "title": "[M03] 文件清单与版本",
+    "title": "[M03] 整理招投标文件：找重复、辨版本、查缺件",
     "difficulty": "beginner",
     "status": "ready",
     "objective": "扩展现有文件登记：检测重复内容、同名不同内容和缺少附件。",
@@ -35,7 +35,7 @@
   {
     "id": "M04-01",
     "module": "M04",
-    "title": "[M04] 原文要求适配",
+    "title": "[M04] 从招标原文整理要求，并标出出处",
     "difficulty": "standard",
     "status": "ready",
     "objective": "新增一种无R标签的自然文本适配器，并保留要求来源与稳定ID。",
@@ -46,7 +46,7 @@
   {
     "id": "M05-01",
     "module": "M05",
-    "title": "[M05] 已有决定登记",
+    "title": "[M05] 登记是否参与投标的决定和条件",
     "difficulty": "beginner",
     "status": "backlog",
     "objective": "实现参与建议与已有EXISTING_GO决定登记的独立模块。",
@@ -57,7 +57,7 @@
   {
     "id": "M06-01",
     "module": "M06",
-    "title": "[M06] 补遗影响与失效",
+    "title": "[M06] 发现招标修改后，列出需要重做的内容",
     "difficulty": "advanced",
     "status": "ready",
     "objective": "支持人数3→4、截止变化，列出影响并使相关确认与放行失效。",
@@ -68,7 +68,7 @@
   {
     "id": "M07-01",
     "module": "M07",
-    "title": "[M07] 责任与任务期限",
+    "title": "[M07] 把招标要求分成有负责人和期限的任务",
     "difficulty": "beginner",
     "status": "ready",
     "objective": "为响应矩阵增加配置的责任角色与明确任务期限，并检查不晚于业务时限。",
@@ -79,7 +79,7 @@
   {
     "id": "M08-01",
     "module": "M08",
-    "title": "[M08] 可见证书字段提取",
+    "title": "[M08] 从证书图片读取字段，看不清就标待核对",
     "difficulty": "advanced",
     "status": "ready",
     "objective": "增加4张合成证书的可见字段提取与不确定字段复核。",
@@ -90,7 +90,7 @@
   {
     "id": "M09-01",
     "module": "M09",
-    "title": "[M09] 公司资料匹配",
+    "title": "[M09] 检查公司资料是否符合要求，并记录选用确认",
     "difficulty": "standard",
     "status": "ready",
     "objective": "从人员证书扩展一类公司资质或业绩材料匹配，保留独立确认。",
@@ -101,7 +101,7 @@
   {
     "id": "M10-01",
     "module": "M10",
-    "title": "[M10] 技术章节响应",
+    "title": "[M10] 为指定要求编写实施计划和交付物章节",
     "difficulty": "standard",
     "status": "backlog",
     "objective": "实现一个实施计划与交付物章节，逐条覆盖5个明确要求。",
@@ -112,7 +112,7 @@
   {
     "id": "M11-01",
     "module": "M11",
-    "title": "[M11] 商务表与偏离",
+    "title": "[M11] 填写商务表，列出不能承诺和待签署的内容",
     "difficulty": "standard",
     "status": "backlog",
     "objective": "实现一套资格与商务偏离表，保留未确认的声明与签署待办。",
@@ -123,7 +123,7 @@
   {
     "id": "M12-01",
     "module": "M12",
-    "title": "[M12] 确定性报价计算",
+    "title": "[M12] 按给定规则计算报价，检查税费和限价",
     "difficulty": "standard",
     "status": "ready",
     "objective": "用Decimal实现3组数量/单价/税费/舍入明确的计算与超限检测。",
@@ -134,7 +134,7 @@
   {
     "id": "M13-01",
     "module": "M13",
-    "title": "[M13] 第二人员模板",
+    "title": "[M13] 把确认的人员资料填进新版 Word 模板",
     "difficulty": "standard",
     "status": "ready",
     "objective": "适配新增资格类型列的模板1.1，提供明确manifest与装配映射。",
@@ -145,7 +145,7 @@
   {
     "id": "M14-01",
     "module": "M14",
-    "title": "[M14] 实际位置与证据审查",
+    "title": "[M14] 检查实际 Word，找出表格和附件的错位",
     "difficulty": "standard",
     "status": "ready",
     "objective": "将trace对应到实际Word表格单元格和附件关系，检测伪造或错位映射。",
@@ -156,7 +156,7 @@
   {
     "id": "M15-01",
     "module": "M15",
-    "title": "[M15] 模拟递交核对",
+    "title": "[M15] 模拟提交标书，核对版本和提交回执",
     "difficulty": "advanced",
     "status": "backlog",
     "objective": "用独立全本模拟输入验证放行哈希、范围、截止与回执。",
@@ -167,7 +167,7 @@
   {
     "id": "M16-01",
     "module": "M16",
-    "title": "[M16] 结果与统计",
+    "title": "[M16] 登记投标结果，计算有明确口径的中标率",
     "difficulty": "standard",
     "status": "backlog",
     "objective": "实现结果分类和明确分母的中标率统计。",
@@ -178,7 +178,7 @@
   {
     "id": "M17-01",
     "module": "M17",
-    "title": "[M17] 中标承诺交接",
+    "title": "[M17] 把中标项目的投标承诺交给交付团队",
     "difficulty": "standard",
     "status": "backlog",
     "objective": "从实际提交版本提取承诺并与给定模拟合同找2处差异。",
@@ -189,7 +189,7 @@
   {
     "id": "M18-01",
     "module": "M18",
-    "title": "[M18] 复用候选与审批",
+    "title": "[M18] 整理可复用的模板和方法，保留批准记录",
     "difficulty": "beginner",
     "status": "ready",
     "objective": "在归档基础上形成模板、规则和脱敏章节候选及人工批准记录。",
@@ -200,7 +200,7 @@
   {
     "id": "X01-01",
     "module": "X01",
-    "title": "[X01] 公共底座与局部重跑",
+    "title": "[X01] 文件或选择变更后，只重做受影响的步骤",
     "difficulty": "advanced",
     "status": "ready",
     "objective": "增加显式依赖图，替换人员、模板变化时仅重跑受影响模块。",

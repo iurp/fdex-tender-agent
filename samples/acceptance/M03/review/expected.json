@@ -1,0 +1,31 @@
+{
+  "status": "REVIEW",
+  "facts": {
+    "duplicate_groups": [
+      [
+        "SRC-ORIGINAL",
+        "SRC-COPY"
+      ]
+    ],
+    "same_name_different_content": [
+      [
+        "SRC-ORIGINAL",
+        "SRC-REVISED"
+      ]
+    ],
+    "registered_ids": [
+      "SRC-ORIGINAL",
+      "SRC-COPY",
+      "SRC-REVISED",
+      "SRC-APPENDIX",
+      "SRC-FORMAT"
+    ],
+    "missing_attachments": [],
+    "original_preserved": true,
+    "current_final_version": null
+  },
+  "issue_codes": [
+    "SUPERSESSION_UNCONFIRMED"
+  ],
+  "real_submission_authorized": false
+}

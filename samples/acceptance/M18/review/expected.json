@@ -1,0 +1,11 @@
+{
+  "status": "REVIEW",
+  "facts": {
+    "approval_status": "NOT_APPROVED",
+    "next_run_confirmed": false
+  },
+  "issue_codes": [
+    "REUSE_APPROVAL_MISSING"
+  ],
+  "real_submission_authorized": false
+}

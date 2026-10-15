@@ -1,0 +1,55 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M13",
+  "case_id": "review",
+  "category": "review",
+  "title": "无确认不装配已选人员",
+  "input": "samples/acceptance/M13/review/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M13/review/input.json",
+      "sha256": "f78d5702d4704cad15f3ea224a01467d2959f1621d7f7e6b300c90890cf15853"
+    },
+    {
+      "path": "samples/acceptance/shared/word/asset_match.json",
+      "sha256": "2dccbe881b5192b971aaeaf5b7d21d746f1f249cc6458ed6d415e1bf1d0ef40a"
+    },
+    {
+      "path": "samples/acceptance/shared/word/material_index.json",
+      "sha256": "6da0d7e2dbc8aa1b8445ab0c88e2f36f2c376a8db4bca799034d92d643a6df96"
+    },
+    {
+      "path": "samples/acceptance/shared/word/personnel-v1.1.docx",
+      "sha256": "a10700a5b7141c7e6ceac5f09d6fb7ac70b1d0a4cf7ae87b41083ecb127a6f5c"
+    },
+    {
+      "path": "samples/acceptance/shared/word/response_matrix.json",
+      "sha256": "6df4fff9ae1cc96b489a118bbea9bfc7d6be84b98c2e973847c9b28fb9b16722"
+    },
+    {
+      "path": "samples/acceptance/shared/word/template-manifest-v1.1.json",
+      "sha256": "d00a65ccb15ff0b1c7975d7b2cb335fdf21f8b41aa3db4b6f076b42452265773"
+    },
+    {
+      "path": "samples/acceptance/shared/word/tender_brief.json",
+      "sha256": "5b6dfbd1703f1d71f8a0012ae9806870bc91013ae2d022ed9d90370f4d7946a4"
+    },
+    {
+      "path": "samples/e2e/core-normal/materials/cert-01.png",
+      "sha256": "3a37f386729388eab7945ced00371e0b92e163f470255b3412a36af13376af05"
+    },
+    {
+      "path": "samples/e2e/core-normal/materials/cert-02.png",
+      "sha256": "e8061802655edc1085209cc5621e719aff023c25704128b20c436869b12920d5"
+    },
+    {
+      "path": "samples/e2e/core-normal/materials/cert-03.png",
+      "sha256": "500c471579fd268975046c8efd4c31387e1c608cba32878dda9001de603c167c"
+    }
+  ],
+  "expected": "samples/acceptance/M13/review/expected.json",
+  "manual_review": "",
+  "artifacts": {
+    "kind": "no_docx"
+  }
+}

@@ -1,0 +1,29 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M18",
+  "case_id": "review",
+  "category": "review",
+  "title": "未批准候选不能成为下次确认响应",
+  "input": "samples/acceptance/M18/review/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M18/review/input.json",
+      "sha256": "413b4fac488266036ad35f141a5c71999a39447bb823225ef055e6e17b0d75e1"
+    },
+    {
+      "path": "samples/acceptance/shared/reuse/redacted-chapter.md",
+      "sha256": "a84406de5457a6958e6cabd9a2b1c7891bfdbadab43f144578adaa29336a7117"
+    },
+    {
+      "path": "samples/acceptance/shared/reuse/rule.md",
+      "sha256": "7bb25246e4c7a0c9f20d0a18cf4f87659239810f42e4aeca53edaecb2208ce54"
+    },
+    {
+      "path": "samples/acceptance/shared/word/personnel-v1.1.docx",
+      "sha256": "a10700a5b7141c7e6ceac5f09d6fb7ac70b1d0a4cf7ae87b41083ecb127a6f5c"
+    }
+  ],
+  "expected": "samples/acceptance/M18/review/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M04",
+  "case_id": "review",
+  "category": "review",
+  "title": "人数冲突保留双方原文",
+  "input": "samples/acceptance/M04/review/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M04/review/input.json",
+      "sha256": "12b58ee7a1668b23b8d8e085fa235e89cdb6352ff6711dcac9d78d2d08b779ca"
+    },
+    {
+      "path": "samples/acceptance/shared/tender/conflict.md",
+      "sha256": "7deabbf89546d1922bccef93fa057002793b71fed79ecc1a3e006c3fce020317"
+    }
+  ],
+  "expected": "samples/acceptance/M04/review/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

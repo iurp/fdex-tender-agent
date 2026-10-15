@@ -1,0 +1,11 @@
+{
+  "status": "BLOCKED",
+  "facts": {
+    "public_export": false,
+    "auto_confirmed": false
+  },
+  "issue_codes": [
+    "EXPORT_NOT_PERMITTED"
+  ],
+  "real_submission_authorized": false
+}

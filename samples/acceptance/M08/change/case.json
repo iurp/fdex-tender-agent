@@ -1,0 +1,25 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M08",
+  "case_id": "change",
+  "category": "change",
+  "title": "同一人的两个版本都保留",
+  "input": "samples/acceptance/M08/change/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M08/change/input.json",
+      "sha256": "366c49bd8543ee7f77ede2faae70b2d98bd6a7b80ae9e8c8a9fea63a81b912cf"
+    },
+    {
+      "path": "samples/acceptance/shared/ocr/clear-03-v2.png",
+      "sha256": "a5fc14e21f028992a1254e2084d5b452087d4b52ce3d5545ee828a14fb2067a8"
+    },
+    {
+      "path": "samples/acceptance/shared/ocr/clear-03.png",
+      "sha256": "5384510595a531bd26b3b417ab961b3555a47aa7540deece46f3c05af5cd6a40"
+    }
+  ],
+  "expected": "samples/acceptance/M08/change/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

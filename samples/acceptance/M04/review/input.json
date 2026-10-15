@@ -1,0 +1,14 @@
+{
+  "schema_version": "bid-training.acceptance-input.v1",
+  "module": "M04",
+  "case_id": "review",
+  "source_mode": "DEMO",
+  "project_id": "DEMO-BID-001",
+  "lot_id": "LOT-001",
+  "analysis_time": "2026-10-13T09:00:00+08:00",
+  "payload": {
+    "document": "samples/acceptance/shared/tender/conflict.md",
+    "source_id": "SRC-PLAIN",
+    "coverage": "excerpt_only"
+  }
+}

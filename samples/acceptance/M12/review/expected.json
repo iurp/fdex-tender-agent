@@ -1,0 +1,17 @@
+{
+  "status": "REVIEW",
+  "facts": {
+    "quotes": {
+      "PRICE-01": {
+        "net": "300.00",
+        "tax": null,
+        "gross": null
+      }
+    },
+    "release_allowed": false
+  },
+  "issue_codes": [
+    "TAX_RULE_MISSING"
+  ],
+  "real_submission_authorized": false
+}

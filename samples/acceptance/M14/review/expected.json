@@ -1,0 +1,14 @@
+{
+  "status": "REVIEW",
+  "facts": {
+    "scope_total": 8,
+    "full_total": 12,
+    "full_tender_complete": false,
+    "visual_review": "NOT_PERFORMED_BY_PROGRAM",
+    "release_allowed": false
+  },
+  "issue_codes": [
+    "TRACE_LOCATION_MISSING"
+  ],
+  "real_submission_authorized": false
+}

@@ -1,0 +1,35 @@
+[
+  {
+    "person_id": "PERSON-01",
+    "asset_id": "ASSET-01",
+    "table_index": 0,
+    "row_index": 1,
+    "name_column": 1,
+    "certificate_column": 2,
+    "paragraph_index": 9,
+    "relationship_id": "rId9",
+    "image_sha256": "3a37f386729388eab7945ced00371e0b92e163f470255b3412a36af13376af05"
+  },
+  {
+    "person_id": "PERSON-02",
+    "asset_id": "ASSET-02",
+    "table_index": 0,
+    "row_index": 2,
+    "name_column": 1,
+    "certificate_column": 2,
+    "paragraph_index": 14,
+    "relationship_id": "rId10",
+    "image_sha256": "e8061802655edc1085209cc5621e719aff023c25704128b20c436869b12920d5"
+  },
+  {
+    "person_id": "PERSON-03",
+    "asset_id": "ASSET-03",
+    "table_index": 0,
+    "row_index": 3,
+    "name_column": 1,
+    "certificate_column": 2,
+    "paragraph_index": 19,
+    "relationship_id": "rId11",
+    "image_sha256": "500c471579fd268975046c8efd4c31387e1c608cba32878dda9001de603c167c"
+  }
+]

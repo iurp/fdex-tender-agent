@@ -1,0 +1,16 @@
+{
+  "status": "REVIEW",
+  "facts": {
+    "owners": {
+      "R-PERSON": null
+    },
+    "due_times": {
+      "R-PERSON": null
+    }
+  },
+  "issue_codes": [
+    "OWNER_MISSING",
+    "DUE_TIME_MISSING"
+  ],
+  "real_submission_authorized": false
+}

@@ -1,0 +1,21 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M04",
+  "case_id": "normal",
+  "category": "normal",
+  "title": "无R标签原文中的12条要求",
+  "input": "samples/acceptance/M04/normal/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M04/normal/input.json",
+      "sha256": "02c5f243ee836daf353603fede764a6369935ce28ea329a6d64cd64f121a057e"
+    },
+    {
+      "path": "samples/acceptance/shared/tender/plain.md",
+      "sha256": "5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8"
+    }
+  ],
+  "expected": "samples/acceptance/M04/normal/expected.json",
+  "manual_review": "核对每条quote与原文行号；不得给评分条款补分值。",
+  "artifacts": {}
+}

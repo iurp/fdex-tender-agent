@@ -1,0 +1,395 @@
+{
+  "schema_version": "bid-training.workflow.v1",
+  "module": "M08",
+  "run_id": "RUN-476203b6c7d0-M08",
+  "project_id": "DEMO-BID-001",
+  "lot_id": "LOT-001",
+  "source_mode": "DEMO",
+  "processing_status": "COMPLETE",
+  "input_refs": [
+    {
+      "source_id": "SRC-PERSON-01",
+      "relative_path": "materials/person-01.md",
+      "version": "1.0",
+      "sha256": "da662b072193d923f2e3e27fcc5bf7679f84bfbac077d65921cbc480d6053aa8"
+    },
+    {
+      "source_id": "SRC-PERSON-02",
+      "relative_path": "materials/person-02.md",
+      "version": "1.0",
+      "sha256": "97a7c0869f9778acc85af20d592ee647b45fec9dd1f0692f881324869873c03f"
+    },
+    {
+      "source_id": "SRC-PERSON-03",
+      "relative_path": "materials/person-03.md",
+      "version": "1.0",
+      "sha256": "9a7071f34ab7fa357d411bb201de95a64258ecebfec2b328a69beca80496e4f3"
+    },
+    {
+      "source_id": "SRC-PERSON-04",
+      "relative_path": "materials/person-04.md",
+      "version": "1.0",
+      "sha256": "936dc77662533beabd1900115cf735fd56e50d66f74d989d2adf9374eb24ce58"
+    }
+  ],
+  "scope": {
+    "included": [
+      "人员资质章节"
+    ],
+    "excluded": [
+      "全本标书",
+      "技术方案",
+      "商务与报价",
+      "正式递交"
+    ]
+  },
+  "issues": [],
+  "data": {
+    "persons": [
+      {
+        "person_id": "PERSON-01",
+        "name": "示例人员甲",
+        "company_id": "DEMO-COMPANY",
+        "source_id": "SRC-PERSON-01"
+      },
+      {
+        "person_id": "PERSON-02",
+        "name": "示例人员乙",
+        "company_id": "DEMO-COMPANY",
+        "source_id": "SRC-PERSON-02"
+      },
+      {
+        "person_id": "PERSON-03",
+        "name": "示例人员丙",
+        "company_id": "DEMO-COMPANY",
+        "source_id": "SRC-PERSON-03"
+      },
+      {
+        "person_id": "PERSON-04",
+        "name": "示例人员丁",
+        "company_id": "DEMO-COMPANY",
+        "source_id": "SRC-PERSON-04"
+      }
+    ],
+    "assets": [
+      {
+        "asset_id": "ASSET-01",
+        "person_id": "PERSON-01",
+        "certificate_id": "DEMO-CERT-001",
+        "qualification": "示例专业服务",
+        "valid_until": "2028-12-31",
+        "relative_path": "materials/cert-01.png",
+        "sha256": "3a37f386729388eab7945ced00371e0b92e163f470255b3412a36af13376af05",
+        "version": "1.0",
+        "read_method": "provided_sidecar_not_ocr",
+        "field_refs": {
+          "person_id": {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 2
+            },
+            "quote": "person_id: PERSON-01"
+          },
+          "name": {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 3
+            },
+            "quote": "name: 示例人员甲"
+          },
+          "asset_id": {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 4
+            },
+            "quote": "asset_id: ASSET-01"
+          },
+          "certificate_id": {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 5
+            },
+            "quote": "certificate_id: DEMO-CERT-001"
+          },
+          "qualification": {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 6
+            },
+            "quote": "qualification: 示例专业服务"
+          },
+          "valid_until": {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 7
+            },
+            "quote": "valid_until: 2028-12-31"
+          },
+          "image": {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 8
+            },
+            "quote": "image: materials/cert-01.png"
+          },
+          "company_id": {
+            "source_id": "SRC-PERSON-01",
+            "locator": {
+              "kind": "line",
+              "line": 9
+            },
+            "quote": "company_id: DEMO-COMPANY"
+          }
+        },
+        "verification_status": "DEMO_DECLARED_FIELDS",
+        "public": true
+      },
+      {
+        "asset_id": "ASSET-02",
+        "person_id": "PERSON-02",
+        "certificate_id": "DEMO-CERT-002",
+        "qualification": "示例专业服务",
+        "valid_until": "2028-12-31",
+        "relative_path": "materials/cert-02.png",
+        "sha256": "e8061802655edc1085209cc5621e719aff023c25704128b20c436869b12920d5",
+        "version": "1.0",
+        "read_method": "provided_sidecar_not_ocr",
+        "field_refs": {
+          "person_id": {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 2
+            },
+            "quote": "person_id: PERSON-02"
+          },
+          "name": {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 3
+            },
+            "quote": "name: 示例人员乙"
+          },
+          "asset_id": {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 4
+            },
+            "quote": "asset_id: ASSET-02"
+          },
+          "certificate_id": {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 5
+            },
+            "quote": "certificate_id: DEMO-CERT-002"
+          },
+          "qualification": {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 6
+            },
+            "quote": "qualification: 示例专业服务"
+          },
+          "valid_until": {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 7
+            },
+            "quote": "valid_until: 2028-12-31"
+          },
+          "image": {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 8
+            },
+            "quote": "image: materials/cert-02.png"
+          },
+          "company_id": {
+            "source_id": "SRC-PERSON-02",
+            "locator": {
+              "kind": "line",
+              "line": 9
+            },
+            "quote": "company_id: DEMO-COMPANY"
+          }
+        },
+        "verification_status": "DEMO_DECLARED_FIELDS",
+        "public": true
+      },
+      {
+        "asset_id": "ASSET-03",
+        "person_id": "PERSON-03",
+        "certificate_id": "DEMO-CERT-003",
+        "qualification": "示例专业服务",
+        "valid_until": "2028-12-31",
+        "relative_path": "materials/cert-03.png",
+        "sha256": "500c471579fd268975046c8efd4c31387e1c608cba32878dda9001de603c167c",
+        "version": "1.0",
+        "read_method": "provided_sidecar_not_ocr",
+        "field_refs": {
+          "person_id": {
+            "source_id": "SRC-PERSON-03",
+            "locator": {
+              "kind": "line",
+              "line": 2
+            },
+            "quote": "person_id: PERSON-03"
+          },
+          "name": {
+            "source_id": "SRC-PERSON-03",
+            "locator": {
+              "kind": "line",
+              "line": 3
+            },
+            "quote": "name: 示例人员丙"
+          },
+          "asset_id": {
+            "source_id": "SRC-PERSON-03",
+            "locator": {
+              "kind": "line",
+              "line": 4
+            },
+            "quote": "asset_id: ASSET-03"
+          },
+          "certificate_id": {
+            "source_id": "SRC-PERSON-03",
+            "locator": {
+              "kind": "line",
+              "line": 5
+            },
+            "quote": "certificate_id: DEMO-CERT-003"
+          },
+          "qualification": {
+            "source_id": "SRC-PERSON-03",
+            "locator": {
+              "kind": "line",
+              "line": 6
+            },
+            "quote": "qualification: 示例专业服务"
+          },
+          "valid_until": {
+            "source_id": "SRC-PERSON-03",
+            "locator": {
+              "kind": "line",
+              "line": 7
+            },
+            "quote": "valid_until: 2028-12-31"
+          },
+          "image": {
+            "source_id": "SRC-PERSON-03",
+            "locator": {
+              "kind": "line",
+              "line": 8
+            },
+            "quote": "image: materials/cert-03.png"
+          },
+          "company_id": {
+            "source_id": "SRC-PERSON-03",
+            "locator": {
+              "kind": "line",
+              "line": 9
+            },
+            "quote": "company_id: DEMO-COMPANY"
+          }
+        },
+        "verification_status": "DEMO_DECLARED_FIELDS",
+        "public": true
+      },
+      {
+        "asset_id": "ASSET-04",
+        "person_id": "PERSON-04",
+        "certificate_id": "DEMO-CERT-004",
+        "qualification": "示例专业服务",
+        "valid_until": "2028-12-31",
+        "relative_path": "materials/cert-04.png",
+        "sha256": "5811d7c78d989d8ec7ba76b82a8d0a6a7689812f5d5fa289a3669d8e136590d4",
+        "version": "1.0",
+        "read_method": "provided_sidecar_not_ocr",
+        "field_refs": {
+          "person_id": {
+            "source_id": "SRC-PERSON-04",
+            "locator": {
+              "kind": "line",
+              "line": 2
+            },
+            "quote": "person_id: PERSON-04"
+          },
+          "name": {
+            "source_id": "SRC-PERSON-04",
+            "locator": {
+              "kind": "line",
+              "line": 3
+            },
+            "quote": "name: 示例人员丁"
+          },
+          "asset_id": {
+            "source_id": "SRC-PERSON-04",
+            "locator": {
+              "kind": "line",
+              "line": 4
+            },
+            "quote": "asset_id: ASSET-04"
+          },
+          "certificate_id": {
+            "source_id": "SRC-PERSON-04",
+            "locator": {
+              "kind": "line",
+              "line": 5
+            },
+            "quote": "certificate_id: DEMO-CERT-004"
+          },
+          "qualification": {
+            "source_id": "SRC-PERSON-04",
+            "locator": {
+              "kind": "line",
+              "line": 6
+            },
+            "quote": "qualification: 示例专业服务"
+          },
+          "valid_until": {
+            "source_id": "SRC-PERSON-04",
+            "locator": {
+              "kind": "line",
+              "line": 7
+            },
+            "quote": "valid_until: 2028-12-31"
+          },
+          "image": {
+            "source_id": "SRC-PERSON-04",
+            "locator": {
+              "kind": "line",
+              "line": 8
+            },
+            "quote": "image: materials/cert-04.png"
+          },
+          "company_id": {
+            "source_id": "SRC-PERSON-04",
+            "locator": {
+              "kind": "line",
+              "line": 9
+            },
+            "quote": "company_id: DEMO-COMPANY"
+          }
+        },
+        "verification_status": "DEMO_DECLARED_FIELDS",
+        "public": true
+      }
+    ],
+    "reading_boundary": "读取教学人员说明并检查图片完整性；未实现OCR、图片字段提取或证书真伪核验"
+  },
+  "next_actions": []
+}

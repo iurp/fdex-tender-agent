@@ -1,0 +1,28 @@
+{
+  "status": "COMPLETE",
+  "facts": {
+    "quotes": {
+      "PRICE-01": {
+        "net": "300.00",
+        "tax": "18.00",
+        "gross": "318.00",
+        "over_ceiling": false
+      },
+      "PRICE-02": {
+        "net": "249.98",
+        "tax": "32.50",
+        "gross": "282.48",
+        "over_ceiling": false
+      },
+      "PRICE-03": {
+        "net": "110.62",
+        "tax": "14.38",
+        "gross": "125.00",
+        "over_ceiling": false
+      }
+    },
+    "release_allowed": false
+  },
+  "issue_codes": [],
+  "real_submission_authorized": false
+}

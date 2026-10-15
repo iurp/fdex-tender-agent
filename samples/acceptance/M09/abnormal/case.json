@@ -1,0 +1,21 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M09",
+  "case_id": "abnormal",
+  "category": "abnormal",
+  "title": "过期企业资料不能满足资格",
+  "input": "samples/acceptance/M09/abnormal/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M09/abnormal/input.json",
+      "sha256": "f971fdefe05bad365c1f82644da36091c8309661f117ae716ef9bf129045eabb"
+    },
+    {
+      "path": "samples/acceptance/shared/company/qualification-expired.md",
+      "sha256": "971adad7c219ebfb6626ceb41472e270931d89a8231364259ce9308a3325167b"
+    }
+  ],
+  "expected": "samples/acceptance/M09/abnormal/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

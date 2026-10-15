@@ -1,0 +1,41 @@
+{
+  "status": "COMPLETE",
+  "facts": {
+    "scenarios": {
+      "template_mapping": {
+        "rerun": [
+          "M07",
+          "M09",
+          "M13",
+          "M14",
+          "M18"
+        ],
+        "unchanged": [
+          "M03",
+          "M04",
+          "M08",
+          "M12"
+        ]
+      },
+      "pricing": {
+        "rerun": [
+          "M12",
+          "M13",
+          "M14",
+          "M18"
+        ],
+        "unchanged": [
+          "M03",
+          "M04",
+          "M07",
+          "M08",
+          "M09"
+        ]
+      }
+    },
+    "release_status": "STALE",
+    "old_history_preserved": true
+  },
+  "issue_codes": [],
+  "real_submission_authorized": false
+}

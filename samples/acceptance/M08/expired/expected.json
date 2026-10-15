@@ -1,0 +1,15 @@
+{
+  "status": "BLOCKED",
+  "facts": {
+    "assets": {
+      "OCR-ASSET-03": {
+        "valid_until": "2025-12-31",
+        "validity_status": "EXPIRED"
+      }
+    }
+  },
+  "issue_codes": [
+    "CERTIFICATE_EXPIRED"
+  ],
+  "real_submission_authorized": false
+}

@@ -1,0 +1,17 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M07",
+  "case_id": "normal",
+  "category": "normal",
+  "title": "配置责任与期限并分别统计范围",
+  "input": "samples/acceptance/M07/normal/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M07/normal/input.json",
+      "sha256": "0c8742506fa9fcdf28ee46011699c1775f40bee5e10e810b53a99e4db29aa7a6"
+    }
+  ],
+  "expected": "samples/acceptance/M07/normal/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

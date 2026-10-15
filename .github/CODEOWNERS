@@ -5,6 +5,16 @@
 /tools/github_coordinator.py @iurp
 /tools/reconcile_pr_event.py @iurp
 /tools/review_worker.py @iurp
+/tools/task_acceptance.py @iurp
+/tools/run_pr_acceptance.py @iurp
+/tools/build_acceptance_kits.py @iurp
+/tools/publish_acceptance_links.py @iurp
+/configs/task-issues.json @iurp
+/configs/task-briefs.json @iurp
+/tools/task_descriptions.py @iurp
+/tools/sync_task_descriptions.py @iurp
+/samples/acceptance/ @iurp
+/tests/test_acceptance.py @iurp
 /.github/ @iurp
 /AGENTS.md @iurp
 /docs/requirements-v1.0.md @iurp

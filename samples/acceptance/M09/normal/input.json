@@ -1,0 +1,29 @@
+{
+  "schema_version": "bid-training.acceptance-input.v1",
+  "module": "M09",
+  "case_id": "normal",
+  "source_mode": "DEMO",
+  "project_id": "DEMO-BID-001",
+  "lot_id": "LOT-001",
+  "analysis_time": "2026-10-13T09:00:00+08:00",
+  "payload": {
+    "requirement": {
+      "key": "R-COMPANY",
+      "qualification": "示例服务能力",
+      "validity_basis": "2026-11-01"
+    },
+    "company_id": "COMPANY-DEMO-A",
+    "materials": [
+      "samples/acceptance/shared/company/qualification-v1.md"
+    ],
+    "confirmation": {
+      "asset_id": "COMPANY-ASSET-01",
+      "target_sha256": "7c37b3d111482d5cf035428916bd78624244a5070bc45748d7b52f9babcf3563",
+      "confirmed_by": "DEMO-企业资料负责人",
+      "confirmed_at": "2026-10-13T09:00:00+08:00",
+      "scope": "company_qualification",
+      "project_id": "DEMO-BID-001",
+      "lot_id": "LOT-001"
+    }
+  }
+}

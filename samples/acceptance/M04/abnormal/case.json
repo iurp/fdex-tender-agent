@@ -1,0 +1,21 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M04",
+  "case_id": "abnormal",
+  "category": "abnormal",
+  "title": "不可读正文不能生成12条伪要求",
+  "input": "samples/acceptance/M04/abnormal/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M04/abnormal/input.json",
+      "sha256": "e24341042e4da81143729dabbbbcb417a91cd98d7ef3c0def76657e170a79e2f"
+    },
+    {
+      "path": "samples/acceptance/shared/tender/unreadable.md",
+      "sha256": "01c44a6fb44707a9a742380db6be1d7d9d5aaecbc313559089e04e4213a9d632"
+    }
+  ],
+  "expected": "samples/acceptance/M04/abnormal/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

@@ -1,0 +1,11 @@
+{
+  "status": "REVIEW",
+  "facts": {
+    "artifact_status": "NOT_GENERATED",
+    "selected_person_ids": []
+  },
+  "issue_codes": [
+    "CONFIRMATION_MISSING"
+  ],
+  "real_submission_authorized": false
+}

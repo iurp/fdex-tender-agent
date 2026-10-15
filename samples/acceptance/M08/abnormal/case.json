@@ -1,0 +1,21 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M08",
+  "case_id": "abnormal",
+  "category": "abnormal",
+  "title": "损坏图片与有索引无原件",
+  "input": "samples/acceptance/M08/abnormal/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M08/abnormal/input.json",
+      "sha256": "4f1f73f740b80c23b42bc7c64796a79860130cfea722719e49e8571b9411bb62"
+    },
+    {
+      "path": "samples/acceptance/shared/ocr/corrupt.png",
+      "sha256": "c1b088efa3775f104ff1db6de6ed5101b9d0bc032ead5389d985bec7e7715440"
+    }
+  ],
+  "expected": "samples/acceptance/M08/abnormal/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

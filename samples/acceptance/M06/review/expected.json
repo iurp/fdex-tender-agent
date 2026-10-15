@@ -1,0 +1,11 @@
+{
+  "status": "REVIEW",
+  "facts": {
+    "effective_version": null,
+    "old_submission_allowed": false
+  },
+  "issue_codes": [
+    "SUPERSESSION_UNCONFIRMED"
+  ],
+  "real_submission_authorized": false
+}

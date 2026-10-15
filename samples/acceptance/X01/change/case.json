@@ -1,0 +1,59 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "X01",
+  "case_id": "change",
+  "category": "change",
+  "title": "模板变化与报价变化分别最小重跑",
+  "input": "samples/acceptance/X01/change/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/X01/change/input.json",
+      "sha256": "18f8c3e6a2a1bc05923030b2817d9b2e3e5e5507ab02509b07f3ccc1bfcb50a2"
+    },
+    {
+      "path": "samples/acceptance/shared/graph.json",
+      "sha256": "2917c5e077fa7b726a6e3653fe3de7b70bb9b80ef7a7a1e0dfbe0a955e1371f1"
+    },
+    {
+      "path": "samples/acceptance/shared/history/M03.json",
+      "sha256": "dd8b36b4205bcc2e95217e50eb26a259f3f16f3ba7335f361db2bb188290acad"
+    },
+    {
+      "path": "samples/acceptance/shared/history/M04.json",
+      "sha256": "79d8c54ad9de97694c21d1dbffb7775a4062180c75f17a77ccf7c96049075439"
+    },
+    {
+      "path": "samples/acceptance/shared/history/M07.json",
+      "sha256": "501112345b464028b71854e9fee4230f507848579ad4ce662980f9dcef727157"
+    },
+    {
+      "path": "samples/acceptance/shared/history/M08.json",
+      "sha256": "cf820603744e6dd8bf47e48abacf5a995069d77bc1a25aae7f6015efeb0fc921"
+    },
+    {
+      "path": "samples/acceptance/shared/history/M09.json",
+      "sha256": "13b654b0c00940438bc92bb94ec9939d135e8e2379a5a9352944bc945bb7fda0"
+    },
+    {
+      "path": "samples/acceptance/shared/history/M12.json",
+      "sha256": "edc67520092106d757495fadbb61ac9913d140f7ececad77190907600fa5d699"
+    },
+    {
+      "path": "samples/acceptance/shared/history/M13.json",
+      "sha256": "05826a26b5e6518752bf54c4173c79fc8eb5ee8f70e8f7c48217a20e53213058"
+    },
+    {
+      "path": "samples/acceptance/shared/history/M14.json",
+      "sha256": "b869e02a2c9fa48792860e617697079980776d660492005683d892638ab362d1"
+    },
+    {
+      "path": "samples/acceptance/shared/history/M18.json",
+      "sha256": "83de4ee854393e9749ec58e9dd481db7a99805bb2a7f2dd6ceb9a5e00d1b534d"
+    }
+  ],
+  "expected": "samples/acceptance/X01/change/expected.json",
+  "manual_review": "这里是依赖图扩展的合成上游输出，不是已实现M12/M18调度能力。需实际产生新运行目录，证明不覆盖旧文件与不继承旧放行。",
+  "artifacts": {
+    "kind": "rerun_scenarios"
+  }
+}

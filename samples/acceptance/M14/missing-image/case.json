@@ -1,0 +1,57 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M14",
+  "case_id": "missing-image",
+  "category": "abnormal",
+  "title": "实际DOCX注入 missing-image",
+  "input": "samples/acceptance/M14/missing-image/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M14/missing-image/input.json",
+      "sha256": "052473a12d700f8b3f086fe4cad129c94bff5a31631f49d5d2de84436ee34c4c"
+    },
+    {
+      "path": "samples/acceptance/shared/word/asset_match.json",
+      "sha256": "2dccbe881b5192b971aaeaf5b7d21d746f1f249cc6458ed6d415e1bf1d0ef40a"
+    },
+    {
+      "path": "samples/acceptance/shared/word/material_index.json",
+      "sha256": "6da0d7e2dbc8aa1b8445ab0c88e2f36f2c376a8db4bca799034d92d643a6df96"
+    },
+    {
+      "path": "samples/acceptance/shared/word/missing-image.docx",
+      "sha256": "600291017a324d28d1a4c99e9f4834a1dbfaf1f22131e787f922295470bf1ab5"
+    },
+    {
+      "path": "samples/acceptance/shared/word/personnel-chapter.docx",
+      "sha256": "6b3f5b9fe7d756b256a7851506faa89c9122c3de6552e935b01f17231fe42780"
+    },
+    {
+      "path": "samples/acceptance/shared/word/response_matrix.json",
+      "sha256": "6df4fff9ae1cc96b489a118bbea9bfc7d6be84b98c2e973847c9b28fb9b16722"
+    },
+    {
+      "path": "samples/acceptance/shared/word/tender_brief.json",
+      "sha256": "5b6dfbd1703f1d71f8a0012ae9806870bc91013ae2d022ed9d90370f4d7946a4"
+    },
+    {
+      "path": "samples/acceptance/shared/word/trace.json",
+      "sha256": "9ce48d4304631f11da8daa1e5896f9db8ac21e1352a0cf27aabc303ab07d8e9e"
+    },
+    {
+      "path": "samples/e2e/core-normal/materials/cert-01.png",
+      "sha256": "3a37f386729388eab7945ced00371e0b92e163f470255b3412a36af13376af05"
+    },
+    {
+      "path": "samples/e2e/core-normal/materials/cert-02.png",
+      "sha256": "e8061802655edc1085209cc5621e719aff023c25704128b20c436869b12920d5"
+    },
+    {
+      "path": "samples/e2e/core-normal/materials/cert-03.png",
+      "sha256": "500c471579fd268975046c8efd4c31387e1c608cba32878dda9001de603c167c"
+    }
+  ],
+  "expected": "samples/acceptance/M14/missing-image/expected.json",
+  "manual_review": "异常DOCX专门包含题目所说缺陷；应定位实际单元格/段落/图片关系，不能只报告日志有错。",
+  "artifacts": {}
+}

@@ -1,0 +1,11 @@
+{
+  "status": "BLOCKED",
+  "facts": {
+    "candidate_status": "EXPIRED",
+    "selected_asset_ids": []
+  },
+  "issue_codes": [
+    "CERTIFICATE_EXPIRED"
+  ],
+  "real_submission_authorized": false
+}

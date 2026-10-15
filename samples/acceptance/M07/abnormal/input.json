@@ -1,0 +1,50 @@
+{
+  "schema_version": "bid-training.acceptance-input.v1",
+  "module": "M07",
+  "case_id": "abnormal",
+  "source_mode": "DEMO",
+  "project_id": "DEMO-BID-001",
+  "lot_id": "LOT-001",
+  "analysis_time": "2026-10-13T09:00:00+08:00",
+  "payload": {
+    "requirements": [
+      {
+        "key": "R-PERSON",
+        "category": "personnel",
+        "mandatory": true,
+        "deadline": "2026-11-01T10:00:00+08:00"
+      },
+      {
+        "key": "R-FORMAT",
+        "category": "format",
+        "mandatory": true,
+        "deadline": "2026-11-01T10:00:00+08:00"
+      },
+      {
+        "key": "R-PRICE",
+        "category": "price",
+        "mandatory": true,
+        "deadline": "2026-11-01T10:00:00+08:00"
+      }
+    ],
+    "roles": {
+      "personnel": "资料管理员",
+      "format": "文档负责人"
+    },
+    "due_times": {
+      "R-PERSON": "2026-11-02T09:00:00+08:00",
+      "R-FORMAT": "2026-10-31T18:00:00+08:00"
+    },
+    "included_categories": [
+      "personnel",
+      "format"
+    ],
+    "template_columns": [
+      "角色",
+      "人员",
+      "证书编号",
+      "有效期",
+      "原件位置"
+    ]
+  }
+}

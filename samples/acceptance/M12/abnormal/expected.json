@@ -1,0 +1,17 @@
+{
+  "status": "BLOCKED",
+  "facts": {
+    "quotes": {
+      "PRICE-01": {
+        "gross": "318.00",
+        "over_ceiling": true
+      }
+    },
+    "release_allowed": false
+  },
+  "issue_codes": [
+    "CEILING_EXCEEDED",
+    "TOTAL_MISMATCH"
+  ],
+  "real_submission_authorized": false
+}

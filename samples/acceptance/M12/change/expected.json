@@ -1,0 +1,18 @@
+{
+  "status": "REVIEW",
+  "facts": {
+    "quotes": {
+      "PRICE-01": {
+        "net": "303.00",
+        "tax": "18.18",
+        "gross": "321.18"
+      }
+    },
+    "approval_status": "STALE",
+    "release_allowed": false
+  },
+  "issue_codes": [
+    "APPROVAL_STALE"
+  ],
+  "real_submission_authorized": false
+}

@@ -1,0 +1,11 @@
+{
+  "status": "BLOCKED",
+  "facts": {
+    "executed": [],
+    "old_history_preserved": true
+  },
+  "issue_codes": [
+    "DEPENDENCY_CYCLE"
+  ],
+  "real_submission_authorized": false
+}

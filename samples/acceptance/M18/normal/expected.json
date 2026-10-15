@@ -1,0 +1,15 @@
+{
+  "status": "COMPLETE",
+  "facts": {
+    "candidate_kinds": [
+      "template_adapter",
+      "rule",
+      "redacted_chapter"
+    ],
+    "approval_status": "NOT_APPROVED",
+    "auto_confirmed": false,
+    "public_export": true
+  },
+  "issue_codes": [],
+  "real_submission_authorized": false
+}

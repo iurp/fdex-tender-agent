@@ -1,0 +1,20 @@
+{
+  "status": "BLOCKED",
+  "facts": {
+    "scope_total": 8,
+    "full_total": 12,
+    "full_tender_complete": false,
+    "visual_review": "NOT_PERFORMED_BY_PROGRAM",
+    "inspected_document_sha256": "6dcd864c7acf1ddfd2ba05cdc47841bb0821ed2f32e829d5d8b19ea40d6900c5",
+    "release_hash_matches": false,
+    "release_allowed": false,
+    "located_issue_kinds": [
+      "table_cell"
+    ]
+  },
+  "issue_codes": [
+    "PERSON_TABLE_WRONG",
+    "RELEASE_STALE"
+  ],
+  "real_submission_authorized": false
+}

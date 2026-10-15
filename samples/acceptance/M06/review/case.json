@@ -1,0 +1,25 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M06",
+  "case_id": "review",
+  "category": "review",
+  "title": "无覆盖关系不裁定补遗",
+  "input": "samples/acceptance/M06/review/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M06/review/input.json",
+      "sha256": "cdfbb2998de7ed54c0dc75b3c65a7e3b1b69bcd63f34c46da4c74c5fef28cdb4"
+    },
+    {
+      "path": "samples/acceptance/shared/tender/plain.md",
+      "sha256": "5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8"
+    },
+    {
+      "path": "samples/modules/M06/normal/amendment.md",
+      "sha256": "e32a8c89e51ac534a119295fb0164b502f3f950a92119815a7f9a2c21522e87e"
+    }
+  ],
+  "expected": "samples/acceptance/M06/review/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

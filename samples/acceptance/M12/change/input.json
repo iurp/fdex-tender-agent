@@ -1,0 +1,42 @@
+{
+  "schema_version": "bid-training.acceptance-input.v1",
+  "module": "M12",
+  "case_id": "change",
+  "source_mode": "DEMO",
+  "project_id": "DEMO-BID-001",
+  "lot_id": "LOT-001",
+  "analysis_time": "2026-10-13T09:00:00+08:00",
+  "payload": {
+    "lines": [
+      {
+        "id": "PRICE-01",
+        "quantity": "3",
+        "unit_price": "101.00",
+        "tax_rate": "0.06",
+        "tax_mode": "exclusive",
+        "rounding": "ROUND_HALF_UP",
+        "digits": 2,
+        "ceiling": "400.00"
+      }
+    ],
+    "rounding_stage": "LINE_THEN_TOTAL",
+    "independent_quotes": true,
+    "approval": {
+      "status": "APPROVED",
+      "scope": "PRICE-01",
+      "input_digest": "78247d010cedc5d82787a95345306c1fc30aa7b219c91f5b0f80c1903715ebbd"
+    },
+    "previous_lines": [
+      {
+        "id": "PRICE-01",
+        "quantity": "3",
+        "unit_price": "100.00",
+        "tax_rate": "0.06",
+        "tax_mode": "exclusive",
+        "rounding": "ROUND_HALF_UP",
+        "digits": 2,
+        "ceiling": "400.00"
+      }
+    ]
+  }
+}

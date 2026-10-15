@@ -1,0 +1,15 @@
+{
+  "status": "REVIEW",
+  "facts": {
+    "conflicting_counts": [
+      3,
+      2
+    ],
+    "effective_personnel_count": null,
+    "full_tender_complete": false
+  },
+  "issue_codes": [
+    "CLAUSE_CONFLICT"
+  ],
+  "real_submission_authorized": false
+}

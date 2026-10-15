@@ -1,0 +1,25 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M08",
+  "case_id": "human-correction",
+  "category": "normal",
+  "title": "修正字段保存第二来源和具名核对记录",
+  "input": "samples/acceptance/M08/human-correction/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M08/human-correction/input.json",
+      "sha256": "8d76e8090c9fd996d0efbf9a0267cbdaf83f085023c0b36e552ffa4da913f780"
+    },
+    {
+      "path": "samples/acceptance/shared/ocr/date-unreadable.png",
+      "sha256": "ccffa066b3714fb9d7004ee8b5e409effed82da385c19b5feeed95b573ad2d24"
+    },
+    {
+      "path": "samples/acceptance/shared/ocr/supplied-human-correction.md",
+      "sha256": "c528d3b320233fda3e8c8ef5eba643060bf2f1cf9b7de414234dea43d1a38300"
+    }
+  ],
+  "expected": "samples/acceptance/M08/human-correction/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

@@ -1,0 +1,16 @@
+{
+  "status": "COMPLETE",
+  "facts": {
+    "assets": {
+      "OCR-ASSET-03": {
+        "valid_until": "2028-12-31",
+        "field_source": "SUPPLIED_HUMAN_RECORD",
+        "confirmed_by": "DEMO-材料核对人",
+        "confirmed_at": "2026-10-13T10:00:00+08:00",
+        "authenticity": "NOT_VERIFIED"
+      }
+    }
+  },
+  "issue_codes": [],
+  "real_submission_authorized": false
+}

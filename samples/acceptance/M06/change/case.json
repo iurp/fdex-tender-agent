@@ -1,0 +1,25 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M06",
+  "case_id": "change",
+  "category": "change",
+  "title": "标题勘误不把无关模块全部重做",
+  "input": "samples/acceptance/M06/change/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M06/change/input.json",
+      "sha256": "afb0fc3ee32cfd9d4f88d49f5ba1479f373a9afc5fcbd1622e318ff5cdf9d4bf"
+    },
+    {
+      "path": "samples/acceptance/shared/tender/cosmetic.md",
+      "sha256": "9e2fca0fde1f6dab0c223d8017e112186e8f8e7fb0dcce56c23382a233b4b5e0"
+    },
+    {
+      "path": "samples/acceptance/shared/tender/plain.md",
+      "sha256": "5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8"
+    }
+  ],
+  "expected": "samples/acceptance/M06/change/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

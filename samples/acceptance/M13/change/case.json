@@ -1,0 +1,107 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M13",
+  "case_id": "change",
+  "category": "change",
+  "title": "换人后六列与图片同步更新",
+  "input": "samples/acceptance/M13/change/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M13/change/input.json",
+      "sha256": "54a1d8b9d30ed506a017c57511e28cc275750332a592ec03e066c5b2672e9577"
+    },
+    {
+      "path": "samples/acceptance/shared/word/asset_match.json",
+      "sha256": "2dccbe881b5192b971aaeaf5b7d21d746f1f249cc6458ed6d415e1bf1d0ef40a"
+    },
+    {
+      "path": "samples/acceptance/shared/word/material_index.json",
+      "sha256": "6da0d7e2dbc8aa1b8445ab0c88e2f36f2c376a8db4bca799034d92d643a6df96"
+    },
+    {
+      "path": "samples/acceptance/shared/word/personnel-v1.1.docx",
+      "sha256": "a10700a5b7141c7e6ceac5f09d6fb7ac70b1d0a4cf7ae87b41083ecb127a6f5c"
+    },
+    {
+      "path": "samples/acceptance/shared/word/response_matrix.json",
+      "sha256": "6df4fff9ae1cc96b489a118bbea9bfc7d6be84b98c2e973847c9b28fb9b16722"
+    },
+    {
+      "path": "samples/acceptance/shared/word/template-manifest-v1.1.json",
+      "sha256": "d00a65ccb15ff0b1c7975d7b2cb335fdf21f8b41aa3db4b6f076b42452265773"
+    },
+    {
+      "path": "samples/acceptance/shared/word/tender_brief.json",
+      "sha256": "5b6dfbd1703f1d71f8a0012ae9806870bc91013ae2d022ed9d90370f4d7946a4"
+    },
+    {
+      "path": "samples/e2e/core-normal/materials/cert-01.png",
+      "sha256": "3a37f386729388eab7945ced00371e0b92e163f470255b3412a36af13376af05"
+    },
+    {
+      "path": "samples/e2e/core-normal/materials/cert-02.png",
+      "sha256": "e8061802655edc1085209cc5621e719aff023c25704128b20c436869b12920d5"
+    },
+    {
+      "path": "samples/e2e/core-normal/materials/cert-03.png",
+      "sha256": "500c471579fd268975046c8efd4c31387e1c608cba32878dda9001de603c167c"
+    },
+    {
+      "path": "samples/e2e/core-normal/materials/cert-04.png",
+      "sha256": "5811d7c78d989d8ec7ba76b82a8d0a6a7689812f5d5fa289a3669d8e136590d4"
+    }
+  ],
+  "expected": "samples/acceptance/M13/change/expected.json",
+  "manual_review": "实际Word不含旧姓名、旧证号、旧图片字节；三张图片的出现顺序与被确认人员一致。",
+  "artifacts": {
+    "kind": "personnel_docx",
+    "columns": [
+      "角色",
+      "人员",
+      "证书编号",
+      "有效期",
+      "原件位置",
+      "资格类型"
+    ],
+    "rows": [
+      [
+        "负责人",
+        "示例人员甲",
+        "DEMO-CERT-001",
+        "2028-12-31",
+        "materials/cert-01.png",
+        "示例专业服务"
+      ],
+      [
+        "业务分析",
+        "示例人员乙",
+        "DEMO-CERT-002",
+        "2028-12-31",
+        "materials/cert-02.png",
+        "示例专业服务"
+      ],
+      [
+        "交付测试",
+        "示例人员丁",
+        "DEMO-CERT-004",
+        "2028-12-31",
+        "materials/cert-04.png",
+        "示例专业服务"
+      ]
+    ],
+    "image_paths": [
+      "samples/e2e/core-normal/materials/cert-01.png",
+      "samples/e2e/core-normal/materials/cert-02.png",
+      "samples/e2e/core-normal/materials/cert-04.png"
+    ],
+    "excluded_text": [
+      "示例人员丙",
+      "DEMO-CERT-003"
+    ],
+    "project_fields": [
+      "示例专业服务项目",
+      "DEMO-BID-001",
+      "LOT-001"
+    ]
+  }
+}

@@ -1,0 +1,189 @@
+{
+  "schema_version": "bid-training.workflow.v1",
+  "module": "M03",
+  "run_id": "RUN-476203b6c7d0-M03",
+  "project_id": "DEMO-BID-001",
+  "lot_id": "LOT-001",
+  "source_mode": "DEMO",
+  "processing_status": "COMPLETE",
+  "input_refs": [
+    {
+      "source_id": "SRC-TENDER",
+      "relative_path": "tender/tender.md",
+      "version": "1.0",
+      "sha256": "fd5b422377b1559f21af7c5545409ebffe5d4fd600740bf051b2a8b4ecdb0baf"
+    },
+    {
+      "source_id": "SRC-PERSON-01",
+      "relative_path": "materials/person-01.md",
+      "version": "1.0",
+      "sha256": "da662b072193d923f2e3e27fcc5bf7679f84bfbac077d65921cbc480d6053aa8"
+    },
+    {
+      "source_id": "SRC-CERT-01",
+      "relative_path": "materials/cert-01.png",
+      "version": "1.0",
+      "sha256": "3a37f386729388eab7945ced00371e0b92e163f470255b3412a36af13376af05"
+    },
+    {
+      "source_id": "SRC-PERSON-02",
+      "relative_path": "materials/person-02.md",
+      "version": "1.0",
+      "sha256": "97a7c0869f9778acc85af20d592ee647b45fec9dd1f0692f881324869873c03f"
+    },
+    {
+      "source_id": "SRC-CERT-02",
+      "relative_path": "materials/cert-02.png",
+      "version": "1.0",
+      "sha256": "e8061802655edc1085209cc5621e719aff023c25704128b20c436869b12920d5"
+    },
+    {
+      "source_id": "SRC-PERSON-03",
+      "relative_path": "materials/person-03.md",
+      "version": "1.0",
+      "sha256": "9a7071f34ab7fa357d411bb201de95a64258ecebfec2b328a69beca80496e4f3"
+    },
+    {
+      "source_id": "SRC-CERT-03",
+      "relative_path": "materials/cert-03.png",
+      "version": "1.0",
+      "sha256": "500c471579fd268975046c8efd4c31387e1c608cba32878dda9001de603c167c"
+    },
+    {
+      "source_id": "SRC-PERSON-04",
+      "relative_path": "materials/person-04.md",
+      "version": "1.0",
+      "sha256": "936dc77662533beabd1900115cf735fd56e50d66f74d989d2adf9374eb24ce58"
+    },
+    {
+      "source_id": "SRC-CERT-04",
+      "relative_path": "materials/cert-04.png",
+      "version": "1.0",
+      "sha256": "5811d7c78d989d8ec7ba76b82a8d0a6a7689812f5d5fa289a3669d8e136590d4"
+    },
+    {
+      "source_id": "SRC-TEMPLATE",
+      "relative_path": "template/personnel-v1.docx",
+      "version": "1.0",
+      "sha256": "157d6af5a85c6fd73be0e0979ffdaf89300c5f50f14b20b82d686a508862e394"
+    }
+  ],
+  "scope": {
+    "included": [
+      "人员资质章节"
+    ],
+    "excluded": [
+      "全本标书",
+      "技术方案",
+      "商务与报价",
+      "正式递交"
+    ]
+  },
+  "issues": [],
+  "data": {
+    "project": {
+      "project_id": "DEMO-BID-001",
+      "lot_id": "LOT-001",
+      "project_name": "示例专业服务项目",
+      "analysis_time": "2026-10-13T09:00:00+08:00"
+    },
+    "sources_manifest_sha256": "f8e139aa9859bdcbfb67fb71f56a03885c45733911b7cd9f3820dc84f29a93f3",
+    "business_participation": "EXISTING_GO",
+    "sources": [
+      {
+        "source_id": "SRC-TENDER",
+        "relative_path": "tender/tender.md",
+        "kind": "tender_markdown",
+        "version": "1.0",
+        "public": true,
+        "project_id": "DEMO-BID-001",
+        "lot_id": "LOT-001",
+        "sha256": "fd5b422377b1559f21af7c5545409ebffe5d4fd600740bf051b2a8b4ecdb0baf",
+        "read_status": "REGISTERED"
+      },
+      {
+        "source_id": "SRC-PERSON-01",
+        "relative_path": "materials/person-01.md",
+        "kind": "person_sidecar",
+        "version": "1.0",
+        "public": true,
+        "sha256": "da662b072193d923f2e3e27fcc5bf7679f84bfbac077d65921cbc480d6053aa8",
+        "read_status": "REGISTERED"
+      },
+      {
+        "source_id": "SRC-CERT-01",
+        "relative_path": "materials/cert-01.png",
+        "kind": "certificate_image",
+        "version": "1.0",
+        "public": true,
+        "sha256": "3a37f386729388eab7945ced00371e0b92e163f470255b3412a36af13376af05",
+        "read_status": "REGISTERED"
+      },
+      {
+        "source_id": "SRC-PERSON-02",
+        "relative_path": "materials/person-02.md",
+        "kind": "person_sidecar",
+        "version": "1.0",
+        "public": true,
+        "sha256": "97a7c0869f9778acc85af20d592ee647b45fec9dd1f0692f881324869873c03f",
+        "read_status": "REGISTERED"
+      },
+      {
+        "source_id": "SRC-CERT-02",
+        "relative_path": "materials/cert-02.png",
+        "kind": "certificate_image",
+        "version": "1.0",
+        "public": true,
+        "sha256": "e8061802655edc1085209cc5621e719aff023c25704128b20c436869b12920d5",
+        "read_status": "REGISTERED"
+      },
+      {
+        "source_id": "SRC-PERSON-03",
+        "relative_path": "materials/person-03.md",
+        "kind": "person_sidecar",
+        "version": "1.0",
+        "public": true,
+        "sha256": "9a7071f34ab7fa357d411bb201de95a64258ecebfec2b328a69beca80496e4f3",
+        "read_status": "REGISTERED"
+      },
+      {
+        "source_id": "SRC-CERT-03",
+        "relative_path": "materials/cert-03.png",
+        "kind": "certificate_image",
+        "version": "1.0",
+        "public": true,
+        "sha256": "500c471579fd268975046c8efd4c31387e1c608cba32878dda9001de603c167c",
+        "read_status": "REGISTERED"
+      },
+      {
+        "source_id": "SRC-PERSON-04",
+        "relative_path": "materials/person-04.md",
+        "kind": "person_sidecar",
+        "version": "1.0",
+        "public": true,
+        "sha256": "936dc77662533beabd1900115cf735fd56e50d66f74d989d2adf9374eb24ce58",
+        "read_status": "REGISTERED"
+      },
+      {
+        "source_id": "SRC-CERT-04",
+        "relative_path": "materials/cert-04.png",
+        "kind": "certificate_image",
+        "version": "1.0",
+        "public": true,
+        "sha256": "5811d7c78d989d8ec7ba76b82a8d0a6a7689812f5d5fa289a3669d8e136590d4",
+        "read_status": "REGISTERED"
+      },
+      {
+        "source_id": "SRC-TEMPLATE",
+        "relative_path": "template/personnel-v1.docx",
+        "kind": "template",
+        "version": "1.0",
+        "public": true,
+        "sha256": "157d6af5a85c6fd73be0e0979ffdaf89300c5f50f14b20b82d686a508862e394",
+        "read_status": "REGISTERED"
+      }
+    ],
+    "current_version_claim": "SUPPLIED_SCOPE_ONLY"
+  },
+  "next_actions": []
+}

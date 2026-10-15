@@ -1,0 +1,25 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M06",
+  "case_id": "normal",
+  "category": "normal",
+  "title": "补遗调整人数、资格基准与截止",
+  "input": "samples/acceptance/M06/normal/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M06/normal/input.json",
+      "sha256": "66780c0eb21b74752ab35c6b2072f7f6dc1c52d5663584e537e7422714022ca0"
+    },
+    {
+      "path": "samples/e2e/core-normal/tender/tender.md",
+      "sha256": "fd5b422377b1559f21af7c5545409ebffe5d4fd600740bf051b2a8b4ecdb0baf"
+    },
+    {
+      "path": "samples/modules/M06/normal/amendment.md",
+      "sha256": "e32a8c89e51ac534a119295fb0164b502f3f950a92119815a7f9a2c21522e87e"
+    }
+  ],
+  "expected": "samples/acceptance/M06/normal/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

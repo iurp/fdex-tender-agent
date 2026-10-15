@@ -1,0 +1,18 @@
+{
+  "status": "REVIEW",
+  "facts": {
+    "asset_ids": [
+      "OCR-ASSET-03",
+      "OCR-ASSET-03-V2"
+    ],
+    "versions": [
+      "1.0",
+      "2.0"
+    ],
+    "auto_confirmed": false
+  },
+  "issue_codes": [
+    "NEW_VERSION_UNCONFIRMED"
+  ],
+  "real_submission_authorized": false
+}

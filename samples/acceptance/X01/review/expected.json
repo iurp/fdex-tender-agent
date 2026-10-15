@@ -1,0 +1,22 @@
+{
+  "status": "REVIEW",
+  "facts": {
+    "planned_rerun": [
+      "M09",
+      "M13",
+      "M14",
+      "M18"
+    ],
+    "blocked_modules": [
+      "M13",
+      "M14",
+      "M18"
+    ],
+    "release_status": "STALE",
+    "old_history_preserved": true
+  },
+  "issue_codes": [
+    "CONFIRMATION_MISSING"
+  ],
+  "real_submission_authorized": false
+}

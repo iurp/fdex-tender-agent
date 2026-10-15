@@ -1,0 +1,13 @@
+{
+  "status": "BLOCKED",
+  "facts": {
+    "missing_attachments": [
+      "appendix-A.md"
+    ],
+    "original_preserved": true
+  },
+  "issue_codes": [
+    "ATTACHMENT_MISSING"
+  ],
+  "real_submission_authorized": false
+}

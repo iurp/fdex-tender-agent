@@ -1,0 +1,28 @@
+{
+  "status": "COMPLETE",
+  "facts": {
+    "duplicate_groups": [
+      [
+        "SRC-ORIGINAL",
+        "SRC-COPY"
+      ]
+    ],
+    "same_name_different_content": [
+      [
+        "SRC-ORIGINAL",
+        "SRC-REVISED"
+      ]
+    ],
+    "registered_ids": [
+      "SRC-ORIGINAL",
+      "SRC-COPY",
+      "SRC-REVISED",
+      "SRC-APPENDIX",
+      "SRC-FORMAT"
+    ],
+    "missing_attachments": [],
+    "original_preserved": true
+  },
+  "issue_codes": [],
+  "real_submission_authorized": false
+}

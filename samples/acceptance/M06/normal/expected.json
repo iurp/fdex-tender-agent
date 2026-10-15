@@ -1,0 +1,31 @@
+{
+  "status": "COMPLETE",
+  "facts": {
+    "changes": {
+      "R-01": {
+        "from": 3,
+        "to": 4
+      },
+      "R-03": {
+        "from": "2026-11-01",
+        "to": "2026-11-08"
+      },
+      "R-12": {
+        "from": "2026-11-01T10:00:00+08:00",
+        "to": "2026-11-08T10:00:00+08:00"
+      }
+    },
+    "stale": [
+      "personnel_confirmation",
+      "personnel_release"
+    ],
+    "untouched_requirements": [
+      "R-09",
+      "R-10",
+      "R-11"
+    ],
+    "old_submission_allowed": false
+  },
+  "issue_codes": [],
+  "real_submission_authorized": false
+}

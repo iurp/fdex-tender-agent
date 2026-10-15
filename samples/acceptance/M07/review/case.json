@@ -1,0 +1,17 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M07",
+  "case_id": "review",
+  "category": "review",
+  "title": "缺责任或期限不能填当天",
+  "input": "samples/acceptance/M07/review/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M07/review/input.json",
+      "sha256": "28f98b2e39c7c6b9741ad65b37ffc141349d8082eab6aaa6e1fd1d9c23b7a2de"
+    }
+  ],
+  "expected": "samples/acceptance/M07/review/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

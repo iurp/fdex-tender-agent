@@ -1,0 +1,15 @@
+{
+  "status": "COMPLETE",
+  "facts": {
+    "artifact_status": "PARTIAL_DRAFT",
+    "template_version": "1.1",
+    "selected_person_ids": [
+      "PERSON-01",
+      "PERSON-02",
+      "PERSON-04"
+    ],
+    "full_tender_complete": false
+  },
+  "issue_codes": [],
+  "real_submission_authorized": false
+}

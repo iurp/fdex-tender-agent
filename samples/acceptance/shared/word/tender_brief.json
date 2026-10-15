@@ -1,0 +1,356 @@
+{
+  "schema_version": "bid-training.workflow.v1",
+  "module": "M04",
+  "run_id": "RUN-476203b6c7d0-M04",
+  "project_id": "DEMO-BID-001",
+  "lot_id": "LOT-001",
+  "source_mode": "DEMO",
+  "processing_status": "COMPLETE",
+  "input_refs": [
+    {
+      "source_id": "SRC-TENDER",
+      "relative_path": "tender/tender.md",
+      "version": "1.0",
+      "sha256": "fd5b422377b1559f21af7c5545409ebffe5d4fd600740bf051b2a8b4ecdb0baf"
+    }
+  ],
+  "scope": {
+    "included": [
+      "人员资质章节"
+    ],
+    "excluded": [
+      "全本标书",
+      "技术方案",
+      "商务与报价",
+      "正式递交"
+    ]
+  },
+  "issues": [],
+  "data": {
+    "requirements": [
+      {
+        "requirement_id": "REQ-0ccccb5998e81e7b",
+        "source_key": "R-01",
+        "category": "人员",
+        "text": "人员不少于3名，人员表必须列出姓名和本次职责。",
+        "mandatory": true,
+        "disqualifying": null,
+        "score": null,
+        "fact_kind": "SOURCE_FACT",
+        "version": "1.0",
+        "missing_reason": {
+          "score": "本适配器未解析出评分数值，请核对原文；不补造分值",
+          "disqualifying": "原文未给出明确否决性依据"
+        },
+        "evidence_refs": [
+          {
+            "source_id": "SRC-TENDER",
+            "locator": {
+              "kind": "line",
+              "line": 4
+            },
+            "quote": "[R-01][人员] 人员不少于3名，人员表必须列出姓名和本次职责。"
+          }
+        ],
+        "in_personnel_scope": true
+      },
+      {
+        "requirement_id": "REQ-9e7294665916a26e",
+        "source_key": "R-02",
+        "category": "资格",
+        "text": "每名所选人员必须持有示例专业服务证书。",
+        "mandatory": true,
+        "disqualifying": null,
+        "score": null,
+        "fact_kind": "SOURCE_FACT",
+        "version": "1.0",
+        "missing_reason": {
+          "score": "本适配器未解析出评分数值，请核对原文；不补造分值",
+          "disqualifying": "原文未给出明确否决性依据"
+        },
+        "evidence_refs": [
+          {
+            "source_id": "SRC-TENDER",
+            "locator": {
+              "kind": "line",
+              "line": 5
+            },
+            "quote": "[R-02][资格] 每名所选人员必须持有示例专业服务证书。"
+          }
+        ],
+        "in_personnel_scope": true
+      },
+      {
+        "requirement_id": "REQ-882c103e82d44f32",
+        "source_key": "R-03",
+        "category": "资格",
+        "text": "证书有效期以2026-11-01为基准，必须仍在有效期内。",
+        "mandatory": true,
+        "disqualifying": null,
+        "score": null,
+        "fact_kind": "SOURCE_FACT",
+        "version": "1.0",
+        "missing_reason": {
+          "score": "本适配器未解析出评分数值，请核对原文；不补造分值",
+          "disqualifying": "原文未给出明确否决性依据"
+        },
+        "evidence_refs": [
+          {
+            "source_id": "SRC-TENDER",
+            "locator": {
+              "kind": "line",
+              "line": 6
+            },
+            "quote": "[R-03][资格] 证书有效期以2026-11-01为基准，必须仍在有效期内。"
+          }
+        ],
+        "in_personnel_scope": true
+      },
+      {
+        "requirement_id": "REQ-b83a09aee7b0c476",
+        "source_key": "R-04",
+        "category": "格式",
+        "text": "必须在人员表填写证书编号和有效期。",
+        "mandatory": true,
+        "disqualifying": null,
+        "score": null,
+        "fact_kind": "SOURCE_FACT",
+        "version": "1.0",
+        "missing_reason": {
+          "score": "本适配器未解析出评分数值，请核对原文；不补造分值",
+          "disqualifying": "原文未给出明确否决性依据"
+        },
+        "evidence_refs": [
+          {
+            "source_id": "SRC-TENDER",
+            "locator": {
+              "kind": "line",
+              "line": 7
+            },
+            "quote": "[R-04][格式] 必须在人员表填写证书编号和有效期。"
+          }
+        ],
+        "in_personnel_scope": true
+      },
+      {
+        "requirement_id": "REQ-5f46976ec917e817",
+        "source_key": "R-05",
+        "category": "格式",
+        "text": "必须为每名所选人员附清晰的对应证书图片。",
+        "mandatory": true,
+        "disqualifying": null,
+        "score": null,
+        "fact_kind": "SOURCE_FACT",
+        "version": "1.0",
+        "missing_reason": {
+          "score": "本适配器未解析出评分数值，请核对原文；不补造分值",
+          "disqualifying": "原文未给出明确否决性依据"
+        },
+        "evidence_refs": [
+          {
+            "source_id": "SRC-TENDER",
+            "locator": {
+              "kind": "line",
+              "line": 8
+            },
+            "quote": "[R-05][格式] 必须为每名所选人员附清晰的对应证书图片。"
+          }
+        ],
+        "in_personnel_scope": true
+      },
+      {
+        "requirement_id": "REQ-d81507fbb4dc615d",
+        "source_key": "R-06",
+        "category": "人员",
+        "text": "必须由资料负责人确认本次选用人员；候选匹配不是正式选用。",
+        "mandatory": true,
+        "disqualifying": null,
+        "score": null,
+        "fact_kind": "SOURCE_FACT",
+        "version": "1.0",
+        "missing_reason": {
+          "score": "本适配器未解析出评分数值，请核对原文；不补造分值",
+          "disqualifying": "原文未给出明确否决性依据"
+        },
+        "evidence_refs": [
+          {
+            "source_id": "SRC-TENDER",
+            "locator": {
+              "kind": "line",
+              "line": 9
+            },
+            "quote": "[R-06][人员] 必须由资料负责人确认本次选用人员；候选匹配不是正式选用。"
+          }
+        ],
+        "in_personnel_scope": true
+      },
+      {
+        "requirement_id": "REQ-e5ae215765864420",
+        "source_key": "R-07",
+        "category": "格式",
+        "text": "必须使用项目提供的人员表版次1.0，生成可编辑Word。",
+        "mandatory": true,
+        "disqualifying": null,
+        "score": null,
+        "fact_kind": "SOURCE_FACT",
+        "version": "1.0",
+        "missing_reason": {
+          "score": "本适配器未解析出评分数值，请核对原文；不补造分值",
+          "disqualifying": "原文未给出明确否决性依据"
+        },
+        "evidence_refs": [
+          {
+            "source_id": "SRC-TENDER",
+            "locator": {
+              "kind": "line",
+              "line": 10
+            },
+            "quote": "[R-07][格式] 必须使用项目提供的人员表版次1.0，生成可编辑Word。"
+          }
+        ],
+        "in_personnel_scope": true
+      },
+      {
+        "requirement_id": "REQ-2207c263eb5fd110",
+        "source_key": "R-08",
+        "category": "格式",
+        "text": "本章必须标明项目名称、项目编号和标包。",
+        "mandatory": true,
+        "disqualifying": null,
+        "score": null,
+        "fact_kind": "SOURCE_FACT",
+        "version": "1.0",
+        "missing_reason": {
+          "score": "本适配器未解析出评分数值，请核对原文；不补造分值",
+          "disqualifying": "原文未给出明确否决性依据"
+        },
+        "evidence_refs": [
+          {
+            "source_id": "SRC-TENDER",
+            "locator": {
+              "kind": "line",
+              "line": 11
+            },
+            "quote": "[R-08][格式] 本章必须标明项目名称、项目编号和标包。"
+          }
+        ],
+        "in_personnel_scope": true
+      },
+      {
+        "requirement_id": "REQ-e63ad93367984979",
+        "source_key": "R-09",
+        "category": "报价",
+        "text": "全本报价必须说明含税口径；本人员章节不制作报价。",
+        "mandatory": true,
+        "disqualifying": null,
+        "score": null,
+        "fact_kind": "SOURCE_FACT",
+        "version": "1.0",
+        "missing_reason": {
+          "score": "本适配器未解析出评分数值，请核对原文；不补造分值",
+          "disqualifying": "原文未给出明确否决性依据"
+        },
+        "evidence_refs": [
+          {
+            "source_id": "SRC-TENDER",
+            "locator": {
+              "kind": "line",
+              "line": 12
+            },
+            "quote": "[R-09][报价] 全本报价必须说明含税口径；本人员章节不制作报价。"
+          }
+        ],
+        "in_personnel_scope": false
+      },
+      {
+        "requirement_id": "REQ-085af933f09f998c",
+        "source_key": "R-10",
+        "category": "技术",
+        "text": "全本必须提供实施计划；本节选只声明人员章节范围。",
+        "mandatory": true,
+        "disqualifying": null,
+        "score": null,
+        "fact_kind": "SOURCE_FACT",
+        "version": "1.0",
+        "missing_reason": {
+          "score": "本适配器未解析出评分数值，请核对原文；不补造分值",
+          "disqualifying": "原文未给出明确否决性依据"
+        },
+        "evidence_refs": [
+          {
+            "source_id": "SRC-TENDER",
+            "locator": {
+              "kind": "line",
+              "line": 13
+            },
+            "quote": "[R-10][技术] 全本必须提供实施计划；本节选只声明人员章节范围。"
+          }
+        ],
+        "in_personnel_scope": false
+      },
+      {
+        "requirement_id": "REQ-ff5c41f9f51ba65f",
+        "source_key": "R-11",
+        "category": "评分",
+        "text": "全本评分包括服务方案；本节选未公布分值，不得补造分数。",
+        "mandatory": false,
+        "disqualifying": null,
+        "score": null,
+        "fact_kind": "SOURCE_FACT",
+        "version": "1.0",
+        "missing_reason": {
+          "score": "本适配器未解析出评分数值，请核对原文；不补造分值",
+          "disqualifying": "原文未给出明确否决性依据"
+        },
+        "evidence_refs": [
+          {
+            "source_id": "SRC-TENDER",
+            "locator": {
+              "kind": "line",
+              "line": 14
+            },
+            "quote": "[R-11][评分] 全本评分包括服务方案；本节选未公布分值，不得补造分数。"
+          }
+        ],
+        "in_personnel_scope": false
+      },
+      {
+        "requirement_id": "REQ-62421ea40d638a35",
+        "source_key": "R-12",
+        "category": "商务",
+        "text": "全本投标截止为2026-11-01T10:00:00+08:00；没有登记其他前置截止。",
+        "mandatory": false,
+        "disqualifying": null,
+        "score": null,
+        "fact_kind": "SOURCE_FACT",
+        "version": "1.0",
+        "missing_reason": {
+          "score": "本适配器未解析出评分数值，请核对原文；不补造分值",
+          "disqualifying": "原文未给出明确否决性依据"
+        },
+        "evidence_refs": [
+          {
+            "source_id": "SRC-TENDER",
+            "locator": {
+              "kind": "line",
+              "line": 15
+            },
+            "quote": "[R-12][商务] 全本投标截止为2026-11-01T10:00:00+08:00；没有登记其他前置截止。"
+          }
+        ],
+        "in_personnel_scope": false
+      }
+    ],
+    "personnel_rule": {
+      "count": 3,
+      "qualification": "示例专业服务",
+      "valid_on": "2026-11-01"
+    },
+    "coverage": {
+      "read_scope": "provided_markdown_excerpt",
+      "full_tender_read": false
+    },
+    "adapter": "labelled-markdown-v1"
+  },
+  "next_actions": []
+}

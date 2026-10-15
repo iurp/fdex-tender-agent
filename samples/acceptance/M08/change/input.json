@@ -1,0 +1,25 @@
+{
+  "schema_version": "bid-training.acceptance-input.v1",
+  "module": "M08",
+  "case_id": "change",
+  "source_mode": "DEMO",
+  "project_id": "DEMO-BID-001",
+  "lot_id": "LOT-001",
+  "analysis_time": "2026-10-13T09:00:00+08:00",
+  "payload": {
+    "assets": [
+      {
+        "asset_id": "OCR-ASSET-03",
+        "version": "1.0",
+        "image": "samples/acceptance/shared/ocr/clear-03.png"
+      },
+      {
+        "asset_id": "OCR-ASSET-03-V2",
+        "version": "2.0",
+        "image": "samples/acceptance/shared/ocr/clear-03-v2.png"
+      }
+    ],
+    "validity_basis": "2026-11-01",
+    "confirmed_version": "1.0"
+  }
+}

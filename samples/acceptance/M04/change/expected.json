@@ -1,0 +1,27 @@
+{
+  "status": "COMPLETE",
+  "facts": {
+    "requirement_count": 12,
+    "changed_keys": [
+      "Q01"
+    ],
+    "unchanged_keys": [
+      "Q02",
+      "Q03",
+      "Q04",
+      "Q05",
+      "Q06",
+      "Q07",
+      "Q08",
+      "Q09",
+      "Q10",
+      "Q11",
+      "Q12"
+    ],
+    "previous_personnel_count": 3,
+    "personnel_count": 4,
+    "stable_ids_preserved": true
+  },
+  "issue_codes": [],
+  "real_submission_authorized": false
+}

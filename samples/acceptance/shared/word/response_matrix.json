@@ -1,0 +1,179 @@
+{
+  "schema_version": "bid-training.workflow.v1",
+  "module": "M07",
+  "run_id": "RUN-476203b6c7d0-M07",
+  "project_id": "DEMO-BID-001",
+  "lot_id": "LOT-001",
+  "source_mode": "DEMO",
+  "processing_status": "COMPLETE",
+  "input_refs": [
+    {
+      "source_id": "SRC-TENDER",
+      "relative_path": "tender/tender.md",
+      "version": "1.0",
+      "sha256": "fd5b422377b1559f21af7c5545409ebffe5d4fd600740bf051b2a8b4ecdb0baf"
+    }
+  ],
+  "scope": {
+    "included": [
+      "人员资质章节"
+    ],
+    "excluded": [
+      "全本标书",
+      "技术方案",
+      "商务与报价",
+      "正式递交"
+    ]
+  },
+  "issues": [],
+  "data": {
+    "responses": [
+      {
+        "response_id": "RESP-2ac8aefccd03a88c",
+        "requirement_ids": [
+          "REQ-0ccccb5998e81e7b"
+        ],
+        "section_id": "SECTION-PERSONNEL",
+        "field_id": "PERSONNEL-TABLE",
+        "owner_role": "资料管理员",
+        "due_time": null,
+        "required_assets": [
+          "certificate"
+        ],
+        "status": "PROPOSED",
+        "template_version": "1.0"
+      },
+      {
+        "response_id": "RESP-6c9b926abba615a2",
+        "requirement_ids": [
+          "REQ-9e7294665916a26e"
+        ],
+        "section_id": "SECTION-PERSONNEL",
+        "field_id": "PERSONNEL-TABLE",
+        "owner_role": "资料管理员",
+        "due_time": null,
+        "required_assets": [
+          "certificate"
+        ],
+        "status": "PROPOSED",
+        "template_version": "1.0"
+      },
+      {
+        "response_id": "RESP-0a969c0751354d42",
+        "requirement_ids": [
+          "REQ-882c103e82d44f32"
+        ],
+        "section_id": "SECTION-PERSONNEL",
+        "field_id": "PERSONNEL-TABLE",
+        "owner_role": "资料管理员",
+        "due_time": null,
+        "required_assets": [
+          "certificate"
+        ],
+        "status": "PROPOSED",
+        "template_version": "1.0"
+      },
+      {
+        "response_id": "RESP-e816a3534157d76c",
+        "requirement_ids": [
+          "REQ-b83a09aee7b0c476"
+        ],
+        "section_id": "SECTION-PERSONNEL",
+        "field_id": "PERSONNEL-TABLE",
+        "owner_role": "资料管理员",
+        "due_time": null,
+        "required_assets": [
+          "certificate"
+        ],
+        "status": "PROPOSED",
+        "template_version": "1.0"
+      },
+      {
+        "response_id": "RESP-e8b7f83d361023ec",
+        "requirement_ids": [
+          "REQ-5f46976ec917e817"
+        ],
+        "section_id": "SECTION-PERSONNEL",
+        "field_id": "PERSONNEL-ATTACHMENTS",
+        "owner_role": "资料管理员",
+        "due_time": null,
+        "required_assets": [
+          "certificate"
+        ],
+        "status": "PROPOSED",
+        "template_version": "1.0"
+      },
+      {
+        "response_id": "RESP-2a944bc0452a4f5b",
+        "requirement_ids": [
+          "REQ-d81507fbb4dc615d"
+        ],
+        "section_id": "SECTION-PERSONNEL",
+        "field_id": "PERSONNEL-ATTACHMENTS",
+        "owner_role": "资料管理员",
+        "due_time": null,
+        "required_assets": [
+          "certificate"
+        ],
+        "status": "PROPOSED",
+        "template_version": "1.0"
+      },
+      {
+        "response_id": "RESP-0078afe86dae4ed5",
+        "requirement_ids": [
+          "REQ-e5ae215765864420"
+        ],
+        "section_id": "SECTION-PERSONNEL",
+        "field_id": "PERSONNEL-ATTACHMENTS",
+        "owner_role": "资料管理员",
+        "due_time": null,
+        "required_assets": [
+          "certificate"
+        ],
+        "status": "PROPOSED",
+        "template_version": "1.0"
+      },
+      {
+        "response_id": "RESP-e0b27f67a53a0e5f",
+        "requirement_ids": [
+          "REQ-2207c263eb5fd110"
+        ],
+        "section_id": "SECTION-PERSONNEL",
+        "field_id": "PERSONNEL-ATTACHMENTS",
+        "owner_role": "资料管理员",
+        "due_time": null,
+        "required_assets": [
+          "certificate"
+        ],
+        "status": "PROPOSED",
+        "template_version": "1.0"
+      }
+    ],
+    "template": {
+      "template_id": "TPL-PERSONNEL",
+      "version": "1.0",
+      "relative_path": "template/personnel-v1.docx",
+      "sha256": "157d6af5a85c6fd73be0e0979ffdaf89300c5f50f14b20b82d686a508862e394",
+      "columns": [
+        "角色",
+        "人员",
+        "证书编号",
+        "有效期",
+        "原件位置"
+      ]
+    },
+    "excluded_requirements": [
+      "REQ-e63ad93367984979",
+      "REQ-085af933f09f998c",
+      "REQ-ff5c41f9f51ba65f",
+      "REQ-62421ea40d638a35"
+    ],
+    "coverage": {
+      "scope_total": 8,
+      "scope_mapped": 8,
+      "full_total": 12,
+      "full_tender_complete": false
+    }
+  },
+  "next_actions": []
+}

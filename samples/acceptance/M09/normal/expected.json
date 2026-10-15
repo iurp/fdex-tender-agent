@@ -1,0 +1,14 @@
+{
+  "status": "COMPLETE",
+  "facts": {
+    "candidate_status": "MATCHED",
+    "selected_asset_ids": [
+      "COMPANY-ASSET-01"
+    ],
+    "confirmation_status": "CONFIRMED",
+    "confirmation_scope": "company_qualification",
+    "personnel_confirmation_created": false
+  },
+  "issue_codes": [],
+  "real_submission_authorized": false
+}

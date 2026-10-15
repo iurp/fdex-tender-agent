@@ -1,0 +1,21 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M09",
+  "case_id": "unknown-id",
+  "category": "abnormal",
+  "title": "不存在的资产确认不能选用",
+  "input": "samples/acceptance/M09/unknown-id/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M09/unknown-id/input.json",
+      "sha256": "7e1c9a2f30403410bb8460acf4beeb7635faad22504c23cf4c6e333f2d1bb5b2"
+    },
+    {
+      "path": "samples/acceptance/shared/company/qualification-v1.md",
+      "sha256": "7c37b3d111482d5cf035428916bd78624244a5070bc45748d7b52f9babcf3563"
+    }
+  ],
+  "expected": "samples/acceptance/M09/unknown-id/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

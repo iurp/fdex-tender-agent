@@ -1,0 +1,12 @@
+{
+  "status": "BLOCKED",
+  "facts": {
+    "requirement_count": 0,
+    "requirements": [],
+    "full_tender_complete": false
+  },
+  "issue_codes": [
+    "BODY_UNREADABLE"
+  ],
+  "real_submission_authorized": false
+}

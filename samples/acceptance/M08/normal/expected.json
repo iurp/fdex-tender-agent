@@ -1,0 +1,41 @@
+{
+  "status": "COMPLETE",
+  "facts": {
+    "assets": {
+      "OCR-ASSET-01": {
+        "person_id": "PERSON-01",
+        "certificate_id": "OCR-DEMO-001",
+        "qualification": "Demo professional service",
+        "valid_until": "2028-12-31",
+        "field_source": "VISIBLE_IMAGE",
+        "authenticity": "NOT_VERIFIED"
+      },
+      "OCR-ASSET-02": {
+        "person_id": "PERSON-02",
+        "certificate_id": "OCR-DEMO-002",
+        "qualification": "Demo professional service",
+        "valid_until": "2028-12-31",
+        "field_source": "VISIBLE_IMAGE",
+        "authenticity": "NOT_VERIFIED"
+      },
+      "OCR-ASSET-03": {
+        "person_id": "PERSON-03",
+        "certificate_id": "OCR-DEMO-003",
+        "qualification": "Demo professional service",
+        "valid_until": "2028-12-31",
+        "field_source": "VISIBLE_IMAGE",
+        "authenticity": "NOT_VERIFIED"
+      },
+      "OCR-ASSET-04": {
+        "person_id": "PERSON-04",
+        "certificate_id": "OCR-DEMO-004",
+        "qualification": "Demo professional service",
+        "valid_until": "2028-12-31",
+        "field_source": "VISIBLE_IMAGE",
+        "authenticity": "NOT_VERIFIED"
+      }
+    }
+  },
+  "issue_codes": [],
+  "real_submission_authorized": false
+}

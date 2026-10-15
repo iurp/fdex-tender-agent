@@ -1,0 +1,21 @@
+{
+  "schema_version": "bid-training.acceptance-case.v1",
+  "module": "M08",
+  "case_id": "expired",
+  "category": "abnormal",
+  "title": "读得到的过期日期不能判有效",
+  "input": "samples/acceptance/M08/expired/input.json",
+  "inputs": [
+    {
+      "path": "samples/acceptance/M08/expired/input.json",
+      "sha256": "13d06a828bb79ffbf11c9c586f186ba52577b9f5bb3a845fb01fb01685eaf561"
+    },
+    {
+      "path": "samples/acceptance/shared/ocr/expired.png",
+      "sha256": "243001a5b54b4e9b9865cd3eb7fbdeb1aa1bd115d25744ed89c934aac8c08bd9"
+    }
+  ],
+  "expected": "samples/acceptance/M08/expired/expected.json",
+  "manual_review": "",
+  "artifacts": {}
+}

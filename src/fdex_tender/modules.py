@@ -1,6 +1,6 @@
 """Bounded, deterministic teaching reference implementations.
 
-M04 reads labelled raw Markdown, M08 reads declared sidecars and checks images.
+M04 reads labelled/plain Markdown, M08 reads declared sidecars and checks images.
 Neither module claims general document extraction or OCR.
 """
 import re
@@ -9,6 +9,7 @@ from datetime import date
 from pathlib import Path
 from PIL import Image
 from .core import InputError, digest_file, digest_object, envelope, evidence, issue, read_json, require_same_context, safe_path, stable_id
+from .requirements import extract_requirements
 
 
 def register(ctx):
@@ -32,54 +33,13 @@ def register(ctx):
                                  "sources": sources, "current_version_claim": "SUPPLIED_SCOPE_ONLY"}, refs, problems)
 
 
-def read_tender(ctx, registered):
+def read_tender(ctx, registered, previous=None):
     require_same_context(ctx, registered)
     declared = read_json(Path(ctx["input_root"]) / "sources.json")["sources"]
     tender_ids = {s["source_id"] for s in declared if s["kind"] == "tender_markdown"}
-    requirements, problems = [], [i for i in registered["issues"] if i["object_id"] in tender_ids]
-    rule = {"count": None, "qualification": None, "valid_on": None}
-    refs = []
-    for src in registered["data"]["sources"]:
-        if src["kind"] != "tender_markdown":
-            continue
-        path = safe_path(ctx["input_root"], src["relative_path"])
-        if digest_file(path) != src["sha256"]:
-            raise InputError("Tender changed after registration")
-        lines = path.read_text(encoding="utf-8").splitlines()
-        refs.append({k: src[k] for k in ("source_id", "relative_path", "version", "sha256")})
-        for number, line in enumerate(lines, 1):
-            match = re.fullmatch(r"\[(R-\d{2})\]\[(人员|资格|评分|报价|技术|格式|商务)\] (.+)", line)
-            if not match:
-                continue
-            key, category, text = match.groups()
-            requirements.append({"requirement_id": stable_id("REQ", ctx["project_id"], ctx["lot_id"], key),
-                                 "source_key": key, "category": category, "text": text,
-                                 "mandatory": "必须" in text or "不少于" in text,
-                                 "disqualifying": True if "否则否决" in text else None,
-                                 "score": None, "fact_kind": "SOURCE_FACT", "version": src["version"],
-                                 "missing_reason": {"score": "本适配器未解析出评分数值，请核对原文；不补造分值",
-                                                    "disqualifying": None if "否则否决" in text else "原文未给出明确否决性依据"},
-                                 "evidence_refs": [evidence(src["source_id"], number, line)],
-                                 "in_personnel_scope": key in ("R-01", "R-02", "R-03", "R-04", "R-05", "R-06", "R-07", "R-08")})
-            count = re.search(r"人员不少于(\d+)名", text)
-            if count:
-                rule["count"] = int(count[1])
-            qual = re.search(r"持有([^，。]+)证书", text)
-            if qual:
-                rule["qualification"] = qual[1]
-            when = re.search(r"证书有效期以(\d{4}-\d{2}-\d{2})为基准", text)
-            if when:
-                rule["valid_on"] = when[1]
-    keys = [r["source_key"] for r in requirements]
-    if len(set(keys)) != len(keys):
-        problems.append(issue("REQUIREMENT_CONFLICT", "tender", "发现重复要求定位，尚未确认覆盖关系"))
-    if not requirements:
-        problems.append(issue("NO_SUPPORTED_REQUIREMENTS", "tender", "当前适配器仅支持示例 Markdown，未提取要求"))
-    if any(v is None for v in rule.values()):
-        problems.append(issue("MISSING_PERSONNEL_RULE", "personnel", "人员数量、证书类型或有效期基准缺失"))
-    return envelope(ctx, "M04", {"requirements": requirements, "personnel_rule": rule,
-                                 "coverage": {"read_scope": "provided_markdown_excerpt", "full_tender_read": False},
-                                 "adapter": "labelled-markdown-v1"}, refs, problems)
+    sources = [s for s in registered["data"]["sources"] if s["kind"] == "tender_markdown"]
+    problems = [i for i in registered["issues"] if i["object_id"] in tender_ids]
+    return extract_requirements(ctx, sources, previous, problems)
 
 
 def response_matrix(ctx, tender):
@@ -98,7 +58,7 @@ def response_matrix(ctx, tender):
         if req["in_personnel_scope"]:
             rows.append({"response_id": stable_id("RESP", req["requirement_id"], manifest["template_id"]),
                          "requirement_ids": [req["requirement_id"]], "section_id": "SECTION-PERSONNEL",
-                         "field_id": "PERSONNEL-TABLE" if req["source_key"] in ("R-01", "R-02", "R-03", "R-04") else "PERSONNEL-ATTACHMENTS",
+                         "field_id": req.get("response_field") or ("PERSONNEL-TABLE" if req["source_key"] in ("R-01", "R-02", "R-03", "R-04") else "PERSONNEL-ATTACHMENTS"),
                          "owner_role": "资料管理员", "due_time": None,
                          "required_assets": ["certificate"], "status": "PROPOSED", "template_version": manifest["version"]})
     return envelope(ctx, "M07", {"responses": rows, "template": manifest,
@@ -156,6 +116,10 @@ def selection_fingerprint(ctx, tender, index, person_ids, roles=None):
                 "rule": tender["data"]["personnel_rule"], "person_ids": person_ids, "roles": roles or {},
                 "persons": [p for p in index["data"]["persons"] if p["person_id"] in person_ids],
                 "assets": [a for a in index["data"]["assets"] if a["person_id"] in person_ids]}
+    constraints = sorted({(c["relation"], c["value"]) for c in tender["data"].get("personnel_constraints", [])})
+    # Keep existing minimum-count confirmations compatible; new bounds bind too.
+    if constraints and constraints != [("min", tender["data"]["personnel_rule"]["count"])]:
+        relevant["personnel_constraints"] = constraints
     return digest_object(relevant)
 
 
@@ -210,7 +174,9 @@ def match_materials(ctx, tender, matrix, index):
             except (ValueError, TypeError):
                 parse_ok = False
             by_id = {p["person_id"]: p for p in candidates}
-            if not parse_ok or len(set(ids)) != len(ids) or rule["count"] is None or len(ids) < rule["count"] or any(pid not in by_id or by_id[pid]["status"] != "MATCHED" or not isinstance(roles.get(pid), str) or not roles[pid].strip() for pid in ids):
+            count_ok = all((len(ids) >= c["value"] if c["relation"] == "min" else len(ids) <= c["value"] if c["relation"] == "max" else len(ids) == c["value"])
+                           for c in tender["data"].get("personnel_constraints", []))
+            if not parse_ok or not count_ok or len(set(ids)) != len(ids) or rule["count"] is None or len(ids) < rule["count"] or any(pid not in by_id or by_id[pid]["status"] != "MATCHED" or not isinstance(roles.get(pid), str) or not roles[pid].strip() for pid in ids):
                 problems.append(issue("SELECTION_INVALID", "selection", "确认日期、数量、人员ID或证书不满足本次要求"))
             else:
                 state = "CONFIRMED"

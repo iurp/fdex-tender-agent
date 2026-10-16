@@ -18,6 +18,8 @@
 
 当前原文适配器支持包内带定位的 Markdown；人员字段来自明确提供的说明文件，检查图片完整性，**未实现OCR或证书真伪核验**。Word 支持已声明的人员模板1.0，**不是任意模板、整本标书或真实电子递交**。这些是后续任务，不是已实现能力。完整状态见 [实现范围](docs/implementation-status.md)。
 
+M04-01 增加了声明范围内的无标签 UTF-8 文本适配：保留文件/行号/原文、未知项、冲突与版本对应。实现范围和一条命令演示见 [M04-01 操作说明](docs/tasks/M04-01-implementation.md)。
+
 ## 2 安装与第一次运行
 
 需要 Git、Python 3.10或以上、能查看 DOCX 的 Word／WPS／LibreOffice。开发工具可使用 Codex。客户侧 Skill 交付使用 WorkBuddy。

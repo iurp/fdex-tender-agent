@@ -117,6 +117,15 @@ def save_module(run_dir, filename, value):
                "范围：人员资质章节。全本标书未完成。", "", "## 问题与接手"]
     summary += [f"- {i['code']}：{i['message']}；{i['owner_role']}接手；{i['next_action']}" for i in value["issues"]] or ["本次声明范围内未发现已知阻断问题；业务确认与放行另行记录。"]
     summary += ["", f"机器可读详情：{filename}"]
+    if value["module"] == "M04":
+        summary += ["", "## 实际提取的要求"]
+        for requirement in value["data"]["requirements"]:
+            locations = "；".join(f"{ref.get('relative_path', ref['source_id'])} 第{ref['locator']['line']}行" for ref in requirement["evidence_refs"])
+            summary += [f"- {requirement['requirement_id']}【{requirement['category']}】：{requirement['text']}（{locations}）"]
+        summary += ["", "评分与否决依据未明确时保持未知；未知信息不构成业务认定。"]
+        changes = value["data"].get("version_mapping", [])
+        if changes:
+            summary += ["", "## 版本对应"] + [f"- {item['requirement_id']}：{item['change']}" for item in changes]
     Path(run_dir, filename.replace(".json", ".md")).write_text("\n".join(summary) + "\n", encoding="utf-8")
 
 

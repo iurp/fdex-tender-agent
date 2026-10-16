@@ -1,0 +1,2621 @@
+{
+  "source_mode": "DEMO",
+  "scope": "M04-01 declared text clause families; source evidence, conflicts and version mapping",
+  "upstream_commit": "b31d2b9",
+  "acceptance_kit_commit": "53e3c9d5e23e02ff77de1d202da003aef64eee2b",
+  "regression": {
+    "command": "python -X utf8 -m unittest discover -s tests -v",
+    "tests": 111,
+    "seconds": 115.738,
+    "passed": true,
+    "m04_tests": 26,
+    "original_log_sha256": "00f48a6f739475c4d7796a456b11cfcdde47905c3720000113967a19eb936fe6"
+  },
+  "acceptance": {
+    "passed": true,
+    "kind": "STUDENT_IMPLEMENTATION_TEST",
+    "cases": [
+      {
+        "case_id": "normal",
+        "exit_code": 0,
+        "passed": true,
+        "errors": []
+      },
+      {
+        "case_id": "review",
+        "exit_code": 2,
+        "passed": true,
+        "errors": []
+      },
+      {
+        "case_id": "abnormal",
+        "exit_code": 2,
+        "passed": true,
+        "errors": []
+      },
+      {
+        "case_id": "change",
+        "exit_code": 0,
+        "passed": true,
+        "errors": []
+      }
+    ],
+    "original_report_sha256": "902226fa2f959c390c01d9281369b518926e02e1231d4f2b2c5e72ba6077bae0",
+    "independent_review": "PENDING",
+    "business_uat": "PENDING"
+  },
+  "actual_module_outputs": {
+    "normal": {
+      "schema_version": "bid-training.workflow.v1",
+      "module": "M04",
+      "run_id": "RUN-ac7661573166e980-M04",
+      "project_id": "DEMO-BID-001",
+      "lot_id": "LOT-001",
+      "source_mode": "DEMO",
+      "processing_status": "COMPLETE",
+      "input_refs": [
+        {
+          "source_id": "SRC-PLAIN",
+          "relative_path": "samples/acceptance/shared/tender/plain.md",
+          "version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+          "sha256": "5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8"
+        }
+      ],
+      "scope": {
+        "included": [
+          "人员资质章节"
+        ],
+        "excluded": [
+          "全本标书",
+          "技术方案",
+          "商务与报价",
+          "正式递交"
+        ]
+      },
+      "issues": [],
+      "data": {
+        "requirements": [
+          {
+            "requirement_id": "REQ-5827753f5740e896",
+            "source_key": "personnel_count:min",
+            "semantic_kind": "personnel_count",
+            "category": "人员",
+            "text": "人员不少于3名，人员表必须列出姓名和本次职责。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "revision_id": "REV-cf0098842869e3bf",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 4
+                },
+                "quote": "人员不少于3名，人员表必须列出姓名和本次职责。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-TABLE",
+            "attributes": {
+              "relation": "min",
+              "value": 3,
+              "constraints": [
+                {
+                  "relation": "min",
+                  "value": 3
+                }
+              ]
+            }
+          },
+          {
+            "requirement_id": "REQ-fb61531454c61a9f",
+            "source_key": "qualification",
+            "semantic_kind": "qualification",
+            "category": "资格",
+            "text": "每名所选人员必须持有示例专业服务证书。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "revision_id": "REV-0d65a12a7aeecfd4",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 5
+                },
+                "quote": "每名所选人员必须持有示例专业服务证书。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-TABLE",
+            "attributes": {
+              "qualification": "示例专业服务"
+            }
+          },
+          {
+            "requirement_id": "REQ-7a093112ac5f3842",
+            "source_key": "validity",
+            "semantic_kind": "validity",
+            "category": "资格",
+            "text": "证书有效期以2026-11-01为基准，必须仍在有效期内。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "revision_id": "REV-8141ef6d8f9bdacf",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 6
+                },
+                "quote": "证书有效期以2026-11-01为基准，必须仍在有效期内。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-TABLE",
+            "attributes": {
+              "valid_on": "2026-11-01"
+            }
+          },
+          {
+            "requirement_id": "REQ-cc9a2d1fdd41a134",
+            "source_key": "table_fields",
+            "semantic_kind": "table_fields",
+            "category": "格式",
+            "text": "必须在人员表填写证书编号和有效期。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "revision_id": "REV-7c1f6f4902af85ad",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 7
+                },
+                "quote": "必须在人员表填写证书编号和有效期。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-TABLE",
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-4b08bd4c30b1c930",
+            "source_key": "certificate_images",
+            "semantic_kind": "certificate_images",
+            "category": "格式",
+            "text": "必须为每名所选人员附清晰的对应证书图片。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "revision_id": "REV-2aa3d4405f8e75b6",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 8
+                },
+                "quote": "必须为每名所选人员附清晰的对应证书图片。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-ATTACHMENTS",
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-cc0b9b5a37c07d3f",
+            "source_key": "selection_confirmation",
+            "semantic_kind": "selection_confirmation",
+            "category": "人员",
+            "text": "必须由资料负责人确认本次选用人员；候选匹配不是正式选用。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "revision_id": "REV-55f117c6825db467",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 9
+                },
+                "quote": "必须由资料负责人确认本次选用人员；候选匹配不是正式选用。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-ATTACHMENTS",
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-ddc3060bb9ae7418",
+            "source_key": "personnel_template",
+            "semantic_kind": "personnel_template",
+            "category": "格式",
+            "text": "必须使用项目提供的人员表版次1.0，生成可编辑Word。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "revision_id": "REV-9f9c3dd9c30c96f7",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 10
+                },
+                "quote": "必须使用项目提供的人员表版次1.0，生成可编辑Word。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-ATTACHMENTS",
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-ebf2db849653eaf9",
+            "source_key": "project_fields",
+            "semantic_kind": "project_fields",
+            "category": "格式",
+            "text": "本章必须标明项目名称、项目编号和标包。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "revision_id": "REV-c2b54a8c65b85dda",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 11
+                },
+                "quote": "本章必须标明项目名称、项目编号和标包。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-ATTACHMENTS",
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-1653a524dec0e91f",
+            "source_key": "pricing",
+            "semantic_kind": "pricing",
+            "category": "报价",
+            "text": "全本报价必须说明含税口径；本人员章节不制作报价。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "revision_id": "REV-0d2059a6eb70a676",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 12
+                },
+                "quote": "全本报价必须说明含税口径；本人员章节不制作报价。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "in_personnel_scope": false,
+            "response_field": null,
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-4f38332ce6341ba8",
+            "source_key": "implementation_plan",
+            "semantic_kind": "implementation_plan",
+            "category": "技术",
+            "text": "全本必须提供实施计划；本节选只声明人员章节范围。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "revision_id": "REV-5642a8a40463aeb1",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 13
+                },
+                "quote": "全本必须提供实施计划；本节选只声明人员章节范围。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "in_personnel_scope": false,
+            "response_field": null,
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-e57e4c9e2cd93f11",
+            "source_key": "scoring",
+            "semantic_kind": "scoring",
+            "category": "评分",
+            "text": "全本评分包括服务方案；本节选未公布分值，不得补造分数。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "revision_id": "REV-84a40c62c4d17cb4",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 14
+                },
+                "quote": "全本评分包括服务方案；本节选未公布分值，不得补造分数。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "in_personnel_scope": false,
+            "response_field": null,
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-36d2a7f5160615c7",
+            "source_key": "submission_deadline",
+            "semantic_kind": "submission_deadline",
+            "category": "商务",
+            "text": "全本投标截止为2026-11-01T10:00:00+08:00；没有登记其他前置截止。",
+            "mandatory": false,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "revision_id": "REV-6437770e7346fa3e",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 15
+                },
+                "quote": "全本投标截止为2026-11-01T10:00:00+08:00；没有登记其他前置截止。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "in_personnel_scope": false,
+            "response_field": null,
+            "attributes": {
+              "deadline_text": "2026-11-01T10:00:00+08:00"
+            }
+          }
+        ],
+        "personnel_rule": {
+          "count": 3,
+          "qualification": "示例专业服务",
+          "valid_on": "2026-11-01"
+        },
+        "personnel_constraints": [
+          {
+            "relation": "min",
+            "value": 3,
+            "requirement_id": "REQ-5827753f5740e896",
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 4
+                },
+                "quote": "人员不少于3名，人员表必须列出姓名和本次职责。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ]
+          }
+        ],
+        "conflicts": [],
+        "version_mapping": [],
+        "coverage": {
+          "read_scope": "provided_markdown_excerpt",
+          "full_tender_read": false
+        },
+        "adapter": "natural-text-v1"
+      },
+      "next_actions": []
+    },
+    "review": {
+      "schema_version": "bid-training.workflow.v1",
+      "module": "M04",
+      "run_id": "RUN-81f25bd786865987-M04",
+      "project_id": "DEMO-BID-001",
+      "lot_id": "LOT-001",
+      "source_mode": "DEMO",
+      "processing_status": "REVIEW",
+      "input_refs": [
+        {
+          "source_id": "SRC-PLAIN",
+          "relative_path": "samples/acceptance/shared/tender/conflict.md",
+          "version": "sha256:7deabbf89546d1922bccef93fa057002793b71fed79ecc1a3e006c3fce020317",
+          "sha256": "7deabbf89546d1922bccef93fa057002793b71fed79ecc1a3e006c3fce020317"
+        }
+      ],
+      "scope": {
+        "included": [
+          "人员资质章节"
+        ],
+        "excluded": [
+          "全本标书",
+          "技术方案",
+          "商务与报价",
+          "正式递交"
+        ]
+      },
+      "issues": [
+        {
+          "issue_id": "ISS-355154017665a4d8",
+          "code": "CLAUSE_CONFLICT",
+          "severity": "MAJOR",
+          "object_id": "personnel-count",
+          "message": "人数约束互相冲突，保留双方原文，等待负责人解释",
+          "evidence_refs": [
+            {
+              "source_id": "SRC-PLAIN",
+              "locator": {
+                "kind": "line",
+                "line": 4
+              },
+              "quote": "人员不少于3名，人员表必须列出姓名和本次职责。",
+              "relative_path": "samples/acceptance/shared/tender/conflict.md"
+            },
+            {
+              "source_id": "SRC-PLAIN",
+              "locator": {
+                "kind": "line",
+                "line": 16
+              },
+              "quote": "补充要求：人员人数恰为2名，上述人数要求仍保留，未说明覆盖关系。",
+              "relative_path": "samples/acceptance/shared/tender/conflict.md"
+            }
+          ],
+          "owner_role": "招投标负责人",
+          "next_action": "核对输入并重新运行"
+        }
+      ],
+      "data": {
+        "requirements": [
+          {
+            "requirement_id": "REQ-5827753f5740e896",
+            "source_key": "personnel_count:min",
+            "semantic_kind": "personnel_count",
+            "category": "人员",
+            "text": "人员不少于3名，人员表必须列出姓名和本次职责。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:7deabbf89546d1922bccef93fa057002793b71fed79ecc1a3e006c3fce020317",
+            "revision_id": "REV-cf0098842869e3bf",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 4
+                },
+                "quote": "人员不少于3名，人员表必须列出姓名和本次职责。",
+                "relative_path": "samples/acceptance/shared/tender/conflict.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-TABLE",
+            "attributes": {
+              "relation": "min",
+              "value": 3,
+              "constraints": [
+                {
+                  "relation": "min",
+                  "value": 3
+                }
+              ]
+            }
+          },
+          {
+            "requirement_id": "REQ-fb61531454c61a9f",
+            "source_key": "qualification",
+            "semantic_kind": "qualification",
+            "category": "资格",
+            "text": "每名所选人员必须持有示例专业服务证书。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:7deabbf89546d1922bccef93fa057002793b71fed79ecc1a3e006c3fce020317",
+            "revision_id": "REV-0d65a12a7aeecfd4",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 5
+                },
+                "quote": "每名所选人员必须持有示例专业服务证书。",
+                "relative_path": "samples/acceptance/shared/tender/conflict.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-TABLE",
+            "attributes": {
+              "qualification": "示例专业服务"
+            }
+          },
+          {
+            "requirement_id": "REQ-7a093112ac5f3842",
+            "source_key": "validity",
+            "semantic_kind": "validity",
+            "category": "资格",
+            "text": "证书有效期以2026-11-01为基准，必须仍在有效期内。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:7deabbf89546d1922bccef93fa057002793b71fed79ecc1a3e006c3fce020317",
+            "revision_id": "REV-8141ef6d8f9bdacf",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 6
+                },
+                "quote": "证书有效期以2026-11-01为基准，必须仍在有效期内。",
+                "relative_path": "samples/acceptance/shared/tender/conflict.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-TABLE",
+            "attributes": {
+              "valid_on": "2026-11-01"
+            }
+          },
+          {
+            "requirement_id": "REQ-cc9a2d1fdd41a134",
+            "source_key": "table_fields",
+            "semantic_kind": "table_fields",
+            "category": "格式",
+            "text": "必须在人员表填写证书编号和有效期。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:7deabbf89546d1922bccef93fa057002793b71fed79ecc1a3e006c3fce020317",
+            "revision_id": "REV-7c1f6f4902af85ad",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 7
+                },
+                "quote": "必须在人员表填写证书编号和有效期。",
+                "relative_path": "samples/acceptance/shared/tender/conflict.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-TABLE",
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-4b08bd4c30b1c930",
+            "source_key": "certificate_images",
+            "semantic_kind": "certificate_images",
+            "category": "格式",
+            "text": "必须为每名所选人员附清晰的对应证书图片。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:7deabbf89546d1922bccef93fa057002793b71fed79ecc1a3e006c3fce020317",
+            "revision_id": "REV-2aa3d4405f8e75b6",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 8
+                },
+                "quote": "必须为每名所选人员附清晰的对应证书图片。",
+                "relative_path": "samples/acceptance/shared/tender/conflict.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-ATTACHMENTS",
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-cc0b9b5a37c07d3f",
+            "source_key": "selection_confirmation",
+            "semantic_kind": "selection_confirmation",
+            "category": "人员",
+            "text": "必须由资料负责人确认本次选用人员；候选匹配不是正式选用。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:7deabbf89546d1922bccef93fa057002793b71fed79ecc1a3e006c3fce020317",
+            "revision_id": "REV-55f117c6825db467",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 9
+                },
+                "quote": "必须由资料负责人确认本次选用人员；候选匹配不是正式选用。",
+                "relative_path": "samples/acceptance/shared/tender/conflict.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-ATTACHMENTS",
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-ddc3060bb9ae7418",
+            "source_key": "personnel_template",
+            "semantic_kind": "personnel_template",
+            "category": "格式",
+            "text": "必须使用项目提供的人员表版次1.0，生成可编辑Word。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:7deabbf89546d1922bccef93fa057002793b71fed79ecc1a3e006c3fce020317",
+            "revision_id": "REV-9f9c3dd9c30c96f7",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 10
+                },
+                "quote": "必须使用项目提供的人员表版次1.0，生成可编辑Word。",
+                "relative_path": "samples/acceptance/shared/tender/conflict.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-ATTACHMENTS",
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-ebf2db849653eaf9",
+            "source_key": "project_fields",
+            "semantic_kind": "project_fields",
+            "category": "格式",
+            "text": "本章必须标明项目名称、项目编号和标包。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:7deabbf89546d1922bccef93fa057002793b71fed79ecc1a3e006c3fce020317",
+            "revision_id": "REV-c2b54a8c65b85dda",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 11
+                },
+                "quote": "本章必须标明项目名称、项目编号和标包。",
+                "relative_path": "samples/acceptance/shared/tender/conflict.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-ATTACHMENTS",
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-1653a524dec0e91f",
+            "source_key": "pricing",
+            "semantic_kind": "pricing",
+            "category": "报价",
+            "text": "全本报价必须说明含税口径；本人员章节不制作报价。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:7deabbf89546d1922bccef93fa057002793b71fed79ecc1a3e006c3fce020317",
+            "revision_id": "REV-0d2059a6eb70a676",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 12
+                },
+                "quote": "全本报价必须说明含税口径；本人员章节不制作报价。",
+                "relative_path": "samples/acceptance/shared/tender/conflict.md"
+              }
+            ],
+            "in_personnel_scope": false,
+            "response_field": null,
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-4f38332ce6341ba8",
+            "source_key": "implementation_plan",
+            "semantic_kind": "implementation_plan",
+            "category": "技术",
+            "text": "全本必须提供实施计划；本节选只声明人员章节范围。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:7deabbf89546d1922bccef93fa057002793b71fed79ecc1a3e006c3fce020317",
+            "revision_id": "REV-5642a8a40463aeb1",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 13
+                },
+                "quote": "全本必须提供实施计划；本节选只声明人员章节范围。",
+                "relative_path": "samples/acceptance/shared/tender/conflict.md"
+              }
+            ],
+            "in_personnel_scope": false,
+            "response_field": null,
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-e57e4c9e2cd93f11",
+            "source_key": "scoring",
+            "semantic_kind": "scoring",
+            "category": "评分",
+            "text": "全本评分包括服务方案；本节选未公布分值，不得补造分数。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:7deabbf89546d1922bccef93fa057002793b71fed79ecc1a3e006c3fce020317",
+            "revision_id": "REV-84a40c62c4d17cb4",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 14
+                },
+                "quote": "全本评分包括服务方案；本节选未公布分值，不得补造分数。",
+                "relative_path": "samples/acceptance/shared/tender/conflict.md"
+              }
+            ],
+            "in_personnel_scope": false,
+            "response_field": null,
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-36d2a7f5160615c7",
+            "source_key": "submission_deadline",
+            "semantic_kind": "submission_deadline",
+            "category": "商务",
+            "text": "全本投标截止为2026-11-01T10:00:00+08:00；没有登记其他前置截止。",
+            "mandatory": false,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:7deabbf89546d1922bccef93fa057002793b71fed79ecc1a3e006c3fce020317",
+            "revision_id": "REV-6437770e7346fa3e",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 15
+                },
+                "quote": "全本投标截止为2026-11-01T10:00:00+08:00；没有登记其他前置截止。",
+                "relative_path": "samples/acceptance/shared/tender/conflict.md"
+              }
+            ],
+            "in_personnel_scope": false,
+            "response_field": null,
+            "attributes": {
+              "deadline_text": "2026-11-01T10:00:00+08:00"
+            }
+          },
+          {
+            "requirement_id": "REQ-c5989dac0f6a86a0",
+            "source_key": "personnel_count:exact",
+            "semantic_kind": "personnel_count",
+            "category": "人员",
+            "text": "补充要求：人员人数恰为2名，上述人数要求仍保留，未说明覆盖关系。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:7deabbf89546d1922bccef93fa057002793b71fed79ecc1a3e006c3fce020317",
+            "revision_id": "REV-523ba6d6da0103ff",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 16
+                },
+                "quote": "补充要求：人员人数恰为2名，上述人数要求仍保留，未说明覆盖关系。",
+                "relative_path": "samples/acceptance/shared/tender/conflict.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-TABLE",
+            "attributes": {
+              "relation": "exact",
+              "value": 2,
+              "constraints": [
+                {
+                  "relation": "exact",
+                  "value": 2
+                }
+              ]
+            }
+          }
+        ],
+        "personnel_rule": {
+          "count": null,
+          "qualification": "示例专业服务",
+          "valid_on": "2026-11-01"
+        },
+        "personnel_constraints": [
+          {
+            "relation": "min",
+            "value": 3,
+            "requirement_id": "REQ-5827753f5740e896",
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 4
+                },
+                "quote": "人员不少于3名，人员表必须列出姓名和本次职责。",
+                "relative_path": "samples/acceptance/shared/tender/conflict.md"
+              }
+            ]
+          },
+          {
+            "relation": "exact",
+            "value": 2,
+            "requirement_id": "REQ-c5989dac0f6a86a0",
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 16
+                },
+                "quote": "补充要求：人员人数恰为2名，上述人数要求仍保留，未说明覆盖关系。",
+                "relative_path": "samples/acceptance/shared/tender/conflict.md"
+              }
+            ]
+          }
+        ],
+        "conflicts": [
+          {
+            "field": "personnel_count",
+            "values": [
+              3,
+              2
+            ],
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 4
+                },
+                "quote": "人员不少于3名，人员表必须列出姓名和本次职责。",
+                "relative_path": "samples/acceptance/shared/tender/conflict.md"
+              },
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 16
+                },
+                "quote": "补充要求：人员人数恰为2名，上述人数要求仍保留，未说明覆盖关系。",
+                "relative_path": "samples/acceptance/shared/tender/conflict.md"
+              }
+            ]
+          }
+        ],
+        "version_mapping": [],
+        "coverage": {
+          "read_scope": "provided_markdown_excerpt",
+          "full_tender_read": false
+        },
+        "adapter": "natural-text-v1"
+      },
+      "next_actions": [
+        {
+          "owner_role": "招投标负责人",
+          "action": "核对输入并重新运行"
+        }
+      ]
+    },
+    "abnormal": {
+      "schema_version": "bid-training.workflow.v1",
+      "module": "M04",
+      "run_id": "RUN-7c737aca1e838b9a-M04",
+      "project_id": "DEMO-BID-001",
+      "lot_id": "LOT-001",
+      "source_mode": "DEMO",
+      "processing_status": "BLOCKED",
+      "input_refs": [
+        {
+          "source_id": "SRC-PLAIN",
+          "relative_path": "samples/acceptance/shared/tender/unreadable.md",
+          "version": "sha256:01c44a6fb44707a9a742380db6be1d7d9d5aaecbc313559089e04e4213a9d632",
+          "sha256": "01c44a6fb44707a9a742380db6be1d7d9d5aaecbc313559089e04e4213a9d632"
+        }
+      ],
+      "scope": {
+        "included": [
+          "人员资质章节"
+        ],
+        "excluded": [
+          "全本标书",
+          "技术方案",
+          "商务与报价",
+          "正式递交"
+        ]
+      },
+      "issues": [
+        {
+          "issue_id": "ISS-ec8ae7bc70dd7009",
+          "code": "BODY_UNREADABLE",
+          "severity": "BLOCKER",
+          "object_id": "SRC-PLAIN",
+          "message": "正文没有可验证的要求；未生成要求清单",
+          "evidence_refs": [],
+          "owner_role": "招投标负责人",
+          "next_action": "核对输入并重新运行"
+        }
+      ],
+      "data": {
+        "requirements": [],
+        "personnel_rule": {
+          "count": null,
+          "qualification": null,
+          "valid_on": null
+        },
+        "personnel_constraints": [],
+        "conflicts": [],
+        "version_mapping": [],
+        "coverage": {
+          "read_scope": "provided_markdown_excerpt",
+          "full_tender_read": false
+        },
+        "adapter": "natural-text-v1"
+      },
+      "next_actions": [
+        {
+          "owner_role": "招投标负责人",
+          "action": "核对输入并重新运行"
+        }
+      ]
+    },
+    "change": {
+      "schema_version": "bid-training.workflow.v1",
+      "module": "M04",
+      "run_id": "RUN-fe33feaff0a26e8b-M04",
+      "project_id": "DEMO-BID-001",
+      "lot_id": "LOT-001",
+      "source_mode": "DEMO",
+      "processing_status": "COMPLETE",
+      "input_refs": [
+        {
+          "source_id": "SRC-PLAIN",
+          "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md",
+          "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+          "sha256": "58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7"
+        }
+      ],
+      "scope": {
+        "included": [
+          "人员资质章节"
+        ],
+        "excluded": [
+          "全本标书",
+          "技术方案",
+          "商务与报价",
+          "正式递交"
+        ]
+      },
+      "issues": [],
+      "data": {
+        "requirements": [
+          {
+            "requirement_id": "REQ-5827753f5740e896",
+            "source_key": "personnel_count:min",
+            "semantic_kind": "personnel_count",
+            "category": "人员",
+            "text": "人员不少于4名，人员表必须列出姓名和本次职责。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "revision_id": "REV-3f6296180de629f1",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 4
+                },
+                "quote": "人员不少于4名，人员表必须列出姓名和本次职责。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-TABLE",
+            "attributes": {
+              "relation": "min",
+              "value": 4,
+              "constraints": [
+                {
+                  "relation": "min",
+                  "value": 4
+                }
+              ]
+            }
+          },
+          {
+            "requirement_id": "REQ-fb61531454c61a9f",
+            "source_key": "qualification",
+            "semantic_kind": "qualification",
+            "category": "资格",
+            "text": "每名所选人员必须持有示例专业服务证书。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "revision_id": "REV-0d65a12a7aeecfd4",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 5
+                },
+                "quote": "每名所选人员必须持有示例专业服务证书。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-TABLE",
+            "attributes": {
+              "qualification": "示例专业服务"
+            }
+          },
+          {
+            "requirement_id": "REQ-7a093112ac5f3842",
+            "source_key": "validity",
+            "semantic_kind": "validity",
+            "category": "资格",
+            "text": "证书有效期以2026-11-01为基准，必须仍在有效期内。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "revision_id": "REV-8141ef6d8f9bdacf",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 6
+                },
+                "quote": "证书有效期以2026-11-01为基准，必须仍在有效期内。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-TABLE",
+            "attributes": {
+              "valid_on": "2026-11-01"
+            }
+          },
+          {
+            "requirement_id": "REQ-cc9a2d1fdd41a134",
+            "source_key": "table_fields",
+            "semantic_kind": "table_fields",
+            "category": "格式",
+            "text": "必须在人员表填写证书编号和有效期。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "revision_id": "REV-7c1f6f4902af85ad",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 7
+                },
+                "quote": "必须在人员表填写证书编号和有效期。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-TABLE",
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-4b08bd4c30b1c930",
+            "source_key": "certificate_images",
+            "semantic_kind": "certificate_images",
+            "category": "格式",
+            "text": "必须为每名所选人员附清晰的对应证书图片。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "revision_id": "REV-2aa3d4405f8e75b6",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 8
+                },
+                "quote": "必须为每名所选人员附清晰的对应证书图片。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-ATTACHMENTS",
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-cc0b9b5a37c07d3f",
+            "source_key": "selection_confirmation",
+            "semantic_kind": "selection_confirmation",
+            "category": "人员",
+            "text": "必须由资料负责人确认本次选用人员；候选匹配不是正式选用。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "revision_id": "REV-55f117c6825db467",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 9
+                },
+                "quote": "必须由资料负责人确认本次选用人员；候选匹配不是正式选用。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-ATTACHMENTS",
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-ddc3060bb9ae7418",
+            "source_key": "personnel_template",
+            "semantic_kind": "personnel_template",
+            "category": "格式",
+            "text": "必须使用项目提供的人员表版次1.0，生成可编辑Word。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "revision_id": "REV-9f9c3dd9c30c96f7",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 10
+                },
+                "quote": "必须使用项目提供的人员表版次1.0，生成可编辑Word。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-ATTACHMENTS",
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-ebf2db849653eaf9",
+            "source_key": "project_fields",
+            "semantic_kind": "project_fields",
+            "category": "格式",
+            "text": "本章必须标明项目名称、项目编号和标包。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "revision_id": "REV-c2b54a8c65b85dda",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 11
+                },
+                "quote": "本章必须标明项目名称、项目编号和标包。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ],
+            "in_personnel_scope": true,
+            "response_field": "PERSONNEL-ATTACHMENTS",
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-1653a524dec0e91f",
+            "source_key": "pricing",
+            "semantic_kind": "pricing",
+            "category": "报价",
+            "text": "全本报价必须说明含税口径；本人员章节不制作报价。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "revision_id": "REV-0d2059a6eb70a676",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 12
+                },
+                "quote": "全本报价必须说明含税口径；本人员章节不制作报价。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ],
+            "in_personnel_scope": false,
+            "response_field": null,
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-4f38332ce6341ba8",
+            "source_key": "implementation_plan",
+            "semantic_kind": "implementation_plan",
+            "category": "技术",
+            "text": "全本必须提供实施计划；本节选只声明人员章节范围。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "revision_id": "REV-5642a8a40463aeb1",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 13
+                },
+                "quote": "全本必须提供实施计划；本节选只声明人员章节范围。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ],
+            "in_personnel_scope": false,
+            "response_field": null,
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-e57e4c9e2cd93f11",
+            "source_key": "scoring",
+            "semantic_kind": "scoring",
+            "category": "评分",
+            "text": "全本评分包括服务方案；本节选未公布分值，不得补造分数。",
+            "mandatory": true,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "revision_id": "REV-84a40c62c4d17cb4",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 14
+                },
+                "quote": "全本评分包括服务方案；本节选未公布分值，不得补造分数。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ],
+            "in_personnel_scope": false,
+            "response_field": null,
+            "attributes": {}
+          },
+          {
+            "requirement_id": "REQ-36d2a7f5160615c7",
+            "source_key": "submission_deadline",
+            "semantic_kind": "submission_deadline",
+            "category": "商务",
+            "text": "全本投标截止为2026-11-01T10:00:00+08:00；没有登记其他前置截止。",
+            "mandatory": false,
+            "disqualifying": null,
+            "score": null,
+            "fact_kind": "SOURCE_FACT",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "revision_id": "REV-6437770e7346fa3e",
+            "missing_reason": {
+              "score": "原文未明确可提取的评分分值，不补造",
+              "disqualifying": "原文未给出明确否决性依据"
+            },
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 15
+                },
+                "quote": "全本投标截止为2026-11-01T10:00:00+08:00；没有登记其他前置截止。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ],
+            "in_personnel_scope": false,
+            "response_field": null,
+            "attributes": {
+              "deadline_text": "2026-11-01T10:00:00+08:00"
+            }
+          }
+        ],
+        "personnel_rule": {
+          "count": 4,
+          "qualification": "示例专业服务",
+          "valid_on": "2026-11-01"
+        },
+        "personnel_constraints": [
+          {
+            "relation": "min",
+            "value": 4,
+            "requirement_id": "REQ-5827753f5740e896",
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 4
+                },
+                "quote": "人员不少于4名，人员表必须列出姓名和本次职责。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ]
+          }
+        ],
+        "conflicts": [],
+        "version_mapping": [
+          {
+            "requirement_id": "REQ-1653a524dec0e91f",
+            "change": "UNCHANGED",
+            "previous_revision_id": "REV-0d2059a6eb70a676",
+            "revision_id": "REV-0d2059a6eb70a676",
+            "previous_version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "previous_evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 12
+                },
+                "quote": "全本报价必须说明含税口径；本人员章节不制作报价。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 12
+                },
+                "quote": "全本报价必须说明含税口径；本人员章节不制作报价。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ]
+          },
+          {
+            "requirement_id": "REQ-36d2a7f5160615c7",
+            "change": "UNCHANGED",
+            "previous_revision_id": "REV-6437770e7346fa3e",
+            "revision_id": "REV-6437770e7346fa3e",
+            "previous_version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "previous_evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 15
+                },
+                "quote": "全本投标截止为2026-11-01T10:00:00+08:00；没有登记其他前置截止。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 15
+                },
+                "quote": "全本投标截止为2026-11-01T10:00:00+08:00；没有登记其他前置截止。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ]
+          },
+          {
+            "requirement_id": "REQ-4b08bd4c30b1c930",
+            "change": "UNCHANGED",
+            "previous_revision_id": "REV-2aa3d4405f8e75b6",
+            "revision_id": "REV-2aa3d4405f8e75b6",
+            "previous_version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "previous_evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 8
+                },
+                "quote": "必须为每名所选人员附清晰的对应证书图片。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 8
+                },
+                "quote": "必须为每名所选人员附清晰的对应证书图片。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ]
+          },
+          {
+            "requirement_id": "REQ-4f38332ce6341ba8",
+            "change": "UNCHANGED",
+            "previous_revision_id": "REV-5642a8a40463aeb1",
+            "revision_id": "REV-5642a8a40463aeb1",
+            "previous_version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "previous_evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 13
+                },
+                "quote": "全本必须提供实施计划；本节选只声明人员章节范围。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 13
+                },
+                "quote": "全本必须提供实施计划；本节选只声明人员章节范围。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ]
+          },
+          {
+            "requirement_id": "REQ-5827753f5740e896",
+            "change": "CHANGED",
+            "previous_revision_id": "REV-cf0098842869e3bf",
+            "revision_id": "REV-3f6296180de629f1",
+            "previous_version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "previous_evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 4
+                },
+                "quote": "人员不少于3名，人员表必须列出姓名和本次职责。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 4
+                },
+                "quote": "人员不少于4名，人员表必须列出姓名和本次职责。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ]
+          },
+          {
+            "requirement_id": "REQ-7a093112ac5f3842",
+            "change": "UNCHANGED",
+            "previous_revision_id": "REV-8141ef6d8f9bdacf",
+            "revision_id": "REV-8141ef6d8f9bdacf",
+            "previous_version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "previous_evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 6
+                },
+                "quote": "证书有效期以2026-11-01为基准，必须仍在有效期内。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 6
+                },
+                "quote": "证书有效期以2026-11-01为基准，必须仍在有效期内。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ]
+          },
+          {
+            "requirement_id": "REQ-cc0b9b5a37c07d3f",
+            "change": "UNCHANGED",
+            "previous_revision_id": "REV-55f117c6825db467",
+            "revision_id": "REV-55f117c6825db467",
+            "previous_version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "previous_evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 9
+                },
+                "quote": "必须由资料负责人确认本次选用人员；候选匹配不是正式选用。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 9
+                },
+                "quote": "必须由资料负责人确认本次选用人员；候选匹配不是正式选用。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ]
+          },
+          {
+            "requirement_id": "REQ-cc9a2d1fdd41a134",
+            "change": "UNCHANGED",
+            "previous_revision_id": "REV-7c1f6f4902af85ad",
+            "revision_id": "REV-7c1f6f4902af85ad",
+            "previous_version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "previous_evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 7
+                },
+                "quote": "必须在人员表填写证书编号和有效期。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 7
+                },
+                "quote": "必须在人员表填写证书编号和有效期。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ]
+          },
+          {
+            "requirement_id": "REQ-ddc3060bb9ae7418",
+            "change": "UNCHANGED",
+            "previous_revision_id": "REV-9f9c3dd9c30c96f7",
+            "revision_id": "REV-9f9c3dd9c30c96f7",
+            "previous_version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "previous_evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 10
+                },
+                "quote": "必须使用项目提供的人员表版次1.0，生成可编辑Word。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 10
+                },
+                "quote": "必须使用项目提供的人员表版次1.0，生成可编辑Word。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ]
+          },
+          {
+            "requirement_id": "REQ-e57e4c9e2cd93f11",
+            "change": "UNCHANGED",
+            "previous_revision_id": "REV-84a40c62c4d17cb4",
+            "revision_id": "REV-84a40c62c4d17cb4",
+            "previous_version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "previous_evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 14
+                },
+                "quote": "全本评分包括服务方案；本节选未公布分值，不得补造分数。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 14
+                },
+                "quote": "全本评分包括服务方案；本节选未公布分值，不得补造分数。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ]
+          },
+          {
+            "requirement_id": "REQ-ebf2db849653eaf9",
+            "change": "UNCHANGED",
+            "previous_revision_id": "REV-c2b54a8c65b85dda",
+            "revision_id": "REV-c2b54a8c65b85dda",
+            "previous_version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "previous_evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 11
+                },
+                "quote": "本章必须标明项目名称、项目编号和标包。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 11
+                },
+                "quote": "本章必须标明项目名称、项目编号和标包。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ]
+          },
+          {
+            "requirement_id": "REQ-fb61531454c61a9f",
+            "change": "UNCHANGED",
+            "previous_revision_id": "REV-0d65a12a7aeecfd4",
+            "revision_id": "REV-0d65a12a7aeecfd4",
+            "previous_version": "sha256:5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8",
+            "version": "sha256:58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+            "previous_evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 5
+                },
+                "quote": "每名所选人员必须持有示例专业服务证书。",
+                "relative_path": "samples/acceptance/shared/tender/plain.md"
+              }
+            ],
+            "evidence_refs": [
+              {
+                "source_id": "SRC-PLAIN",
+                "locator": {
+                  "kind": "line",
+                  "line": 5
+                },
+                "quote": "每名所选人员必须持有示例专业服务证书。",
+                "relative_path": "samples/acceptance/shared/tender/plain-v1.1.md"
+              }
+            ]
+          }
+        ],
+        "coverage": {
+          "read_scope": "provided_markdown_excerpt",
+          "full_tender_read": false
+        },
+        "adapter": "natural-text-v1"
+      },
+      "next_actions": []
+    }
+  },
+  "actual_acceptance_projections": {
+    "normal": {
+      "schema_version": "bid-training.acceptance-result.v1",
+      "module": "M04",
+      "case_id": "normal",
+      "source_mode": "DEMO",
+      "status": "COMPLETE",
+      "facts": {
+        "requirement_count": 12,
+        "requirements": [
+          {
+            "key": "Q01",
+            "line": 4,
+            "quote": "人员不少于3名，人员表必须列出姓名和本次职责。",
+            "score": null,
+            "requirement_id": "REQ-5827753f5740e896"
+          },
+          {
+            "key": "Q02",
+            "line": 5,
+            "quote": "每名所选人员必须持有示例专业服务证书。",
+            "score": null,
+            "requirement_id": "REQ-fb61531454c61a9f"
+          },
+          {
+            "key": "Q03",
+            "line": 6,
+            "quote": "证书有效期以2026-11-01为基准，必须仍在有效期内。",
+            "score": null,
+            "requirement_id": "REQ-7a093112ac5f3842"
+          },
+          {
+            "key": "Q04",
+            "line": 7,
+            "quote": "必须在人员表填写证书编号和有效期。",
+            "score": null,
+            "requirement_id": "REQ-cc9a2d1fdd41a134"
+          },
+          {
+            "key": "Q05",
+            "line": 8,
+            "quote": "必须为每名所选人员附清晰的对应证书图片。",
+            "score": null,
+            "requirement_id": "REQ-4b08bd4c30b1c930"
+          },
+          {
+            "key": "Q06",
+            "line": 9,
+            "quote": "必须由资料负责人确认本次选用人员；候选匹配不是正式选用。",
+            "score": null,
+            "requirement_id": "REQ-cc0b9b5a37c07d3f"
+          },
+          {
+            "key": "Q07",
+            "line": 10,
+            "quote": "必须使用项目提供的人员表版次1.0，生成可编辑Word。",
+            "score": null,
+            "requirement_id": "REQ-ddc3060bb9ae7418"
+          },
+          {
+            "key": "Q08",
+            "line": 11,
+            "quote": "本章必须标明项目名称、项目编号和标包。",
+            "score": null,
+            "requirement_id": "REQ-ebf2db849653eaf9"
+          },
+          {
+            "key": "Q09",
+            "line": 12,
+            "quote": "全本报价必须说明含税口径；本人员章节不制作报价。",
+            "score": null,
+            "requirement_id": "REQ-1653a524dec0e91f"
+          },
+          {
+            "key": "Q10",
+            "line": 13,
+            "quote": "全本必须提供实施计划；本节选只声明人员章节范围。",
+            "score": null,
+            "requirement_id": "REQ-4f38332ce6341ba8"
+          },
+          {
+            "key": "Q11",
+            "line": 14,
+            "quote": "全本评分包括服务方案；本节选未公布分值，不得补造分数。",
+            "score": null,
+            "requirement_id": "REQ-e57e4c9e2cd93f11"
+          },
+          {
+            "key": "Q12",
+            "line": 15,
+            "quote": "全本投标截止为2026-11-01T10:00:00+08:00；没有登记其他前置截止。",
+            "score": null,
+            "requirement_id": "REQ-36d2a7f5160615c7"
+          }
+        ],
+        "full_tender_complete": false,
+        "conflicting_counts": [],
+        "effective_personnel_count": 3,
+        "changed_keys": [],
+        "unchanged_keys": [],
+        "previous_personnel_count": null,
+        "personnel_count": 3,
+        "stable_ids_preserved": false
+      },
+      "issue_codes": [],
+      "input_hashes": {
+        "samples/acceptance/M04/normal/input.json": "02c5f243ee836daf353603fede764a6369935ce28ea329a6d64cd64f121a057e",
+        "samples/acceptance/shared/tender/plain.md": "5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8"
+      },
+      "evidence": [
+        {
+          "path": "samples/acceptance/shared/tender/plain.md",
+          "kind": "line",
+          "line": 4,
+          "quote": "人员不少于3名，人员表必须列出姓名和本次职责。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/plain.md",
+          "kind": "line",
+          "line": 5,
+          "quote": "每名所选人员必须持有示例专业服务证书。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/plain.md",
+          "kind": "line",
+          "line": 6,
+          "quote": "证书有效期以2026-11-01为基准，必须仍在有效期内。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/plain.md",
+          "kind": "line",
+          "line": 7,
+          "quote": "必须在人员表填写证书编号和有效期。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/plain.md",
+          "kind": "line",
+          "line": 8,
+          "quote": "必须为每名所选人员附清晰的对应证书图片。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/plain.md",
+          "kind": "line",
+          "line": 9,
+          "quote": "必须由资料负责人确认本次选用人员；候选匹配不是正式选用。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/plain.md",
+          "kind": "line",
+          "line": 10,
+          "quote": "必须使用项目提供的人员表版次1.0，生成可编辑Word。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/plain.md",
+          "kind": "line",
+          "line": 11,
+          "quote": "本章必须标明项目名称、项目编号和标包。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/plain.md",
+          "kind": "line",
+          "line": 12,
+          "quote": "全本报价必须说明含税口径；本人员章节不制作报价。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/plain.md",
+          "kind": "line",
+          "line": 13,
+          "quote": "全本必须提供实施计划；本节选只声明人员章节范围。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/plain.md",
+          "kind": "line",
+          "line": 14,
+          "quote": "全本评分包括服务方案；本节选未公布分值，不得补造分数。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/plain.md",
+          "kind": "line",
+          "line": 15,
+          "quote": "全本投标截止为2026-11-01T10:00:00+08:00；没有登记其他前置截止。"
+        }
+      ],
+      "artifacts": {
+        "brief": "tender_brief.json",
+        "summary": "tender_brief.md"
+      },
+      "real_submission_authorized": false
+    },
+    "review": {
+      "schema_version": "bid-training.acceptance-result.v1",
+      "module": "M04",
+      "case_id": "review",
+      "source_mode": "DEMO",
+      "status": "REVIEW",
+      "facts": {
+        "requirement_count": 13,
+        "requirements": [
+          {
+            "key": "Q01",
+            "line": 4,
+            "quote": "人员不少于3名，人员表必须列出姓名和本次职责。",
+            "score": null,
+            "requirement_id": "REQ-5827753f5740e896"
+          },
+          {
+            "key": "Q02",
+            "line": 5,
+            "quote": "每名所选人员必须持有示例专业服务证书。",
+            "score": null,
+            "requirement_id": "REQ-fb61531454c61a9f"
+          },
+          {
+            "key": "Q03",
+            "line": 6,
+            "quote": "证书有效期以2026-11-01为基准，必须仍在有效期内。",
+            "score": null,
+            "requirement_id": "REQ-7a093112ac5f3842"
+          },
+          {
+            "key": "Q04",
+            "line": 7,
+            "quote": "必须在人员表填写证书编号和有效期。",
+            "score": null,
+            "requirement_id": "REQ-cc9a2d1fdd41a134"
+          },
+          {
+            "key": "Q05",
+            "line": 8,
+            "quote": "必须为每名所选人员附清晰的对应证书图片。",
+            "score": null,
+            "requirement_id": "REQ-4b08bd4c30b1c930"
+          },
+          {
+            "key": "Q06",
+            "line": 9,
+            "quote": "必须由资料负责人确认本次选用人员；候选匹配不是正式选用。",
+            "score": null,
+            "requirement_id": "REQ-cc0b9b5a37c07d3f"
+          },
+          {
+            "key": "Q07",
+            "line": 10,
+            "quote": "必须使用项目提供的人员表版次1.0，生成可编辑Word。",
+            "score": null,
+            "requirement_id": "REQ-ddc3060bb9ae7418"
+          },
+          {
+            "key": "Q08",
+            "line": 11,
+            "quote": "本章必须标明项目名称、项目编号和标包。",
+            "score": null,
+            "requirement_id": "REQ-ebf2db849653eaf9"
+          },
+          {
+            "key": "Q09",
+            "line": 12,
+            "quote": "全本报价必须说明含税口径；本人员章节不制作报价。",
+            "score": null,
+            "requirement_id": "REQ-1653a524dec0e91f"
+          },
+          {
+            "key": "Q10",
+            "line": 13,
+            "quote": "全本必须提供实施计划；本节选只声明人员章节范围。",
+            "score": null,
+            "requirement_id": "REQ-4f38332ce6341ba8"
+          },
+          {
+            "key": "Q11",
+            "line": 14,
+            "quote": "全本评分包括服务方案；本节选未公布分值，不得补造分数。",
+            "score": null,
+            "requirement_id": "REQ-e57e4c9e2cd93f11"
+          },
+          {
+            "key": "Q12",
+            "line": 15,
+            "quote": "全本投标截止为2026-11-01T10:00:00+08:00；没有登记其他前置截止。",
+            "score": null,
+            "requirement_id": "REQ-36d2a7f5160615c7"
+          },
+          {
+            "key": "Q01",
+            "line": 16,
+            "quote": "补充要求：人员人数恰为2名，上述人数要求仍保留，未说明覆盖关系。",
+            "score": null,
+            "requirement_id": "REQ-c5989dac0f6a86a0"
+          }
+        ],
+        "full_tender_complete": false,
+        "conflicting_counts": [
+          3,
+          2
+        ],
+        "effective_personnel_count": null,
+        "changed_keys": [],
+        "unchanged_keys": [],
+        "previous_personnel_count": null,
+        "personnel_count": null,
+        "stable_ids_preserved": false
+      },
+      "issue_codes": [
+        "CLAUSE_CONFLICT"
+      ],
+      "input_hashes": {
+        "samples/acceptance/M04/review/input.json": "12b58ee7a1668b23b8d8e085fa235e89cdb6352ff6711dcac9d78d2d08b779ca",
+        "samples/acceptance/shared/tender/conflict.md": "7deabbf89546d1922bccef93fa057002793b71fed79ecc1a3e006c3fce020317"
+      },
+      "evidence": [
+        {
+          "path": "samples/acceptance/shared/tender/conflict.md",
+          "kind": "line",
+          "line": 4,
+          "quote": "人员不少于3名，人员表必须列出姓名和本次职责。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/conflict.md",
+          "kind": "line",
+          "line": 5,
+          "quote": "每名所选人员必须持有示例专业服务证书。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/conflict.md",
+          "kind": "line",
+          "line": 6,
+          "quote": "证书有效期以2026-11-01为基准，必须仍在有效期内。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/conflict.md",
+          "kind": "line",
+          "line": 7,
+          "quote": "必须在人员表填写证书编号和有效期。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/conflict.md",
+          "kind": "line",
+          "line": 8,
+          "quote": "必须为每名所选人员附清晰的对应证书图片。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/conflict.md",
+          "kind": "line",
+          "line": 9,
+          "quote": "必须由资料负责人确认本次选用人员；候选匹配不是正式选用。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/conflict.md",
+          "kind": "line",
+          "line": 10,
+          "quote": "必须使用项目提供的人员表版次1.0，生成可编辑Word。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/conflict.md",
+          "kind": "line",
+          "line": 11,
+          "quote": "本章必须标明项目名称、项目编号和标包。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/conflict.md",
+          "kind": "line",
+          "line": 12,
+          "quote": "全本报价必须说明含税口径；本人员章节不制作报价。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/conflict.md",
+          "kind": "line",
+          "line": 13,
+          "quote": "全本必须提供实施计划；本节选只声明人员章节范围。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/conflict.md",
+          "kind": "line",
+          "line": 14,
+          "quote": "全本评分包括服务方案；本节选未公布分值，不得补造分数。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/conflict.md",
+          "kind": "line",
+          "line": 15,
+          "quote": "全本投标截止为2026-11-01T10:00:00+08:00；没有登记其他前置截止。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/conflict.md",
+          "kind": "line",
+          "line": 16,
+          "quote": "补充要求：人员人数恰为2名，上述人数要求仍保留，未说明覆盖关系。"
+        }
+      ],
+      "artifacts": {
+        "brief": "tender_brief.json",
+        "summary": "tender_brief.md"
+      },
+      "real_submission_authorized": false
+    },
+    "abnormal": {
+      "schema_version": "bid-training.acceptance-result.v1",
+      "module": "M04",
+      "case_id": "abnormal",
+      "source_mode": "DEMO",
+      "status": "BLOCKED",
+      "facts": {
+        "requirement_count": 0,
+        "requirements": [],
+        "full_tender_complete": false,
+        "conflicting_counts": [],
+        "effective_personnel_count": null,
+        "changed_keys": [],
+        "unchanged_keys": [],
+        "previous_personnel_count": null,
+        "personnel_count": null,
+        "stable_ids_preserved": false
+      },
+      "issue_codes": [
+        "BODY_UNREADABLE"
+      ],
+      "input_hashes": {
+        "samples/acceptance/M04/abnormal/input.json": "e24341042e4da81143729dabbbbcb417a91cd98d7ef3c0def76657e170a79e2f",
+        "samples/acceptance/shared/tender/unreadable.md": "01c44a6fb44707a9a742380db6be1d7d9d5aaecbc313559089e04e4213a9d632"
+      },
+      "evidence": [],
+      "artifacts": {
+        "brief": "tender_brief.json",
+        "summary": "tender_brief.md"
+      },
+      "real_submission_authorized": false
+    },
+    "change": {
+      "schema_version": "bid-training.acceptance-result.v1",
+      "module": "M04",
+      "case_id": "change",
+      "source_mode": "DEMO",
+      "status": "COMPLETE",
+      "facts": {
+        "requirement_count": 12,
+        "requirements": [
+          {
+            "key": "Q01",
+            "line": 4,
+            "quote": "人员不少于4名，人员表必须列出姓名和本次职责。",
+            "score": null,
+            "requirement_id": "REQ-5827753f5740e896"
+          },
+          {
+            "key": "Q02",
+            "line": 5,
+            "quote": "每名所选人员必须持有示例专业服务证书。",
+            "score": null,
+            "requirement_id": "REQ-fb61531454c61a9f"
+          },
+          {
+            "key": "Q03",
+            "line": 6,
+            "quote": "证书有效期以2026-11-01为基准，必须仍在有效期内。",
+            "score": null,
+            "requirement_id": "REQ-7a093112ac5f3842"
+          },
+          {
+            "key": "Q04",
+            "line": 7,
+            "quote": "必须在人员表填写证书编号和有效期。",
+            "score": null,
+            "requirement_id": "REQ-cc9a2d1fdd41a134"
+          },
+          {
+            "key": "Q05",
+            "line": 8,
+            "quote": "必须为每名所选人员附清晰的对应证书图片。",
+            "score": null,
+            "requirement_id": "REQ-4b08bd4c30b1c930"
+          },
+          {
+            "key": "Q06",
+            "line": 9,
+            "quote": "必须由资料负责人确认本次选用人员；候选匹配不是正式选用。",
+            "score": null,
+            "requirement_id": "REQ-cc0b9b5a37c07d3f"
+          },
+          {
+            "key": "Q07",
+            "line": 10,
+            "quote": "必须使用项目提供的人员表版次1.0，生成可编辑Word。",
+            "score": null,
+            "requirement_id": "REQ-ddc3060bb9ae7418"
+          },
+          {
+            "key": "Q08",
+            "line": 11,
+            "quote": "本章必须标明项目名称、项目编号和标包。",
+            "score": null,
+            "requirement_id": "REQ-ebf2db849653eaf9"
+          },
+          {
+            "key": "Q09",
+            "line": 12,
+            "quote": "全本报价必须说明含税口径；本人员章节不制作报价。",
+            "score": null,
+            "requirement_id": "REQ-1653a524dec0e91f"
+          },
+          {
+            "key": "Q10",
+            "line": 13,
+            "quote": "全本必须提供实施计划；本节选只声明人员章节范围。",
+            "score": null,
+            "requirement_id": "REQ-4f38332ce6341ba8"
+          },
+          {
+            "key": "Q11",
+            "line": 14,
+            "quote": "全本评分包括服务方案；本节选未公布分值，不得补造分数。",
+            "score": null,
+            "requirement_id": "REQ-e57e4c9e2cd93f11"
+          },
+          {
+            "key": "Q12",
+            "line": 15,
+            "quote": "全本投标截止为2026-11-01T10:00:00+08:00；没有登记其他前置截止。",
+            "score": null,
+            "requirement_id": "REQ-36d2a7f5160615c7"
+          }
+        ],
+        "full_tender_complete": false,
+        "conflicting_counts": [],
+        "effective_personnel_count": 4,
+        "changed_keys": [
+          "Q01"
+        ],
+        "unchanged_keys": [
+          "Q02",
+          "Q03",
+          "Q04",
+          "Q05",
+          "Q06",
+          "Q07",
+          "Q08",
+          "Q09",
+          "Q10",
+          "Q11",
+          "Q12"
+        ],
+        "previous_personnel_count": 3,
+        "personnel_count": 4,
+        "stable_ids_preserved": true
+      },
+      "issue_codes": [],
+      "input_hashes": {
+        "samples/acceptance/M04/change/input.json": "62267fa37184c08fe0cdfd76c8cc3593b140fcce18eae3dc035cb89e183bf4ee",
+        "samples/acceptance/shared/tender/plain-v1.1.md": "58df809539b8c7b5eabd9263f08fa369410b08a7d94c9afc5d65d02f7f9482a7",
+        "samples/acceptance/shared/tender/plain.md": "5c43b8c7f2d8334f54cb18cd19e92dcde783ce86ceba0cafbbfc77d6f56a60e8"
+      },
+      "evidence": [
+        {
+          "path": "samples/acceptance/shared/tender/plain-v1.1.md",
+          "kind": "line",
+          "line": 4,
+          "quote": "人员不少于4名，人员表必须列出姓名和本次职责。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/plain-v1.1.md",
+          "kind": "line",
+          "line": 5,
+          "quote": "每名所选人员必须持有示例专业服务证书。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/plain-v1.1.md",
+          "kind": "line",
+          "line": 6,
+          "quote": "证书有效期以2026-11-01为基准，必须仍在有效期内。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/plain-v1.1.md",
+          "kind": "line",
+          "line": 7,
+          "quote": "必须在人员表填写证书编号和有效期。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/plain-v1.1.md",
+          "kind": "line",
+          "line": 8,
+          "quote": "必须为每名所选人员附清晰的对应证书图片。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/plain-v1.1.md",
+          "kind": "line",
+          "line": 9,
+          "quote": "必须由资料负责人确认本次选用人员；候选匹配不是正式选用。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/plain-v1.1.md",
+          "kind": "line",
+          "line": 10,
+          "quote": "必须使用项目提供的人员表版次1.0，生成可编辑Word。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/plain-v1.1.md",
+          "kind": "line",
+          "line": 11,
+          "quote": "本章必须标明项目名称、项目编号和标包。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/plain-v1.1.md",
+          "kind": "line",
+          "line": 12,
+          "quote": "全本报价必须说明含税口径；本人员章节不制作报价。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/plain-v1.1.md",
+          "kind": "line",
+          "line": 13,
+          "quote": "全本必须提供实施计划；本节选只声明人员章节范围。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/plain-v1.1.md",
+          "kind": "line",
+          "line": 14,
+          "quote": "全本评分包括服务方案；本节选未公布分值，不得补造分数。"
+        },
+        {
+          "path": "samples/acceptance/shared/tender/plain-v1.1.md",
+          "kind": "line",
+          "line": 15,
+          "quote": "全本投标截止为2026-11-01T10:00:00+08:00；没有登记其他前置截止。"
+        }
+      ],
+      "artifacts": {
+        "brief": "tender_brief.json",
+        "summary": "tender_brief.md"
+      },
+      "real_submission_authorized": false
+    }
+  },
+  "actual_normal_chain_demo": {
+    "source_mode": "DEMO",
+    "statuses": {
+      "normal": "COMPLETE",
+      "review": "REVIEW",
+      "abnormal": "BLOCKED",
+      "change": "COMPLETE"
+    },
+    "normal_full_chain": {
+      "M03": "COMPLETE",
+      "M04": "COMPLETE",
+      "M07": "COMPLETE",
+      "M08": "COMPLETE",
+      "M09": "COMPLETE",
+      "M13": "COMPLETE",
+      "M14": "COMPLETE"
+    },
+    "actual_docx": {
+      "tables": 1,
+      "rows": [
+        4
+      ],
+      "inline_images": 3,
+      "visual_review": "NOT_PERFORMED"
+    },
+    "workbuddy_runtime": "NOT_TESTED",
+    "real_submission_authorized": false
+  },
+  "actual_upstream_handoffs": {
+    "review": {
+      "upstream_file": "upstream/review/source_manifest.json",
+      "original_sha256": "3201abb5234e3c70bdf9b1f97b72763f320d44d956077c0ca4143ccd1de033f9",
+      "scope": "actual M03 saved JSON read by M04; change also reads previous saved M04 JSON"
+    },
+    "abnormal": {
+      "upstream_file": "upstream/abnormal/source_manifest.json",
+      "original_sha256": "2b1582fb9b77af05134f246a34f38e41c2d03fcf7368745007d06141ee53a19c",
+      "scope": "actual M03 saved JSON read by M04; change also reads previous saved M04 JSON"
+    },
+    "change": {
+      "upstream_file": "upstream/change/source_manifest.json",
+      "original_sha256": "45361323c72f1060884502b1cc0ef312f836ddc73538817462a801843f0c1947",
+      "scope": "actual M03 saved JSON read by M04; change also reads previous saved M04 JSON"
+    }
+  },
+  "real_submission_authorized": false
+}

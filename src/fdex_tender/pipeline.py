@@ -150,6 +150,12 @@ def release(run_dir, approver):
         raise InputError("Selection confirmation changed since this run")
     if read_json(safe_path(ctx["input_root"], "template-manifest.json")) != matrix["data"]["template"]:
         raise InputError("Template manifest changed since this run")
+    # 分工配置是 M07 新增声明输入：改了配置就要重跑，不能沿用按旧配置生成的矩阵放行。
+    assignment = matrix["data"].get("task_assignment") or {}
+    if assignment.get("configured"):
+        path = safe_path(ctx["input_root"], assignment["file"])
+        if not path.is_file() or digest_file(path) != assignment.get("sha256"):
+            raise InputError("Task assignment configuration changed since this run; rerun before release")
     review = review_document(ctx, matrix, index, matched, assembled, run_dir)
     save_module(run_dir, FILENAMES["M14"], review)
     if review["issues"] or matched["data"]["confirmation"]["status"] != "CONFIRMED":

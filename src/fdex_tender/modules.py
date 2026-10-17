@@ -9,6 +9,22 @@ from datetime import date
 from pathlib import Path
 from PIL import Image
 from .core import InputError, digest_file, digest_object, envelope, evidence, issue, read_json, require_same_context, safe_path, stable_id
+from .assignment import resolve_assignments
+
+# M07 分工配置的问题码 → 公共信封问题条目（严重度、说明、接手角色、下一步）。
+# 顺序与 assignment.resolve_assignments 的逐条判定顺序一致，便于按人、按条复核。
+# 未登记的新码给保守兜底，避免因为漏登记直接崩掉整链。
+_ASSIGNMENT_ISSUES = {
+    "OWNER_MISSING": ("MAJOR", "配置未给出该类别责任角色；保留未知，不沿用默认角色",
+                      "招投标负责人", "在 task-assignment.json 中补齐该类别角色后重跑"),
+    "DUE_TIME_MISSING": ("MAJOR", "配置未给出该任务期限；保留未知，不填当天",
+                         "招投标负责人", "在 task-assignment.json 中补齐该要求期限后重跑"),
+    "DUE_TIME_INVALID": ("BLOCKER", "任务期限不是带时区的合法时间；不猜测",
+                         "招投标负责人", "修正 task-assignment.json 中的期限后重跑"),
+    "DUE_AFTER_DEADLINE": ("BLOCKER", "任务期限晚于该要求自己的业务截止",
+                           "招投标负责人", "把期限提前到业务截止之前，或申请调整截止"),
+}
+_ASSIGNMENT_ISSUE_FALLBACK = ("MAJOR", "分工配置出现未登记的问题", "招投标负责人", "核对配置后重跑")
 
 
 def register(ctx):
@@ -93,17 +109,52 @@ def response_matrix(ctx, tender):
         problems.append(issue("TEMPLATE_HASH_MISMATCH", manifest["template_id"], "模板文件与声明哈希不一致"))
     if manifest.get("columns") != expected_columns or manifest.get("version") != "1.0":
         problems.append(issue("TEMPLATE_MAPPING_UNSUPPORTED", manifest["template_id"], "模板列或版次变化，需要明确适配"))
+
+    in_scope = [r for r in tender["data"]["requirements"] if r["in_personnel_scope"]]
+
+    # 企业分工配置（task-assignment.json）是**可选**输入。
+    # 没有它时严格保持基座行为：角色为默认值、期限保持未知，只在 data 里声明
+    # "未配置"。既不改状态，也不凭空造出角色或期限——"没配"要看得见，
+    # 而不是让一个看似合理的日期冒充已配置的期限。
+    assignment_path = root / "task-assignment.json"
+    assignment = read_json(assignment_path) if assignment_path.exists() else None
+    if assignment is None:
+        assignment_state = {"source": "BASELINE_DEFAULT", "configured": False,
+                            "note": "未提供 task-assignment.json；责任角色沿用基座默认，任务期限保持未知，不填当天"}
+        by_requirement_id = {r["requirement_id"]: ("资料管理员", None) for r in in_scope}
+    else:
+        deadlines = assignment.get("deadlines") or {}
+        business_deadline = assignment.get("business_deadline")
+        # 每条要求用的是**它自己**的业务截止；只有该条没单列时才退回统一业务截止。
+        normalized = [{"key": r["source_key"], "category": r["category"], "mandatory": r["mandatory"],
+                       "deadline": deadlines.get(r["source_key"], business_deadline)} for r in in_scope]
+        resolved, _ = resolve_assignments(normalized, assignment.get("roles"), assignment.get("due_times"))
+        by_requirement_id, late_keys = {}, []
+        for requirement, row in zip(in_scope, resolved):
+            by_requirement_id[requirement["requirement_id"]] = (row["owner_role"], row["due_time"])
+            if row["late"]:
+                late_keys.append(requirement["source_key"])
+            for code in row["issues"]:
+                severity, message, owner, action = _ASSIGNMENT_ISSUES.get(code, _ASSIGNMENT_ISSUE_FALLBACK)
+                problems.append(issue(code, requirement["source_key"], message,
+                                      severity=severity, owner=owner, action=action))
+        assignment_state = {"source": "CONFIGURED", "configured": True, "file": "task-assignment.json",
+                            "sha256": digest_file(assignment_path),
+                            "roles": assignment.get("roles") or {}, "due_times": assignment.get("due_times") or {},
+                            "business_deadline": business_deadline, "late_requirements": late_keys}
+
     rows = []
-    for req in tender["data"]["requirements"]:
-        if req["in_personnel_scope"]:
-            rows.append({"response_id": stable_id("RESP", req["requirement_id"], manifest["template_id"]),
-                         "requirement_ids": [req["requirement_id"]], "section_id": "SECTION-PERSONNEL",
-                         "field_id": "PERSONNEL-TABLE" if req["source_key"] in ("R-01", "R-02", "R-03", "R-04") else "PERSONNEL-ATTACHMENTS",
-                         "owner_role": "资料管理员", "due_time": None,
-                         "required_assets": ["certificate"], "status": "PROPOSED", "template_version": manifest["version"]})
+    for req in in_scope:
+        owner_role, due_time = by_requirement_id[req["requirement_id"]]
+        rows.append({"response_id": stable_id("RESP", req["requirement_id"], manifest["template_id"]),
+                     "requirement_ids": [req["requirement_id"]], "section_id": "SECTION-PERSONNEL",
+                     "field_id": "PERSONNEL-TABLE" if req["source_key"] in ("R-01", "R-02", "R-03", "R-04") else "PERSONNEL-ATTACHMENTS",
+                     "owner_role": owner_role, "due_time": due_time,
+                     "required_assets": ["certificate"], "status": "PROPOSED", "template_version": manifest["version"]})
     return envelope(ctx, "M07", {"responses": rows, "template": manifest,
                                  "excluded_requirements": [r["requirement_id"] for r in tender["data"]["requirements"] if not r["in_personnel_scope"]],
-                                 "coverage": {"scope_total": len(rows), "scope_mapped": len(rows), "full_total": len(tender["data"]["requirements"]), "full_tender_complete": False}}, tender["input_refs"], problems)
+                                 "coverage": {"scope_total": len(rows), "scope_mapped": len(rows), "full_total": len(tender["data"]["requirements"]), "full_tender_complete": False},
+                                 "task_assignment": assignment_state}, tender["input_refs"], problems)
 
 
 def material_index(ctx, registered):
